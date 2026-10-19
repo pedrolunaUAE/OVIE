@@ -1,0 +1,117 @@
+.ui-datepicker{
+   /*width: 350px !important;*/
+   width: 320px !important;
+    /*position: absolute;*/
+}
+.datePicker_agenda{
+	/*margin-left: 27px;*/
+}
+.leyenda{
+	width:13px;
+	height:13px;
+	display: -webkit-box;
+	margin-top: 2px;
+}
+
+.datePicker_agenda{
+	display:-webkit-inline-box;
+}
+.leyend{
+	margin-top:10px;
+	
+}
+.leyend div{   
+	/*width:30%;*/
+	display:inline-flex;
+	padding: 3px 5px 2px 3px;
+	 -webkit-box-sizing: border-box;
+	 box-sizing: border-box;
+	/* margin-left: 72px;*/
+ }
+ .leyend label{
+	 margin-left: 3px;
+ }
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	background:#F9DCE8;
+	color:#df0077;
+}
+
+ /*Segun su typo:: Para Amplia disponibilidad color  rosa*/
+.highlighted1 a{
+	background-color:#F9DCE8 !important;
+	background-image:none !important;
+	color:#E2007A !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	
+}
+/*Para poca disponibilidad color amarillito*/
+.highlighted2 a{
+	background-color:#FCF3CF   !important;
+	background-image:none !important;
+	color:#FFC300 !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	
+}
+/*Sin disponibilida color rojo*/
+.highlighted3 span{
+	background-color:#FE2E2E  !important;
+	/*background-image:none !important;*/
+	color:#FFFFFF !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	z-index: 3;
+	
+}
+.highlighted5 a{
+	background-color:#BDBDBD   !important;
+	background-image:none !important;
+	color:#FFFFFF !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	
+}
+/*Para fines de semana color gris*/
+.highlighted4 span {
+	background:#BDBDBD !important;
+	color:#FFFFFF !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	z-index: 3;
+}
+
+.highlighted6 span {
+	background:#BDBDBD !important;
+	color:#FFFFFF !important;
+	font-weight: bold !important;
+	font-size:12pt;
+	z-index: 3;
+	
+
+	
+}
+ 
+/* .ui-datepicker-week-end span {
+	muestra grises los fines de semana
+ color: #333 !important; 
+
+} */
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,639 @@
+.template_ovie_mappingPan{
+    background:url("../img/pan.png") top left no-repeat;
+}
+.tom_zoomin{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -297px;
+}
+
+.tom_extent{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -170px;
+}
+.tom_zoomout{
+	width: 23px;
+    height: 23px;
+    background-position: -9px -234px;
+}
+.tom_zoomin:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -265px;
+}
+
+.tom_extent:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -138px;
+}
+.tom_zoomout:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -9px -201px;
+}
+
+
+.template_ovie_mapping{
+    background:url("../img/mapping.png") top left no-repeat;
+}
+
+.tom_polygon{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -10px;
+}
+
+.tom_point{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -175px;
+}
+.tom_line{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -76px;
+}
+.tom_polygon:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -274px;
+}
+
+.tom_point:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -208px;
+}
+.tom_line:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -110px;
+}
+
+
+.sectionButton_active .tom_polygon{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -241px;
+}
+
+.sectionButton_active .tom_point{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -142px;
+}
+.sectionButton_active .tom_line{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -43px;
+}
+
+.ovie_mapping{
+	border:7px solid #fff;
+}
+.ovie_mapping .Buttons{
+	position: absolute;
+	bottom: 35px;
+	right: 15px;
+	z-index: 1500;
+	background: #fff;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 2px 0px #555;
+    -webkit-box-shadow: 1px 1px 2px 0px #555;
+    box-shadow: 1px 1px 2px 0px #555;
+}
+.ovie_mapping .ButtonsPan{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 1500;
+    background: #fff;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 2px 0px #555;
+    -webkit-box-shadow: 1px 1px 2px 0px #555;
+    box-shadow: 1px 1px 2px 0px #555;
+}
+.ovie_mapping .sectionButton{
+	
+    padding: 4px;
+    border:1px solid #DDD
+
+}
+.ovie_mapping .sectionButton:hover{
+	background:#eee;
+}
+.ovie_mapping .sectionButton.Border_top{
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.ovie_mapping .sectionButton.Border_middle{
+	
+}
+.ovie_mapping .sectionButton.Border_bottom{
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.ovie_mapping .Modal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    /*top: -70%;*/
+    /*width: 200px;*/
+    z-index: 3000;/*99999;*/
+}
+.ovie_mapping .Modal .contOL{
+    padding-top: 5px;
+}
+.ovie_mapping .inputItem{
+    background-color: transparent;
+    border: 1px solid #DDDDDD;
+    color: #555555;
+    font-size: 120%;
+    height: 23px;
+    overflow: hidden;
+    padding-left: 3px;
+    /*position: absolute;
+    right: 45px;
+    top: 4px;*/
+    width: 85%;
+    font-family: arial;
+}
+.ovie_mapping .closeLineTime{position:absolute;top:2px;right:5px}
+.ovie_mapping .titleOL{font-weight:bold;font-size: 100%;}
+.ovie_mapping .contOL{font-size: 90%;}
+.ovie_mapping .Modal-window{
+    box-shadow: 0px 0px 6px 0 #555555;
+    background: none repeat scroll 0 0 white;
+    margin: 0px 0 0px;/*margin: 50px 0 30px;*/
+    position: relative;
+    text-align: center;
+    font-size: 78%;
+    padding: 10px 10px 10px 10px;
+    position:absolute;
+}
+
+.ovie_mapping .Notifications{display: block;margin-left: auto;margin-right: auto;position: relative;top: -100%;width: 300px;z-index: 5000;}
+.ovie_mapping .NotificationsIE{display: block;margin-left: auto;margin-right: auto;position: relative;top: 0px;width: 300px;z-index: 5000;}
+.ovie_mapping .Notification{
+    background: none repeat scroll 0 0 white;
+    box-shadow: 0 0 6px 0 #555555;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top:0px;
+    border-radius: 0px 0px 10px 10px;
+}
+.ovie_mapping .Title{
+    background:#EC7DAB;
+    color:#fff;
+    padding-bottom:5px;
+    padding-top:5px;
+    padding-left:10px;
+    padding-right:10px;
+    position:absolute;
+    z-index:2000;
+    top:0px;
+   -webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+}
+
+.ovie_mapping .Popup{display:block;background-image:url(../img/popup.png);overflow:hidden}
+.ovie_mapping .popupProp{width:11px; height:11px; background-repeat:no-repeat;}
+.ovie_mapping .row_left{background-position:-23px 0px;}
+.ovie_mapping .row_top{background-position:-11px 0px;}
+.ovie_mapping .row_right{background-position:-37px 0px;}
+.ovie_mapping .row_bottom{background-position:0px 0px;}
+
+.ovie_mapping .PopupOL{position:absolute;z-index:20000;}
+.ovie_mapping .titleOL{font-weight:bold;font-size: 100%;}
+.ovie_mapping #PopupOL .close{position: absolute; right: 5px; top: 2px;}
+.ovie_mapping #PopupOL .dinamicPanel-searchLink{float:left;position:relative;bottom:-5px;color:#03508D;}
+.ovie_mapping .popup_close{
+    position: absolute;
+    right: 5px;
+    top: 2px;
+}
+
+/**/
+
+
+.ovie_mapping .PopupElementItem.none {
+            margin-left: 30px;
+        }
+.ovie_mapping .PopupElementItem.none:before {
+            border-color: transparent transparent;
+            border-width: 0px 0px 0px 0;
+            bottom: auto;
+            left: 0px;
+            top: 0px;
+        }
+        
+.ovie_mapping .PopupElementItem.none:after {
+            border-color: transparent transparent;
+            border-width: 0px 0px 0px 0;
+            bottom: auto;
+            left: 0px;
+            top: 0px;
+        }
+.ovie_mapping .PopupElementItem {
+	    box-shadow: 0px 0px 6px 0 #555555;
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px 10px 10px 10px;
+            color: #333333;
+            margin: 0em 0 0em;
+            padding: 15px;
+            position: relative;
+        }
+	
+.ovie_mapping .PopupElementItem:before {
+            border-color: #DDDDDD transparent;/*5A8F00*/
+            border-style: solid;
+            border-width: 20px 20px 0; /*20px 20px 0;*/
+            /*bottom: -20px;*/
+            content: "";
+            display: block;
+            /*left: 40px;*/
+            position: absolute;
+            width: 0;
+        }
+	
+.ovie_mapping .PopupElementItem:after {
+            border-color: #FFFFFF transparent;
+            border-style: solid;
+            border-width: 13px 13px 0;
+            /*bottom: -13px;*/
+            content: "";
+            display: block;
+            /*left: 47px;*/
+            position: absolute;
+            width: 0;
+        }
+	
+.ovie_mapping .PopupElementItem.bottom-left:before {
+	    border-width: 20px 20px 0;
+	    bottom: -20px;
+	    left: 40px;
+	}
+        
+.ovie_mapping .PopupElementItem.bottom-left:after {
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            left: 47px;
+        }
+.ovie_mapping .PopupElementItem.bottom-right:before {
+	    border-width: 20px 20px 0;
+	    bottom: -20px;
+	    right: 40px;
+	}
+        
+.ovie_mapping .PopupElementItem.bottom-right:after {
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            right: 47px;
+        }
+.ovie_mapping .PopupElementItem.top-left:before {
+	    border-width: 0 20px 20px;
+	    bottom: auto;
+	    left: auto;
+	    left: 40px;
+	    top: -20px;
+	}
+        
+.ovie_mapping .PopupElementItem.top-left:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            left: 47px;
+            top: -13px;
+        }
+.ovie_mapping .PopupElementItem.top-right:before {
+	    border-width: 0 20px 20px;
+	    bottom: auto;
+	    left: auto;
+	    right: 40px;
+	    top: -20px;
+	}
+        
+.ovie_mapping .PopupElementItem.top-right:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            right: 47px;
+            top: -13px;
+        }
+        
+.ovie_mapping .PopupElementItem.top-right-support:before {
+	    border-width: 0 20px 20px;
+	    bottom: auto;
+	    left: auto;
+	    right: 3px;
+	    top: -20px;
+	}
+        
+.ovie_mapping .PopupElementItem.top-right-support:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            right: 10px;
+            top: -13px;
+        }
+.ovie_mapping .PopupElementItem.left-top {
+            margin-left: 30px;
+        }
+.ovie_mapping .PopupElementItem.left-top:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            top: 10px;
+        }
+        
+.ovie_mapping .PopupElementItem.left-top:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            top: 16px;
+        }
+	
+.ovie_mapping .PopupElementItem.left-bottom {
+            margin-left: 30px;
+        }
+.ovie_mapping .PopupElementItem.left-bottom:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            bottom: 10px;
+        }
+        
+.ovie_mapping .PopupElementItem.left-bottom:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            bottom: 16px;
+        }
+        
+.ovie_mapping .PopupElementItem.right-top {
+            margin-right: 30px;
+        }
+.ovie_mapping .PopupElementItem.right-top:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            top: 10px;
+        }
+.ovie_mapping .PopupElementItem.right-top:after {
+		    border-color: transparent #FFFFFF;
+		    border-width: 9px 0 9px 21px;
+		    bottom: auto;
+		    left: auto;
+		    right: -21px;
+		    top: 16px;
+	}
+	
+.ovie_mapping .PopupElementItem.right-bottom {
+            margin-right: 30px;
+        }
+.ovie_mapping .PopupElementItem.right-bottom:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            bottom: 10px;
+        }
+.ovie_mapping .PopupElementItem.right-bottom:after {
+		    border-color: transparent #FFFFFF;
+		    border-width: 9px 0 9px 21px;
+		    bottom: auto;
+		    left: auto;
+		    right: -21px;
+		    bottom: 16px;
+	}
+
+
+/**/
+.ovie_mapping .PopupElement{
+	    box-shadow: 0px 0px 6px 0 #555555;
+	}
+.ovie_mapping .PopupElement.top:before {
+		    border-width: 0 20px 20px;
+		    bottom: auto;
+		    left: auto;
+		    right: 40px;
+		    top: -20px;
+	}
+        
+.ovie_mapping .PopupElement:before {
+            border-color: #DDDDDD transparent;/*5A8F00*/
+            border-style: solid;
+            border-width: 20px 20px 0; /*20px 20px 0;*/
+            bottom: -20px;
+            content: "";
+            display: block;
+            left: 40px;
+            position: absolute;
+            width: 0;
+        }
+        
+.ovie_mapping .PopupElement.top:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            right: 47px;
+            top: -13px;
+        }
+        
+.ovie_mapping .PopupElement:after {
+            border-color: #FFFFFF transparent;
+            border-style: solid;
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            content: "";
+            display: block;
+            left: 47px;
+            position: absolute;
+            width: 0;
+        }
+.ovie_mapping .PopupElement {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px 10px 10px 10px;
+            color: #333333;
+            margin: 1em 0 3em;
+            padding: 15px;
+            position: relative;
+        }
+        
+.ovie_mapping .PopupElement.left {
+            margin-left: 30px;
+        }
+.ovie_mapping .PopupElement.left:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            top: 10px;
+        }
+        
+.ovie_mapping .PopupElement.left:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            top: 16px;
+        }
+        
+        
+.ovie_mapping .PopupElement.right {
+            margin-right: 30px;
+        }
+.ovie_mapping .PopupElement.right:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            top: 10px;
+        }
+.ovie_mapping .PopupElement.right:after {
+                    border-color: transparent #FFFFFF;
+                    border-width: 9px 0 9px 21px;
+                    bottom: auto;
+                    left: auto;
+                    right: -21px;
+                    top: 16px;
+        }
+        
+        
+.ovie_mapping .PopupElement.top:before {
+                    border-width: 0 20px 20px;
+                    bottom: auto;
+                    left: auto;
+                    right: 40px;
+                    top: -20px;
+        }
+        
+.ovie_mapping .PopupElement:before {
+            border-color: #DDDDDD transparent;/*5A8F00*/
+            border-style: solid;
+            border-width: 20px 20px 0; /*20px 20px 0;*/
+            bottom: -20px;
+            content: "";
+            display: block;
+            left: 40px;
+            position: absolute;
+            width: 0;
+        }
+        
+.ovie_mapping .PopupElement.top:after {
+            border-width: 0 13px 13px;
+            bottom: auto;
+            left: auto;
+            right: 47px;
+            top: -13px;
+        }
+        
+.ovie_mapping .PopupElement:after {
+            border-color: #FFFFFF transparent;
+            border-style: solid;
+            border-width: 13px 13px 0;
+            bottom: -13px;
+            content: "";
+            display: block;
+            left: 47px;
+            position: absolute;
+            width: 0;
+        }
+.ovie_mapping .PopupElement {
+            background: none repeat scroll 0 0 #FFFFFF;
+            border: 2px solid #DDDDDD;
+            border-radius: 10px 10px 10px 10px;
+            color: #333333;
+            margin: 0em 0 0em;
+            padding: 15px;
+            position: relative;
+        }
+        
+.ovie_mapping .PopupElement.left {
+            margin-left: 30px;
+        }
+.ovie_mapping .PopupElement.left:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 30px 15px 0;
+            bottom: auto;
+            left: -30px;
+            top: 10px;
+        }
+        
+.ovie_mapping .PopupElement.left:after {
+            border-color: transparent #FFFFFF;
+            border-width: 9px 21px 9px 0;
+            bottom: auto;
+            left: -21px;
+            top: 16px;
+        }
+        
+        
+.ovie_mapping .PopupElement.right {
+            margin-right: 30px;
+        }
+.ovie_mapping .PopupElement.right:before {
+            border-color: transparent #DDDDDD;
+            border-width: 15px 0 15px 30px;
+            bottom: auto;
+            left: auto;
+            right: -30px;
+            top: 10px;
+        }
+.ovie_mapping .PopupElement.right:after {
+		    border-color: transparent #FFFFFF;
+		    border-width: 9px 0 9px 21px;
+		    bottom: auto;
+		    left: auto;
+		    right: -21px;
+		    top: 16px;
+	}
+.ovie_mapping .ButtonsMove{
+    top: 40px !important;
+}    
+.ovie_mapping .Change {
+    background: #EC7DAB;
+    color: #fff;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    z-index: 2000;
+    top: 0px;
+    right: 0px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
+.dinamicPanel-sprite{ background:url("dinamicPanel-sprite.png") top left no-repeat; }
+.dinamicPanel-close-short:hover{ width:20px; height:20px; background-position:-10px -4040px; }
+.dinamicPanel-close-short{ width:20px; height:20px; background-position:-10px -4550px; }

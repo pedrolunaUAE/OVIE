@@ -1,0 +1,8 @@
+*.zip
+
+.env
+
+target/
+node_modules/
+
+.logs/

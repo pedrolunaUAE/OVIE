@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.AppointmentMapper">
+
+	<insert id="add">
+	INSERT INTO agenda_ovie.solicitudes( id_horario, nombre, telefono, celular, correo,consulta, fecha_solicitud, fecha_cita, status,sexo,edad,ocupacion,domicilio)
+     VALUES (#{schedule}, #{name},#{tel},#{phone},#{mail},#{question}, now(),#{request}, 1,#{sex},#{age},#{occupation},#{address});
+	</insert>
+
+	<select id="schedules" resultType="java.util.LinkedHashMap">
+	SELECT id_horario as schedule, hora_in, hora_fn, dia
+    FROM agenda_ovie.horario order by hora_in ;
+	</select>
+	
+	<select id="days" resultType="java.util.LinkedHashMap">
+	select fecha_cita, case when count(*)&#62;&#61;2 and count(*) &#60;4 then 2 when count(*)&#61;4  then 3 end as Estatus  
+		FROM (select  distinct fecha_cita, id_horario from  agenda_ovie.solicitudes where status&#61;2 and EXTRACT (Mon FROM  fecha_cita) = #{month} and EXTRACT(year FROM  fecha_cita) = #{year} )
+		a group by fecha_cita having count(*)&#62;&#61;2 union all select fecha_cita,5  from agenda_ovie.dia_inhabil where EXTRACT (Mon FROM  fecha_cita) = #{month} and EXTRACT(year FROM  fecha_cita) = #{year} order by Estatus;
+	</select>
+
+</mapper>

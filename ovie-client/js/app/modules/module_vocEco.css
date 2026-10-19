@@ -1,0 +1,516 @@
+/*
+#compare_container .map_compare{
+    position: relative;
+    height: 350px;
+    margin-bottom:10px;
+}
+#compare_container .compare_container{
+    margin-top: 25px;
+}
+#compare_container .segmentMap{
+    position:relative;
+    margin-bottom:12px;
+}
+*/
+
+.vocEco-areaMap{
+	height: 623px;
+    width: 100%;
+    margin-top: 5px;
+}
+.vocEco-results{
+	width:100%;
+	margin-top: 20px;
+}
+
+#vocationAreas-Container .areas-mainContainer{
+	/*max-height:176px;*/
+}
+
+#infoActEcoFind .card-content{
+    margin-top:5px;
+}
+
+
+/*buscador de actividades economicas*/
+#infoActEcoSearch .card-content{
+    margin-top:5px;
+}
+
+/*Listado de actividades economicas*/
+.actEco-list-container{
+    height: 623px;
+    position: relative;
+    top: 8px;
+    /* right: 82px; */
+    background: white;
+    width: 100%;
+}
+
+.actEco-list-header{
+    position: absolute;
+    border-bottom: 3px solid #e2007a;
+    width: 100%;
+    height: 60px;
+    background: #f3f3f3;
+}
+
+.actEco-list-title{
+    padding-left: 7px;
+    margin-top: 4px;
+    color: #ababab;
+    /*font-weight: bold;*/
+    font-size: 107%;
+    
+}
+
+.actEco-list{
+    /* position: absolute; */
+    /* width: 100%; */
+    /* background: beige; */
+    margin-top: 59px;
+    margin-left: 10px;
+    padding-top: 4px;
+    height: 565px;
+    overflow: auto;
+    
+}
+
+.actEco-list-columnTitle{
+    float: left;
+    margin-left: 6px;
+   /*background-color: #e2007a;*/
+    margin-top: 12px;
+    color: #757575;;
+    font-weight: bold;
+}
+
+.actEco-list-columnDivider{
+    float: left;
+    margin-top: 16px;
+    margin-left: 3px;
+    margin-right: -8px;
+    width: 1px;
+    height: 15px;
+    background: #757575; 
+}
+
+.actEco-closeIcon{
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.actEco-row{
+    padding: 5px 5px !important;
+}
+
+.actEco-cve{
+    color: #e2007a;
+}
+
+/*Lista de TODAS las actividades económicas*/
+.actEco-row-container:hover {
+   background-color:#F9DCE8;
+}
+.actEco-row-container.active{
+    background-color: #E2007A;
+}
+.actEco-row-container.active .actEco-cve{
+    color: #FFF;
+}
+
+.actEco-row-container.active .actEco-descripcion{
+    color: #FFF;
+}
+
+/***********/
+
+.actEco-list-footer{
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    /* background: aqua; */
+    bottom: 0px;
+}
+
+.actEco-list-footer .verMas-container{
+    float: right;
+    width: 20%;
+    height: 100%;
+    padding-top: 5px;
+    cursor: pointer;
+    /*background-color: aliceblue;*/
+}
+
+.actEco-footer-icon{
+    float: left;
+    margin-left: 17px;
+}
+
+.actEco-verMas-txt{
+    float: left;
+    margin-top: -18px;
+    margin-left: 6px;
+    font-family: arial;
+    font-weight: bold;
+    color: #e2007a;
+}
+/*metadatos*/
+.ovie-results-information{
+    display:none;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.tooltipSquare:hover .ovie-results-information{
+    display:inline-block;
+}
+
+/*temporal*/
+
+.bloques .s4{
+	height:	83px;
+}
+.bloques .s4 img{
+	position:absolute;
+}
+.bloques .label{
+	position:absolute;
+	font-weight:bold;
+	color:#E2007A;
+	font-family: arial;
+	width:90px;
+	text-align:center;
+}
+
+#tue .label{
+	margin: 41px 0px 0px 130px;	
+}
+#tem .label{
+	margin: 41px 0px 0px 100px;
+}
+
+
+#acp .lab1{
+	width:170px;
+	margin: 23px 0px 0px 54px;
+}
+#acp .lab2{
+	margin: 41px 0px 0px 100px;
+}
+#acp .lab3{
+	margin: 60px 0px 0px 100px;
+}
+
+
+#cue .lab1{
+	margin: 49px 0px 0px 3px;
+}
+#cue .lab2{
+	margin: 49px 0px 0px 80px;
+}
+#cue .lab3{
+	margin: 49px 0px 0px 150px;
+}
+#cue .lab4{
+	margin: 129px 0px 0px 3px;
+	font-size:13px;
+}
+#cue .lab5{
+	margin: 129px 0px 0px 76px;
+	font-size:13px;
+}
+#cue .lab6{
+	margin: 129px 0px 0px 150px;
+	font-size:13px;
+}
+
+
+
+#tmue .label{
+	margin: 101px 0px 0px 62px;
+}
+#esd img{
+	display:none;	
+}
+#esd[tipo=tipo_i] #im_i{
+	display:block;	
+}
+#esd[tipo=tipo_c] #im_c{
+	display:block;	
+}
+#esd[tipo=tipo_s] #im_s{
+	display:block;	
+}
+
+#esd .lab1{
+	margin: 43px 0px 0px 100px;
+}
+#esd .lab2{
+	margin: 79px 0px 0px 100px;
+}
+#esd .lab3{
+	margin: 116px 0px 0px 100px;
+}
+#esd .lab4{
+	margin: 55px 0px 0px -3px;
+}
+
+/*grafica*/
+
+.ovie-graph-title{
+	width: 100%;
+    float: left;
+    margin-top: 25px;
+    text-align: center;
+    font-family: verdana;
+    font-size: 11pt;
+    line-height: normal;
+    color: #757575;
+}
+
+.graph_mainContainer{
+	border: 1px solid #FFFFFF;
+	float:left;
+	width:100px; 
+	height:113px;
+
+}
+
+.graph-icon{
+	/*width: 40px;
+    height: 40px;*/
+	margin-top: 39px;
+    margin-left: 38px;
+}
+
+.graphPercent{
+	position: absolute;
+	font-family: arial;
+    font-size: 10pt;
+    margin-top: -49px;
+    margin-left: 47px;
+    font-weight: bold;
+    
+}
+
+.ovie-compeco-container{
+	width: 100%;
+    float: left;
+}
+
+.ovie-compeco-wrap{
+	margin-left: 34px;
+    margin-top: 15px;
+}
+
+/*Actividad Consultada*/
+
+.vocEco-actConsul-container{
+	margin-top: 15px;
+    /*margin-bottom: 50px;*/
+    width: 100%;
+}
+
+/*Actividad predominante*/
+
+.vocEco-actpred-container{
+	position:relative;
+	width:100%;
+    margin-bottom: 11px;
+}
+
+.vocEco-actpred-mainWrap{
+	/*float: left;*/
+    width: 100%;
+    margin-top: 5px;
+}
+
+.vocEco-actpred-icon{
+	position: absolute;
+	margin-top: 6px;
+}
+
+.vocEco-actpred-data{
+	
+    font-family: verdana;
+    font-size: 11pt;
+    font-weight: 700;
+    line-height: normal;
+    color: #E2007A;
+    /*margin-left: 35px;
+    margin-top: 10px;*/
+}
+
+.vocEco-actpred-count{
+    margin-top:2px;
+}
+
+/*Empleados*/
+.vocEco-results-txt{
+	text-align: center;
+    margin-top: 15px;
+}
+
+/*Especialización definida*/
+
+.vocEco-results-title{
+	width: 100%;
+    text-align: center;
+	font-family: verdana;
+    font-size: 11pt;
+	line-height: normal;
+    color: #757575;
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.vocEco-espDef-mainWrap{
+	margin-top: 25px;
+    margin-left: 10px;
+    width: 100%;
+    float: left;
+}
+
+.vocEco-espDef-container{
+	float: left;
+    width: 100%;
+    height: 50px;
+}
+
+.vocEco-espDef-icon{
+	float:left;
+    margin-top:10px;
+}
+
+.vocEco-espDef-title{
+	width: 50%;
+    float: left;
+    font-family: verdana;
+    font-size: 11pt;
+    line-height: normal;
+    color: #757575;
+    margin-left: 7px;
+    margin-top: 10px;
+}
+
+.vocEco-espDef-value{
+    float: left;
+    font-family: verdana;
+    font-size: 11pt;
+    line-height: normal;
+    margin-left: 7px;
+    margin-top: 20px;
+    width:auto;
+    color:#757575;
+    font-weight:bold;
+}
+
+/*Indice de desarrollo social*/
+
+.ovie-indice-container{
+	/*float: left;
+    margin-left: -35px;*/
+	width: 100%;
+}
+
+.ovie-indice-wrap{
+	/*margin-left: 80px;
+    margin-top: 15px;*/
+}
+
+/*lista de actividades económicas principales*/
+.vocEco-act-list{
+	width: 100%;
+    /*height: 163px;*/
+    background-color: #FFF;
+    overflow-y: auto;
+}
+.vocEco-act-list .collection a.active{
+    color:#ffffff;
+}
+.vocEco-act-list .collection a.collection-item{
+    color:#555;
+}
+.vocEco-act-list .collection a.collection-item.active{
+    color:#fff;
+}
+
+#title{
+	color: #757575;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.act-item{
+	color:#555;
+}
+
+.act-item.active{
+	color:#FFF;
+}
+
+.vocEco-search-actEco{
+	float: left;
+    width: 92%;
+    height: 30px;
+    margin-bottom: 5px;
+    border: 1px solid #E0E0E0;
+    background-color: #F3F3F3;
+}
+
+.vocEco-launch-icon{
+	float: left;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.vocEco-search-field{
+	color: #757575;
+    width: 80%;
+    height: 100%;
+}
+
+#vocationAreas-Container .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+#infoActEco{
+    padding-top:10px;
+}
+#vocationAreas-Container .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+#vocation-container #sa_detail_infoActEcoFind{
+    position: relative;
+    left: -10px;
+    width: 110%;
+}
+
+#vocEco_results .totales{
+    width:100%;
+}
+.vocacionBloque1{
+    margin-bottom: 25px;
+    position: relative;
+}
+.vocacionBloque2{
+    margin-bottom: 30px;
+    position: relative;
+}
+.vocacionBloque5{
+    margin-bottom: 35px;
+    position: relative;
+}
+.vocacionBloque4{
+    margin-bottom: 30px;
+    position: relative;
+}
+.vocacionBloque3{
+    margin-bottom: 30px;
+    position: relative;
+}
+

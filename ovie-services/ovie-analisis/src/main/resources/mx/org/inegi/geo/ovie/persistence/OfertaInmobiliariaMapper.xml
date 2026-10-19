@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.OfertaInmobiliariaMapper">
+
+	<select id="insertInm" parameterType="mx.org.inegi.geo.ovie.domain.OfertaInmobiliaria" resultType="int">
+		INSERT INTO
+		oferta_ovie.inmobiliaria( id_inm, nombre, correo_electronico,
+		calle_inmueble,
+		no_ext, no_int, colonia, delegacion, cp, telefono,
+		estatus,
+		tipo_inmueble, servicios, modalidad_oferta, valor_total,
+		valor_metro2,
+		observaciones, superficie_metros2, ubicacion)
+		VALUES (
+		DEFAULT,
+		#{oferta.nombre}, #{oferta.correo_electronico},
+		#{oferta.calle_inmueble},
+		#{oferta.no_ext},
+		#{oferta.no_int},
+		#{oferta.colonia},
+		#{oferta.delegacion}, #{oferta.cp},
+		#{oferta.telefono},
+		#{oferta.estatus},
+		#{oferta.tipo_inmueble},
+		#{oferta.servicios},
+		#{oferta.modalidad_oferta},
+		#{oferta.valor_total},
+		#{oferta.valor_metro2},
+		#{oferta.observaciones},
+		#{oferta.superficie_metros2},
+		#{oferta.ubicacion}
+		) returning id_inm;
+	</select>
+	
+	<insert id="insertImg" parameterType="mx.org.inegi.geo.ovie.domain.FotosInmobiliaria">
+		INSERT INTO oferta_ovie.fotos_inmobiliaria( imagen, id_inm)
+		VALUES
+		<foreach item="item" index="index" collection="fotos"
+			separator=",">
+			(#{item.imagen}, #{item.id_inm})
+		</foreach>
+		;
+
+	</insert>
+
+	<update id="updateInm" parameterType="mx.org.inegi.geo.ovie.domain.OfertaInmobiliaria">
+		UPDATE
+		oferta_ovie.inmobiliaria SET nombre=#{oferta.nombre},
+		correo_electronico=#{oferta.correo_electronico},
+		calle_inmueble=#{oferta.calle_inmueble}, no_ext=#{oferta.no_ext},
+		no_int=#{oferta.no_int},
+		colonia=#{oferta.colonia},
+		delegacion=#{oferta.delegacion},
+		cp=#{oferta.cp},
+		telefono=#{oferta.telefono},
+		estatus=#{oferta.estatus} WHERE id_inm =
+		#{oferta.id_inm};
+		<foreach item="item" index="index" collection="oferta.fotos"
+			separator=";">
+			UPDATE oferta_ovie.fotos_inmobiliaria SET
+			imagen=#{item.imgByte64} WHERE
+			gid=#{item.gid} AND
+			id_inm=#{item.id_inm}
+		</foreach>
+	</update>
+
+	<select id="selectInm" resultType="mx.org.inegi.geo.ovie.domain.OfertaInmobiliaria">
+		SELECT nombre,
+		correo_electronico, calle_inmueble,
+		no_ext, no_int,
+		colonia, delegacion,
+		cp, telefono, estatus, id_inm, servicios, modalidad_oferta,
+		valor_total, valor_metro2, observaciones, superficie_metros2,
+		tipo_inmueble, ubicacion, titulo_oferta, no_ext, no_int
+		FROM
+		oferta_ovie.inmobiliaria
+		<if test="estatus!=null">
+			WHERE estatus =#{estatus}
+		</if>
+		;
+	</select>
+		<select id="selectByID" resultType="mx.org.inegi.geo.ovie.domain.OfertaInmobiliaria">
+		SELECT nombre,
+		correo_electronico, calle_inmueble,
+		no_ext, no_int,
+		colonia, delegacion,
+		cp, telefono, estatus, id_inm, servicios, modalidad_oferta,
+		valor_total, valor_metro2, observaciones, superficie_metros2,
+		tipo_inmueble, ubicacion, titulo_oferta, no_ext, no_int
+		FROM
+		oferta_ovie.inmobiliaria
+			WHERE id_inm =#{id_inm};
+	</select>
+	<select id="selectByTitle"   resultType="java.util.LinkedHashMap">
+		SELECT id_inm, titulo_oferta, nombre
+		FROM oferta_ovie.inmobiliaria
+	</select>
+	<select id="selectImg" resultType="mx.org.inegi.geo.ovie.domain.FotosInmobiliaria">
+		SELECT gid, imagen,
+		id_inm FROM
+		oferta_ovie.fotos_inmobiliaria WHERE
+		id_inm=#{id_inm}
+	</select>
+</mapper>

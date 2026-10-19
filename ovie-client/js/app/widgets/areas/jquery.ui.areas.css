@@ -1,0 +1,35 @@
+@import url('css/spriteOVIE.css');
+
+.areas-mainContainer{
+    width: 100%;
+	/*height:100%;*/
+	overflow-y:auto;
+   /* max-height:250px;
+	overflow: auto;*/
+}
+
+.areas-mainContainer .secondary-content {
+    float: right;
+    color: #E2007A;
+}	
+
+.areas-Row:hover{
+	background:#F9DCE8;
+	cursor: pointer;
+}
+
+.sinAreas{
+	height: 85px;
+    background: #F3F3F3;
+    text-align: center;
+    padding: 26px;
+}
+
+.areaName-field{
+    width: 85% !important;
+    border-color: white !important;
+}
+.areas-Row.hide{
+    display: none;
+}
+

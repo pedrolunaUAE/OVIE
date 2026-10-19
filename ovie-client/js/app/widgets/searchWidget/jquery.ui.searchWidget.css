@@ -1,0 +1,128 @@
+.custom-searchWidget{
+	width:100%;
+	float:left;
+}
+.sa-search-container{
+	width: 100%;
+    float: left;
+	/*height: 591px !important;*/
+}
+
+.sa-search-container .card-content{
+	 border: 2px solid #EEE;	
+}
+
+.sa-search-input{
+	float: left;
+    width: 100%;
+	padding-right: 25px;
+	color:#333;
+}
+.sa-search-btn{
+	margin-left: -28px;
+	cursor:pointer;
+}
+.sa-clearsearch-btn{
+	margin-left: -28px;
+	cursor:pointer;
+	display:none;
+}
+.card-content{
+	float:left;
+	width:100%;	
+}
+.contentSearch{
+	padding:0px !important;
+	display:none;
+	
+    overflow-y: auto;
+    float: left;
+    width: 100%;
+}
+.sa-clearsearch-btn{
+	float:left;
+	margin-top: -14px;
+    height: 24px;
+	margin-left:-31px;
+}
+.custom-searchWidget.showing-results .contentSearch{
+	display:block;
+}
+.custom-searchWidget.showing-results .sa-search-btn{
+	display:none;
+}
+.custom-searchWidget.showing-results .sa-clearsearch-btn{
+	display:block;
+}
+
+.contentSearch .collection-item{
+	cursor:pointer;
+	margin-top: 7px;
+	border: 2px solid #EEE;
+	
+}
+.contentSearch .collection-item:hover{
+	background-color:#F9DCE8;
+}
+.contentSearch .collection{
+	margin:0px;
+	border:none;	
+}
+.contentSearch .secondary-content{
+	right:0px !important;	
+}
+
+.contentSearch .collection-item.avatar{
+	min-height: 60px;
+}
+.sa-search-detail{
+	padding:14px 17px 14px 17px;
+	float:left;
+	background-color: #F3F3F3;
+	width:100%;
+	/*margin-top: -20px;*/
+}
+.sa-search-detail .chip{
+	color:#FFF;
+	background-color:#E2007A;
+	margin: 2px 2px 2px 2px;
+	cursor:pointer;
+}
+.sa-search-detail .chip:hover{
+	background-color: #ffab40;;	
+}
+
+/* Buscador de actividades */
+.collection-item.avatar .activity-label{
+	font-size: 13pt;
+    color: #3e3f41;
+}
+
+.collection-item.avatar .activity-clave{
+	color: #e2007a;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+.collection .collection-item:last-child{
+    border-bottom: 2px solid #eeeeee !important;
+}
+
+/*buscador de actividades seleccionar elemento*/
+.collection .collection-item.active {
+    background-color: #E2007A;
+    color: #eafaf9;
+}
+
+.collection-item.active .activity-label{
+	color:#FFF;
+}
+
+.collection-item.active .activity-clave{
+	color:#FFF;
+}
+
+.collection-item.active .cve-title{
+	color:#CDDC39  !important;
+}
+

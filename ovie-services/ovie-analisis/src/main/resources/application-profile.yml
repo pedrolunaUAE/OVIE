@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      pool-name: ovieAnalisisPool
+    url: #agregar conexión a base de datos ejemplo: jdbc:postgresql://esquema:puerto/base_de_datos
+    driver-class-name: org.postgresql.Driver
+    username: #agregar usuario a base de datos
+    password: #agregar contraseña de base de datos
+
+logging:
+  config: "classpath:log4j2-profile.xml"
+
+mail:
+  protocol: smtps
+  starttls: true
+  host: #agregar host de correo electronico
+  port: #agregar puerto de comunicacion del host de correo electronico
+  auth: true
+  from: #agregar correo electronico del remitente
+  pass: #agregar contraseña del correo electronico del remitente
+
+planeacion:
+  allowed-origins:
+    #agregar la lista de los orígenes permitidos para las solicitudes de servicios REST
+    #ejemplo
+    #- "http://localhost"

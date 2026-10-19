@@ -1,0 +1,151 @@
+.template_ovie_mapping{
+    background:url("../img/mapping.png") top left no-repeat;
+}
+
+.tom_polygon{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -10px;
+}
+
+.tom_point{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -175px;
+}
+.tom_line{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -76px;
+}
+.tom_polygon:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -274px;
+}
+
+.tom_point:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -208px;
+}
+.tom_line:hover{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -110px;
+}
+
+
+.sectionButton_active .tom_polygon{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -241px;
+}
+
+.sectionButton_active .tom_point{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -142px;
+}
+.sectionButton_active .tom_line{
+	width: 23px;
+    height: 23px;
+    background-position: -10px -43px;
+}
+
+.ovie_mapping.{
+	
+}
+.ovie_mapping .Buttons{
+	position: absolute;
+	bottom: 35px;
+	right: 15px;
+	z-index: 1500;
+	background: #fff;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    -moz-box-shadow: 1px 1px 2px 0px #555;
+    -webkit-box-shadow: 1px 1px 2px 0px #555;
+    box-shadow: 1px 1px 2px 0px #555;
+}
+.ovie_mapping .sectionButton{
+	
+    padding: 4px;
+    border:1px solid #DDD
+
+}
+.ovie_mapping .sectionButton:hover{
+	background:#eee;
+}
+.ovie_mapping .sectionButton.Border_top{
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.ovie_mapping .sectionButton.Border_middle{
+	
+}
+.ovie_mapping .sectionButton.Border_bottom{
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.ovie_mapping .Modal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    /*top: -70%;*/
+    /*width: 200px;*/
+    z-index: 3000;/*99999;*/
+}
+.ovie_mapping .Modal .contOL{
+    padding-top: 5px;
+}
+.ovie_mapping .inputItem{
+    background-color: transparent;
+    border: 1px solid #DDDDDD;
+    color: #555555;
+    font-size: 120%;
+    height: 23px;
+    overflow: hidden;
+    padding-left: 3px;
+    /*position: absolute;
+    right: 45px;
+    top: 4px;*/
+    width: 85%;
+    font-family: arial;
+}
+.ovie_mapping .closeLineTime{position:absolute;top:2px;right:5px}
+.ovie_mapping .titleOL{font-weight:bold;font-size: 120%;}
+.ovie_mapping .Modal-window{
+    box-shadow: 0px 0px 6px 0 #555555;
+    background: none repeat scroll 0 0 white;
+    margin: 0px 0 0px;/*margin: 50px 0 30px;*/
+    position: relative;
+    text-align: center;
+    font-size: 78%;
+    padding: 10px 10px 10px 10px;
+    position:absolute;
+}
+
+.ovie_mapping .Notifications{display: block;margin-left: auto;margin-right: auto;position: relative;top: -100%;width: 300px;z-index: 5000;}
+.ovie_mapping .NotificationsIE{display: block;margin-left: auto;margin-right: auto;position: relative;top: 0px;width: 300px;z-index: 5000;}
+.ovie_mapping .Notification{
+    background: none repeat scroll 0 0 white;
+    box-shadow: 0 0 6px 0 #555555;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    top:0px;
+    border-radius: 0px 0px 10px 10px;
+}

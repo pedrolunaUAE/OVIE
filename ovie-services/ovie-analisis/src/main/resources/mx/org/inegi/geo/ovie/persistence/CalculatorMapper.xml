@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.CalculatorMapper">
+
+	<select id="getVariable" resultType="java.util.LinkedHashMap">
+		SELECT nombre as name ,alias,unidad as units,id,id_tipo as type
+		FROM
+		ovie_web.cat_variable_cal
+		<choose>
+			<when test="sup==0">
+				WHERE id_tipo=1
+			</when>
+			<otherwise>
+				WHERE superior=#{sup}
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="getsql" resultType="String">
+		SELECT sql
+		FROM ovie_web.cat_variable_cal
+		WHERE id=#{di}
+	</select>
+
+	<select id="getValor" resultType="float">
+		${sql}
+	</select>
+
+	<select id="getValorGiro" resultType="float">
+		${sql}
+	</select>
+
+</mapper>

@@ -1,0 +1,19 @@
+.fichaContainer{
+    width:200px;
+    height:230px;
+    border:1px solid #e2007a;
+}
+
+.marginRow{
+    margin-bottom:0px !important;
+}
+
+.marginRow .title{
+    color: #e2007a;
+    font-weight: 500;
+}
+
+.marginRow .data{
+    color: grey;
+    margin-top: -4px; 
+}

@@ -1,0 +1,149 @@
+#searchProveedSecond{
+	width:100%;
+	height:301px;
+	background-color:#FFF;
+	overflow-y: auto;
+}
+#searchProveed{
+	width:100%;
+	height:301px;
+	background-color:#FFF;
+	overflow-y: auto;
+}
+#proveed_areaMap{
+	width:100%;
+	height:400px;
+	
+}
+#proveed-container .rowBack{
+	display: none;
+	position: absolute;
+    top: 30px;
+    left: 5px;
+}
+#proveed-container #headerallDataProveed{
+	display: none;
+}
+#proveed-container #headersearchActEcoProveed{
+	display:none;
+	margin-left: 40px;
+}
+#proveed-container .sa-search-container{
+	margin-top: 10px;
+}
+#proveed-container #sa_detail_searchActEcoProveed {
+	position: relative;
+    left: -10px;
+    width: 110%;
+}
+#searchProveedSecond .act-item{
+	color:#555;
+}
+#searchProveedSecond .act-item.active{
+	color:#FFF;
+}
+#searchProveed .act-item{
+	color:#555;
+}
+#searchProveed .act-item.active{
+	color:#FFF;
+}
+
+#proveed-container #title{
+	color: #757575;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#proveed-container .titleResults-Provider{
+	color: #757575;
+    font-size: 120%;
+    font-weight: bold;
+}
+.infoProviders .cellProvider{
+	color: #555 !important;
+}
+.infoProviders .headProvider{
+	    color: #FFF;
+    background: #EC7DAB;
+	text-align: center;
+    border: 2px solid #fff;
+}
+.infoProviders tbody{
+	font-size: 90%;
+}
+#proveed-container #proveed-geoAreaList_container{
+	float: right;
+}
+#proveed-container #proveed-geoAreaList{
+	
+}
+#proveed-container .itemProvider{
+	cursor: pointer;
+}
+#proveed-container .itemProvider.selected{
+	background-color: #DDDDDD;
+}
+#proveed-container .proveedor-message-container{
+    text-align: center;
+    padding: 25px;
+    background: #F3F3F3;
+}
+#proveed-container .blocker{
+	text-align: center;
+	display: none;
+}
+#proveed-container .blocker .blocker-container{
+	    padding: 35px;
+}
+
+#proveed-container .blocker .spinner-layer{
+	border-color: #E2007A;
+}
+#proveed-container .blocker .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+#proveed-container .proveedor-mesage{
+	display: none;
+}
+#proveed-container .blocker .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;
+}
+#proveed-container .proveedor-export{
+	display: none;
+}
+#proveed-container .exportPdf{
+	background-color: #E2007A;
+    /*margin-top: 20px;*/
+}
+#proveed-container .exportPdf .image{
+	margin-top:-5px;
+}
+#proveed-container .exportPdf .label{
+	float:right; margin-top:1px;
+}
+
+#proveed-geoAreaList .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+
+#proveed-geoAreaList .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+#proveed-container #searchProveedAreas{
+	padding-top: 10px;
+}
+#proveed-container #sa_detail_searchProveedAreas{
+	position: relative;
+    left: -10px;
+    width: 110%;
+}

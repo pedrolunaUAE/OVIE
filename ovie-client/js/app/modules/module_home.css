@@ -1,0 +1,282 @@
+@import url('../css/sprites/ovieSprite-home.css');
+@import url('../../../img/home/sprite-home/spriteHome.css');
+
+/*Nuevo home*/
+.home-container .section .BG{
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    background-image: url(../../../img/home/homeBG.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    /* right: 0px; */
+    /*height: 100%;*/
+    height: 805px;
+    z-index: 0;
+}
+
+.home-container .section{
+    position: relative;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.home-container{
+    position: relative;
+    width: 100%;
+    top:-15px;
+    /*
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow:auto;*/
+}
+
+.home-greyBG{
+    width: 50%;
+    height: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+.ovie-title-definicion2{
+    padding-top: 35px;
+    /*font-family: arial;*/
+    /*Solución temporal*/
+    font-size: 110%;
+    /*text-align: center;*/
+    color: grey;
+}    
+ 
+/*tamaño tablet*/   
+@media only screen and (max-width: 993px) and (min-width: 602px){
+   .home-greyBG {
+        width: 80%;
+   }
+   
+   .ovie-title-definicion2{
+        font-size: 140%;
+   }
+   
+   .info_contact{
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+   }
+}
+
+/*tamaño celular*/
+@media only screen and (max-width: 601px) and (min-width: 0px){
+    .home-greyBG {
+        width: 80%;
+   }
+   .info_contact{
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+   }
+   
+   .spaces{
+    display:none;
+   }
+   
+   .delegacionB{
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+        background-image : url(../../../img/home/sprite-home/delegacionS.png);
+	}
+    
+    .coloniaB{
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+        background-image : url(../../../img/home/sprite-home/coloniaS.png);
+	}
+    
+    .poligonoB{
+        background-repeat: no-repeat;
+        width: 80px;
+        height: 80px;
+        background-image : url(../../../img/home/sprite-home/poligonoS.png);
+	}
+
+    .comercioB{
+        background-repeat: no-repeat;
+        width: 62px;
+        height: 62px;
+        background-image : url(../../../img/home/sprite-home/comercioS.png);
+	}
+    
+     .industriaB{
+        background-repeat: no-repeat;
+        width: 62px;
+        height: 62px;
+        background-image : url(../../../img/home/sprite-home/industriaS.png);
+	}
+    
+     .servicioB{
+        background-repeat: no-repeat;
+        width: 62px;
+        height: 62px;
+        background-image : url(../../../img/home/sprite-home/servicioS.png);
+	}
+}
+
+/*Fin nuevo home*/
+
+
+.home-infographic-element{
+    margin-top: -100px;
+    margin-left: -116px;
+}
+
+.guion{
+    display:inline-block;
+}
+.home-blocks-txt{
+     position: absolute;
+     text-align: -webkit-left;
+     font-family: arial;
+     line-height: normal;
+     color: #717070;
+}
+
+.info_contact{
+    padding-bottom: 8px;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    font-size: 110%;
+    color: #ffffff;
+    text-align: center;
+}
+.info_contact .col{
+    background: #e2007a;
+}
+.home-dirigido-txt{
+    width: 300px;
+    margin-left: 189px;
+    margin-top: 42px;
+}
+
+.home-features-txt{
+    width: 300px;
+    margin-left: 176px;
+    margin-top: 27px;
+    font-size: 10pt;
+}
+
+.home-beneficios-txt{
+    width: 311px;
+    margin-left: 60px;
+    font-size: 10pt;
+    margin-top: 25px;
+}
+
+.home-sources-txt{
+    width: 311px;
+    margin-left: 60px;
+    font-size: 10pt;
+    margin-top: 27px;
+}
+
+.home-aboutuse-txt{
+    width: 311px;
+    margin-left: 179px;
+    font-size: 10pt;
+    margin-top: 50px;
+}
+
+.block-title{
+    font-family: arial;
+    font-weight: bold;
+    font-size: 13pt;
+    padding: 0px 10px !important;
+}
+
+.block-txt{
+    padding: 0px 10px !important;
+    font-family: arial;
+    font-size: 10pt;
+    color: grey;
+}
+
+.ovie-footer-txt{
+    font-family: arial;
+    font-size: 7pt;
+    color: #757575;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.ovie-footer-line{
+    width: 100%;
+    height: 3px;
+    text-align: justify;
+    background-color: #e2007a;
+    margin-top:20px;
+}
+
+#circle-footer{
+    position: absolute;
+    top: -10px;
+    right: 0px;
+}
+.home-text-right{
+    position: absolute;
+    left: 145px;
+    width: auto;
+    top: 23px;
+    bottom: 47px;
+    right: 47px;
+    font-size: 87%;
+    text-align: justify;
+    color: #717070;
+}
+.home-title-right{
+        display: block;
+        font-size: 115%;
+}
+
+.home-text-left{
+    position: absolute;
+    left: 60px;
+    width: auto;
+    top: 23px;
+    bottom: 47px;
+    right: 140px;
+    font-size: 87%;
+    text-align: justify;
+    color: #717070;
+}
+.home-title-left{
+        display: block;
+        font-size: 115%;
+}
+
+.home-text-left ul{
+    margin-top: 0px !important;
+    line-height: 12px;
+    text-align: left;
+}
+
+.home-text-right ul{
+    margin-top: 0px !important;
+    line-height: 12px;
+    text-align: left;
+}
+
+.home-text-left .margin{
+    margin-left: 10px;
+}
+.home-text-right .margin{
+    margin-left: 10px;
+}

@@ -1,0 +1,137 @@
+.laboral-areaMap{
+    height: 611px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.laboral-results{
+	width:100%;
+    margin-top:0px;
+	background-color:#FFF;
+	height:auto;
+}
+
+#sa_results_laboralSearchArea{
+    height: 382px !important;
+    overflow-y: auto !important;
+}
+
+#sa_detail_laboralSearchArea{
+    width: 110%;
+    height: 100px;
+    position: relative;
+    left: -10px;
+}
+
+#laboral-geoArea_list_container{
+	height:220px;	
+}
+#laboral-geoArea_list .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+#searchArea{
+    padding-top:10px;
+}
+#searchArea .collection-item{
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#laboral-geoArea_list .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+#sa_results_searchArea{
+    height: 367px !important;
+}
+#sa_detail_searchArea{
+    position: relative;
+    left: -10px;
+    width: 110%;
+}
+
+#laboralSearchArea{
+    margin-top: 4px;
+}
+
+/*submenus tabs*/
+#container_mnu_laboral .tabSection .itemTab.active{
+    border-bottom: 3px solid #e2007a;
+    /* font-weight: bold; */
+    color: #e2007a;
+}
+
+#container_mnu_laboral .tabSection {
+    border-bottom: 1px solid #9c9e9f;
+}
+#container_mnu_laboral .tabSection .itemTab{
+    display: inline-block;
+    /*margin-right: 30px;*/
+    color: #7b7878;
+    font-size: 120%;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    /*padding-right: 10px;*/
+    cursor: pointer;
+}
+
+#container_mnu_laboral .moduleSection .module{
+    display:none;    
+}
+
+#container_mnu_laboral .moduleSection .module.show{
+    display:block;
+   
+}
+
+#lab_registrar_Container{
+    /*margin-top: 25px;*/
+    padding-top:20px;
+    background: #fbfbfb;
+    border: .5px solid grey;
+}
+
+/*Login-logout icon*/
+#lab_itemLogin{
+    color: #d22626;
+    /*color: #4CAF50;*/
+    float: right;
+    margin-left: 18px;
+    /*margin-top: -5px;*/
+    /*display:none;*/
+    cursor:pointer;
+}
+
+/*filtros en buscador*/
+.barTitle{
+    height: 25px;
+    background: #f3f3f3;
+    margin-top: 5px;
+    margin-bottom: -7px;
+}
+
+.labFilterTitle{
+    color: #e2007a;
+    font-weight: bold;
+    margin-left: 20px;
+    padding-top: 2px;
+}
+
+/*tablas de la ficha pop-up consulta*/
+
+#labPopup_container{
+    max-height: 176px;
+    max-width: 250px;
+    overflow-y: auto; 
+}
+
+.labPopup_Row{
+    border-bottom: 1px solid #eaeaea;
+}
+
+#labTxt_verMas{
+    margin-left: 4px;
+    float: left;
+    margin-top: -3px;
+}

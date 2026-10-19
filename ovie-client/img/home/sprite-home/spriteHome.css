@@ -1,0 +1,73 @@
+@charset "utf-8";
+	.servicioS
+{
+	background-image : url(servicioS.png);
+	background-repeat : no-repeat;
+}
+.comercioS
+{
+	background-image : url(comercioS.png);
+	background-repeat : no-repeat;
+}
+.comercioB
+{
+	background-image : url(comercioB.png);
+	background-repeat : no-repeat;
+	width:86px;
+    height:86px;
+}
+.industriaS
+{
+	background-image : url(industriaS.png);
+	background-repeat : no-repeat;
+}
+.industriaB
+{
+	background-image : url(industriaB.png);
+	background-repeat : no-repeat;
+	width:86px;
+    height:86px;
+}
+.delegacionS
+{
+	background-image : url(delegacionS.png);
+	background-repeat : no-repeat;
+}
+.servicioB
+{
+	background-image : url(servicioB.png);
+	background-repeat : no-repeat;
+	width:86px;
+    height:86px;
+}
+.coloniaS
+{
+	background-image : url(coloniaS.png);
+	background-repeat : no-repeat;
+}
+.delegacionB
+{
+	background-image : url(delegacionB.png);
+	background-repeat : no-repeat;
+	width:116px;
+    height:116px;
+}
+.coloniaB
+{
+	background-image : url(coloniaB.png);
+	background-repeat : no-repeat;
+	width:116px;
+    height:116px;
+}
+.poligonoS
+{
+	background-image : url(poligonoS.png);
+	background-repeat : no-repeat;
+}
+.poligonoB
+{
+	background-image : url(poligonoB.png);
+	background-repeat : no-repeat;
+	width:116px;
+    height:116px;
+}

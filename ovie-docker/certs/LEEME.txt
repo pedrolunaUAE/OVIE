@@ -1,0 +1,10 @@
+Coloque aquí los certificados raíz / intermedios de la red institucional
+(extensión .crt, .cer o .pem) si la compilación falla con:
+
+  PKIX path building failed
+  unable to find valid certification path to requested target
+
+Al reconstruir (docker compose build --no-cache ovie-services) se importan
+automáticamente al almacén de confianza de Java del contenedor de compilación.
+
+Si no hay inspección TLS en su red, deje esta carpeta como está.

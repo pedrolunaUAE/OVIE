@@ -1,0 +1,675 @@
+@import url('adjustments.css');
+@import url('sprites/main-sprite.css');
+@import url('sprites/spriteOVIE.css');
+@import url('sprites/ovie-sprite-tools.css');
+@import url('sprites/inmobSprite.css');
+
+#main{
+	overflow: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+.ms-header{
+	  position: absolute;
+	  width: 100%;
+	  padding-top: 3px;	
+}
+.pdfClass{
+    position: absolute;
+    top: -270px;
+    left: 0px;
+}
+.ms-content{
+	  position: absolute;
+	  top: 270px;
+	  left: 0px;
+	  right: 0px;
+	  bottom: 0px;	
+}
+.header-btnLogout{
+	float:right;
+	cursor:pointer;	
+}
+.header-btnGraph{
+	float:right;
+	cursor:pointer;	
+}
+.header-specialGraph{
+	float:right;
+	cursor:pointer;	
+}
+.ms-header .row{
+	margin-bottom:0px;
+}
+.ms-header nav{
+	color:#333;
+	background-color:#F3F3F3;
+	height: 105px;
+  	line-height: 28px
+}
+.ms-header nav a{
+	color:#333;
+}
+.ms-header .button-collapse, {
+	height:31px;
+}
+
+.ms-header .button-collapse i {
+  font-size: 2.7rem;
+  height: 30px;
+  line-height: 32px;
+}
+
+.ms-header nav ul li:hover, .ms-header nav ul li.active {
+  background-color: rgba(225, 150, 50, 0.7);
+}
+
+.content-display{
+	position:absolute;
+	top:0px;
+	right:0px;
+	left:0px;
+	bottom:0px;
+	border: none;
+	display:none;
+	padding-top: 15px;
+
+}
+
+iframe.content-display {
+	width:100%;
+	height:100%	
+}
+.content-display.active{
+	display:block;	
+}
+.nameUser h6{
+	margin: 0.5rem 0 0.1rem 0;
+}
+
+<!-- Login ----------------------------->
+.login-container{
+	margin-left: auto;
+  	margin-right: auto;
+  	margin-top: 0px;
+  	margin-bottom: 0px;
+  	height: 100%;	
+}
+.login-box{
+	width:100%;
+	height:100%;	
+}
+#login-modal{
+	-webkit-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+	max-height:none;
+
+}
+.login-header{
+	color:#272727;
+	/*background-image:url(img/bg-login.jpg);
+	background-position:center;*/
+	background-color:#CFCFCF;
+}
+#login-panel{
+	padding:10px;
+	
+}
+.login-left-panel{
+	padding-bottom: 15px;
+  	background-color: #EAEAEA;
+  	padding: 7px 0px 14px 10px;
+ 	float: left;
+  	width: 100%;
+	margin-bottom: 10px;
+}
+#spinnerHeader{
+	position:absolute;
+	z-index:1000;
+	left:0px;
+	top:0px;
+	height:5px;
+	width:100%;
+}
+#spinnerHeader .progress{
+	margin:0px;
+	
+}
+
+.versionBeta{
+	position: absolute;
+    top: 134px;
+    left: 19%;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 18px;
+    color: #e2007a;
+}
+
+.pivot{
+	height: 155px;
+	float: left;
+}
+.modal-title{
+	background: #e2007a;
+    color: white;
+    font-size: 16pt;
+    padding: 5px;
+}
+
+.modal-txt{
+	text-align: justify;
+    font-size: 90%;
+    color: #828181;
+}
+
+.modal-container{
+	height:505px !important;
+	width:600px !important;
+	
+}
+.modal-containerAgenda{
+	height:545px !important;
+	width:600px !important;
+	
+}
+/*Temporal*/
+#mnu_analisis{
+	display:none;
+}
+
+#mnu_share{
+	display:none;
+}
+
+/*ocultar los menús de inmobiliaria,agendar y laboral*/
+
+#mnu_inmobiliaria{
+	display:none;
+}
+
+#mnu_laboral{
+	display:none;
+}
+#mnu_agendar{
+	display:none;
+}
+
+.main-logo{
+	/*content:url(img/ovie_logo.jpg);*/
+	/*width:329px;
+	height:152px;*/
+	float:left;
+}
+.width-content{
+	width:1000px;
+	margin-left: auto;
+    margin-right: auto;
+	position: relative;
+}
+.cdmx-logo{
+	/*content: url(img/logo_cdmx.png);*/
+    /*width: 326px;
+    height: 75px;*/
+	
+	width:auto;
+	height:auto;
+    float: left;
+    margin-top: 15px;
+    margin-left: 34px;
+}
+.sedeco-logo{
+	
+	/*content: url(img/sedeco_logo.png);*/
+    /*width: 75px;
+    height: 75px;*/
+	width:auto;
+	height:auto;
+    float: right;
+    margin-top: 45px;
+    margin-right: 23px;
+}
+.inegi-logo{
+	/*content: url(img/inegi_logo.png);*/
+    /*width: 136px;
+    height: 75px;*/
+	width:auto;
+	height:auto;
+    float: right;
+    margin-top: 45px;
+    margin-right: 0px;
+}
+.header-title{
+	width: auto;
+    float: right;
+    text-align: right;
+    padding-right: 20px;
+    clear: both;
+    margin-top: -23px;
+	padding-top:2px;
+    padding-left: 20px;
+	color:#FFF;
+	
+	box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+	
+	position: relative; 
+    height: 0px; 
+    width: auto; 
+    border-left: 40px solid transparent; 
+    border-right: 0px solid transparent; 
+    border-bottom: 25px solid #E2007A; 
+	
+}
+.header-bottombar{
+	width:100%;
+	float:left;
+	height:3px;
+	background-color:#E2007A;
+	
+}
+.ovie-nav-btn{
+	float: left;
+    width: 76px;
+    margin-left: 6px;
+    padding:10px 5px 30px 10px;
+	cursor:pointer;
+	height: 103px;
+	overflow:hidden;
+	
+	box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+}
+.ovie-nav-btn:hover{
+	background-color:#FCEEF4;
+}
+.ovie-nav-btn[status=active]{
+	background-color:#F9DCE8;
+}
+.ovie-nav-btn[status=active] .ovie-nav-btn-img{
+	display:block;	
+}
+.ovie-nav-btn[status=inactive] .ovie-nav-btn-img{
+	display:none;	
+}
+
+.ovie-nav-btn[status=active] .btn-img-inactive{
+	display:none;	
+}
+.ovie-nav-btn[status=inactive] .btn-img-inactive{
+	display:block;	
+}
+.ovie-nav-btn:first-of-type{
+	margin-left:0px;
+	
+}
+.ovie-nav-btn-img{
+    margin-left: auto;
+    margin-right: auto;
+}
+.ovie-nav-btn label{
+	font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    float: left;
+	width: 100%;
+    margin-top: 3px;
+}
+.ovie-nav-btn[status=active] label{
+	color:#333;
+	font-weight:bold;
+}
+.ms-header-hidden{
+	position: absolute;
+    top: 0px;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 100;
+}
+.ms-header-hidden nav{
+	background-color:#FFF;
+}
+.modal input{
+	color:#555;	
+}
+
+#mnu_addGeo{
+	width:100px;
+}
+
+
+.spinnerExport{
+	text-align: center;
+	display: none;
+	position:fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 5000;
+}
+.spinnerExport .export-container{
+	    /*padding: 35px;*/
+}
+
+.spinnerExport .spinner-layer{
+	border-color: #E2007A;
+}
+.spinnerExport .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+
+.spinnerExport .image{
+	position: absolute;
+    margin-left: 19px;
+    margin-top: 18px;
+}
+
+@media only screen and (max-width: 601px) and (min-width: 0px){
+	.width-content{
+		width:100%;
+	}
+	.ovie-nav-btn[status="inactive"]{
+		display: none;
+	}
+	.ovie-nav-btn[status="active"]{
+		position: absolute !important;
+		left: 60px !important;
+		right: 0px !important;
+		width: auto !important;
+	}
+	
+	.ovie-nav-btn[status="active"] .ovie-nav-btn-img{
+		margin-top: 0px !important;
+		left: 14px !important;
+		position: absolute !important;
+	}
+	.ovie-nav-btn[status="active"] label{
+		    
+			    margin-top: 0px !important;
+				position: absolute !important;
+				font-size: 100% !important;
+				top: 20px !important;
+				width: auto;
+				left: 55px;
+				right: 10px;
+				text-align: left;
+	}
+	.versionBeta{
+		        left: 13% !important;
+				top: 77px !important;
+			    /* right: 17px !important; */
+	}
+	.main-logo{
+		/*content:url(img/ovie_logo_mobile.jpg);*/
+		    width: 54% !important;
+			margin-top: 6px !important;
+			max-width: 170px;
+	}
+	
+	.cdmx-logo{
+			/*content: url(img/logo_cdmx_mobile.png);*/
+		    width: 40% !important;
+			margin-top: 17px !important;
+			margin-left: 18px !important;
+	}
+	.sedeco-logo{
+		            width: 12% !important;
+					margin-right: 10px !important;
+					margin-top: 15px !important;
+					max-width: 45px;
+	}
+	.inegi-logo{
+			    content: url(img/inegi_logo_mobile.png);
+				width: 13% !important;
+				margin-right: 15px !important;
+				margin-top: 15px !important;
+				max-width: 51px;
+	}
+	.modal-container {
+		height: 90% !important;
+		width: 90% !important;
+	}
+	.button-collapse{
+		    height: auto;
+			margin-left: 12px;
+			margin-top: 9px;
+	}
+	
+	.ovie-sprite-tools-help{ width:30px; height:30px; background-position:-10px -1170px; }
+	.ovie-sprite-tools-home{ width:30px; height:30px; background-position:-11px -2369px; }
+	.ovie-sprite-tools-analysis{ width:30px; height:30px; background-position:-11px -2491px; }
+	.ovie-sprite-tools-share{ width:30px; height:30px; background-position:-10px -1370px; }
+	.ovie-sprite-tools-graph{ width:30px; height:30px; background-position:-10px -1410px; }
+	.ovie-sprite-tools-swap{ width:30px; height:30px; background-position:-10px -1649px; }
+	.ovie-sprite-tools-group{ width:30px; height:30px; background-position:-10px -1689px; }
+	.ovie-sprite-tools-market{ width:30px; height:30px; background-position:-9px -1809px;}
+	.ovie-sprite-tools-addGeo{ width:30px; height:30px; background-position:-10px -1730px; }
+	.ovie-sprite-tools-swap{ width:30px; height:30px; background-position:-10px -1648px;}
+	.ovie-sprite-tools-calculator{ width:30px; height:30px; background-position:-10px -2050px; }
+	.ovie-sprite-tools-agendar{ width:30px; height:30px; background-position:-10px -2132px; }
+	.ovie-sprite-tools-help{ width:30px; height:30px; background-position:-10px -2290px; }
+	.ovie-sprite-tools-inmobiliaria{ width:30px; height:30px; background-position:-11px -1971px; }
+	.ovie-sprite-tools-laboral{ width:30px; height:30px; background-position:-10px -1889px; }
+	
+	.ms-header nav{
+		height: 50px;
+		position: absolute;
+		top: 120px;
+	}
+	.header-bottombar{
+		    position: absolute;
+			top: 117px;
+	}
+	.ovie-nav-btn{
+		height:50px;
+	}
+	.ms-content{
+		top:173px;
+	}
+	#mobile-demo .ovie-sprite-tools {
+		padding-top:-18px;
+	}
+	#mobile-demo .iconChoice{
+		display: inline-block;
+		position: absolute;
+		top: -8px;
+		/* margin-right: 5px; */
+		/* left: -38px; */
+		/* float: left; */
+		left: -40px;
+	}
+	#mobile-demo .labelChoice{
+		display: inline-block;
+		line-height: 15px;
+		margin-left: 50px;
+	}
+
+	.ms-header nav ul li:hover, .ms-header nav ul li.active{
+		background-color: #F9DCE8;
+	}
+	#mobile-demo li{
+		border-bottom: 1px solid #e0dede;
+		position: relative;
+	}
+	#mobile-demo li.Active{
+		background-color: #F9DCE8;
+	}
+	#mobile-demo .opcChoice{
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-left: 30px;
+		position: relative;
+		line-height: 15px;
+		top: 25px;
+	}
+	.header-title{
+		    border-bottom: 25px solid transparent !important;
+			
+	}
+	.nav-wrapper .button-collapse{
+		height: 43px;
+		color: #4a4f50;
+	}
+	.nav-wrapper .button-collapse i{
+		    line-height: 35px;
+			height: 40px;
+	}<div id="laboral-container" class="width-content"><div class="row"><div class="col s12 tabSection"><div class="row" style="margin-bottom:0px"><div class="col s6 m6 l6"><div id="itemTab1" step="1" module="consultar" class="itemTab  active">Consultar</div></div><div class="col s6 m6 l6"><div id="itemTab3" step="3" module="modificar" class="itemTab" style="float:right; display:none">Modificar oferta</div><div id="itemTab2" step="2" module="registrar" class="itemTab" style="float:right; margin-right:20px">Agregar nueva oferta</div></div></div></div></div><div class="row moduleSection"><div class="col s12 module show" id="consultar_Container"><div class="row"><div class="col s12 m5" style="margin-top:-7px"><div id="laboral-tabArea" class="card customTab" style="height: 610px;"><div class="header"><div class="option marginTab active" id="headerlaboralSearchArea" ref="laboralSearchArea">Buscar en el mapa</div><div class="separator"></div><div class="option " id="headerlaboral-geoArea_list" ref="laboral-geoArea_list">Áreas de selección</div></div><div class="content"><div class="optionContainer  active notOverflow  custom-searchWidget search-asbox" id="laboralSearchArea">  	<div class="sa-search-container" style="height: 610px;">    		<div class="card-content">    			<input id="sa_search_input_laboralSearchArea" class="sa-search-input" placeholder="Buscar áreas">				<i id="sa_search_btn_laboralSearchArea" class="material-icons sa-search-btn">search</i>				<i id="sa_clearsearch_btn_laboralSearchArea" class="sa-clearsearch-btn small mdi-content-clear"></i>    			<div class="search-results"></div>  		</div>    		<div id="sa_results_laboralSearchArea" style="height:550px;overflow-y:auto" class="card-action contentSearch">    		</div>  		<div id="sa_detail_laboralSearchArea" class="sa-search-detail" style="display:none">    		</div>  	</div></div><div class="optionContainer " id="laboral-geoArea_list"><ul class="collection areas-mainContainer z-depth-1 sinAreas">No hay áreas para mostrar</ul></div><div class="col s12 Spinner"><div class="Spinner-container"><img class="image" src="img/icons/mark.png"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div><div class="label">Cargando..</div></div></div></div></div></div><div class="col s12 m7"><div id="laboral_areaMap" class="laboral-areaMap olMap ovie_mapping card"><div id="OpenLayers_Map_5_OpenLayers_ViewPort" class="olMapViewport olControlDragPanActive olControlZoomBoxActive olControlPinchZoomActive olControlNavigationActive olControlMousePositionActive olControlActive olControlSelectFeatureActive" style="position: relative; overflow: hidden; width: 100%; height: 100%;"><div id="OpenLayers_Map_5_OpenLayers_Container" style="position: absolute; z-index: 749; left: 0px; top: 0px;"><div id="OpenLayers_Layer_WMS_17" dir="ltr" class="olLayerDiv olLayerGrid" style="position: absolute; width: 100%; height: 100%; z-index: 100;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11036283.89075,2152466.715325,-10997148.132275,2191602.4738&amp;WIDTH=256&amp;HEIGHT=256" id="null" style="visibility: inherit; opacity: 1; position: absolute; left: 256px; top: 294px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas3.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11075419.649225,2152466.715325,-11036283.89075,2191602.4738&amp;WIDTH=256&amp;HEIGHT=256" id="null" style="visibility: inherit; opacity: 1; position: absolute; left: 0px; top: 294px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10997148.132275,2152466.715325,-10958012.3738,2191602.4738&amp;WIDTH=256&amp;HEIGHT=256" id="null" style="visibility: inherit; opacity: 1; position: absolute; left: 512px; top: 294px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11036283.89075,2191602.4738,-10997148.132275,2230738.232275&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 256px; top: 38px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11075419.649225,2191602.4738,-11036283.89075,2230738.232275&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 0px; top: 38px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10997148.132275,2191602.4738,-10958012.3738,2230738.232275&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 512px; top: 38px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11036283.89075,2113330.95685,-10997148.132275,2152466.715325&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 256px; top: 550px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11036283.89075,2230738.232275,-10997148.132275,2269873.99075&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 256px; top: -218px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas3.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11075419.649225,2113330.95685,-11036283.89075,2152466.715325&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 0px; top: 550px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11075419.649225,2230738.232275,-11036283.89075,2269873.99075&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 0px; top: -218px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10997148.132275,2113330.95685,-10958012.3738,2152466.715325&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 512px; top: 550px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10997148.132275,2230738.232275,-10958012.3738,2269873.99075&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 512px; top: -218px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10958012.3738,2152466.715325,-10918876.615325,2191602.4738&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 768px; top: 294px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10958012.3738,2191602.4738,-10918876.615325,2230738.232275&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 768px; top: 38px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10958012.3738,2113330.95685,-10918876.615325,2152466.715325&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 768px; top: 550px; width: 256px; height: 256px;"><img class="olTileImage" src="http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?LAYERS=MapaBaseTopograficov61_sinsombreado&amp;FORMAT=image%2Fjpeg&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-10958012.3738,2230738.232275,-10918876.615325,2269873.99075&amp;WIDTH=256&amp;HEIGHT=256" style="visibility: inherit; opacity: 1; position: absolute; left: 768px; top: -218px; width: 256px; height: 256px;"></div><div id="OpenLayers_Layer_WMS_19" dir="ltr" class="olLayerDiv olLayerGridSingleTile" style="position: absolute; width: 100%; height: 100%; z-index: 330;"><img class="olTileImage" src="http://gaia.inegi.org.mx/NLB/tunnel/wms/mdm6wms?map=/opt/map/mdm60/puntos_ovie.map&amp;LAYERS=chitosv3&amp;FORMAT=image%2Fpng&amp;SERVICE=WMS&amp;VERSION=1.1.1&amp;REQUEST=GetMap&amp;STYLES=&amp;SRS=EPSG%3A900913&amp;BBOX=-11095793.729643,2122730.4051598,-10973341.610352,2259399.8117092&amp;WIDTH=801&amp;HEIGHT=894" style="visibility: inherit; opacity: 1; position: absolute; left: -133px; top: -149px; width: 801px; height: 894px;"></div><div id="OpenLayers_Layer_Vector_27" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 335; left: 0px; top: 0px;"><svg id="OpenLayers_Layer_Vector_27_svgRoot" width="534" height="596" viewBox="0 0 534 596" style="display: block;"><g id="OpenLayers_Layer_Vector_27_root" transform="" style="visibility: visible;"><g id="OpenLayers_Layer_Vector_27_vroot"></g><g id="OpenLayers_Layer_Vector_27_troot"></g></g></svg></div><div id="OpenLayers_Layer_Vector_36" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 340; left: 0px; top: 0px;"><svg id="OpenLayers_Layer_Vector_36_svgRoot" width="534" height="596" viewBox="0 0 534 596" style="display: block;"></svg></div><div id="OpenLayers_Layer_Vector_45" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 345; left: 0px; top: 0px;"><canvas width="534" height="596" style="width: 534px; height: 596px; visibility: visible;"></canvas></div><div id="OpenLayers_Layer_Vector_RootContainer_75" dir="ltr" class="olLayerDiv" style="position: absolute; width: 100%; height: 100%; z-index: 725; left: 0px; top: 0px;"><svg id="OpenLayers_Layer_Vector_RootContainer_75_svgRoot" width="534" height="596" viewBox="0 0 534 596" style="display: block;"><g id="OpenLayers_Layer_Vector_RootContainer_75_root" transform="" style="visibility: visible;"><g id="OpenLayers_Layer_Vector_RootContainer_75_vroot"></g><g id="OpenLayers_Layer_Vector_RootContainer_75_troot"></g></g><g id="OpenLayers_Layer_Vector_36_root" transform="" style="visibility: visible;"><g id="OpenLayers_Layer_Vector_36_vroot"></g><g id="OpenLayers_Layer_Vector_36_troot"></g></g></svg></div></div><div id="OpenLayers_Control_MousePosition_3" class="olControlMousePosition olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1003;">-98.76136, 19.58895</div><div id="OpenLayers_Control_ScaleLine_4" class="olControlScaleLine olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1003;"><div class="olControlScaleLineTop" style="visibility: visible; width: 65px;">10 km</div><div class="olControlScaleLineBottom" style="visibility: visible; width: 53px;">5 mi</div></div><div id="OpenLayers_Control_53" class="olControl olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1004;"></div><div id="OpenLayers_Control_55" class="olControl olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1005;"></div><div id="OpenLayers_Control_Measure_57" class="olControlMeasure olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1006;"></div><div id="OpenLayers_Control_Measure_59" class="olControlMeasure olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1007;"></div><div id="OpenLayers_Control_SelectFeature_66" class="olControlSelectFeature olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1008;"></div><div id="OpenLayers_Control_SelectFeature_74" class="olControlSelectFeature olControlNoSelect" unselectable="on" style="position: absolute; z-index: 1009;"></div></div><div class="Buttons"><div id="Button_polygon" class="sectionButton Border_top" type="polygon"><div class="template_ovie_mapping tom_polygon "></div></div><div id="Button_point" class="sectionButton Border_middle" type="point"><div class="template_ovie_mapping tom_point "></div></div><div id="Button_line" class="sectionButton Border_bottom" type="line"><div class="template_ovie_mapping tom_line "></div></div></div><div class="ButtonsPan"><div id="Button_zoomin" class="sectionButton Border_top" type="zoomin"><div class="template_ovie_mappingPan tom_zoomin"></div></div><div id="Button_extent" class="sectionButton Border_middle" type="extent"><div class="template_ovie_mappingPan tom_extent"></div></div><div id="Button_zoomout" class="sectionButton Border_bottom" type="zoomout"><div class="template_ovie_mappingPan tom_zoomout"></div></div></div></div></div></div><div class="col s12"><div id="demoQuestionnaire"><div class="questionnaire row"><div class="input-field col s12 m6"><input field="nombre_contacto" id="demoQuestionnaire_item0" required="true" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item0">Nombre del contacto (*)</label></div><div class="input-field col s12 m6"><input field="telefono" id="demoQuestionnaire_item1" required="true" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item1">Teléfono (*)</label></div><div class="input-field col s12 m6"><input field="correo_electronico" id="demoQuestionnaire_item2" required="true" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item2">Correo eléctronico (*)</label></div><div class="titleSection col s12 "><label class="labelTitle">Direccion de la vacante</label></div><div class="input-field col s12 m6"><input field="calle_vacante" id="demoQuestionnaire_item4" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item4">Calle</label></div><div class="input-field col s12 m6"><input field="no_ext" id="demoQuestionnaire_item5" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item5">No. Exterior</label></div><div class="input-field col s12 m6"><input field="no_int" id="demoQuestionnaire_item6" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item6">No. Interior</label></div><div class="input-field col s12 m6"><input field="colonia" id="demoQuestionnaire_item7" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item7">Colonia</label></div><div class="input-field col s12 m6"><input field="delegacion" id="demoQuestionnaire_item8" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item8">Delegación</label></div><div class="input-field col s12 m6"><input field="cp" id="demoQuestionnaire_item9" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item9">Código postal</label></div><div class="input-field col s12 m6"><div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-56fbc0e1-6748-4958-e35b-f58f857a261b" value="Seleccione una opción"><ul id="select-options-56fbc0e1-6748-4958-e35b-f58f857a261b" class="dropdown-content select-dropdown"><li class="disabled"><span>Seleccione una opción</span></li><li class=""><span>Provesional</span></li><li class=""><span>Tecnico</span></li><li class=""><span>Administrativo</span></li><li class=""><span>Ventas</span></li><li class=""><span>Oficios</span></li><li class=""><span>Servicios</span></li><li class=""><span>Industria</span></li></ul><select id="demoQuestionnaire_item10" field="categoria" class="initialized"><option value="-1" disabled="" selected="">Seleccione una opción</option><option field="categoria" value="1">Provesional</option><option field="categoria" value="2">Tecnico</option><option field="categoria" value="3">Administrativo</option><option field="categoria" value="4">Ventas</option><option field="categoria" value="5">Oficios</option><option field="categoria" value="6">Servicios</option><option field="categoria" value="7">Industria</option></select></div><label class="labelInput">Categoria</label></div><div class="input-field col s12 m6"><input field="vacante" id="demoQuestionnaire_item11" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item11">Vacante</label></div><div class="input-field col s12 m6"><input field="total_vacantes" id="demoQuestionnaire_item12" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item12">Total de vacantes</label></div><div class="input-field col s12 m6"><div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-f01d527a-43a4-dc1c-3d98-67da425e1ffa" value="Seleccione una opción"><ul id="select-options-f01d527a-43a4-dc1c-3d98-67da425e1ffa" class="dropdown-content select-dropdown"><li class="disabled"><span>Seleccione una opción</span></li><li class=""><span>hasta $5,000</span></li><li class=""><span>Hasta $10,000</span></li><li class=""><span>hasta $15,000</span></li><li class=""><span>Hasta $20,000</span></li><li class=""><span>Más de $20,000</span></li><li class=""><span>Otro</span></li></ul><select id="demoQuestionnaire_item13" field="sueldo" class="initialized"><option value="-1" disabled="" selected="">Seleccione una opción</option><option field="sueldo" value="1">hasta $5,000</option><option field="sueldo" value="2">Hasta $10,000</option><option field="sueldo" value="3">hasta $15,000</option><option field="sueldo" value="4">Hasta $20,000</option><option field="sueldo" value="5">Más de $20,000</option><option field="sueldo" value="6">Otro</option></select></div><label class="labelInput">Sueldo</label></div><div class="input-field col s12 m6"><textarea field="description_actividades" id="demoQuestionnaire_item14" class="materialize-textarea"></textarea><label class="labelInput" for="demoQuestionnaire_item14">Descripción de actividades</label></div><div class="input-field col s12 m6"><textarea field="perfil_postulante" id="demoQuestionnaire_item15" class="materialize-textarea"></textarea><label class="labelInput" for="demoQuestionnaire_item15">Perfil esperado del postulante</label></div><div class="input-field col s12 m6"><div class="select-wrapper"><span class="caret">▼</span><input type="text" class="select-dropdown" readonly="true" data-activates="select-options-8fb0dfc7-14d3-e2c1-1c37-0a6d217dc420" value="Seleccione una opción"><ul id="select-options-8fb0dfc7-14d3-e2c1-1c37-0a6d217dc420" class="dropdown-content select-dropdown"><li class="disabled"><span>Seleccione una opción</span></li><li class=""><span>Tiempo completo</span></li><li class=""><span>Medio tiempo</span></li><li class=""><span>Abierto</span></li><li class=""><span>Otro</span></li></ul><select id="demoQuestionnaire_item16" field="modalidad" class="initialized"><option value="-1" disabled="" selected="">Seleccione una opción</option><option field="modalidad" value="1">Tiempo completo</option><option field="modalidad" value="2">Medio tiempo</option><option field="modalidad" value="3">Abierto</option><option field="modalidad" value="4">Otro</option></select></div><label class="labelInput">Modalidad de contratación</label></div><div class="input-field col s12 m6"><input field="tiempo_contratacion" id="demoQuestionnaire_item17" type="text" class="validate"><label class="labelInput" for="demoQuestionnaire_item17">Tiempo de contratación</label></div><div class="input-field col s12 m6"><textarea field="requisitos_entrega" id="demoQuestionnaire_item18" class="materialize-textarea"></textarea><label class="labelInput" for="demoQuestionnaire_item18">Requisitos para la entrega</label></div><div class="input-field col s12 m6"><textarea field="contacto" id="demoQuestionnaire_item19" class="materialize-textarea"></textarea><label class="labelInput" for="demoQuestionnaire_item19">Contacto</label></div><div class="row"><div class="col s12 conditionsLab"><input name="conditionsLab" type="checkbox" id="conditionsLab" value="1"><label class="labelOption" for="conditionsLab">He leído y acepto las condiciones</label></div><div class="col s12 sectionBtn"><a class="waves-effect waves-light btn btnSave">Enviar</a></div></div><div class="blocker"><div class="block_container"><img class="image" src="img/icons/mark.png"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-blue-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div><div class="label">Procesando...</div></div></div></div></div></div></div><div class="col s12 module" id="registrar_Container"></div><div class="col s12 module" id="modificar_Container"><ul class="collection"><li class="collection-item">oferta1</li><li class="collection-item">oferta2</li></ul></div></div><div class="col s12 FooterSection" style="margin-top: 25px;"><div style="position: relative;"><img id="circle-footer" src="js/app/css/img/footer-circle.png"><div class="ovie-footer-line"></div></div><p class="ovie-footer-txt">Este programa es de carácter público, no es patrocinado ni promovido por partido político alguno y  sus recursos provienen de los impuestos que pagan todos los contribuyentes.Está prohibido el uso de este programa con fines políticos, electorales, de lucro y de otros distintos a los establecidos. Quien haga uso indebido de los recursos de este programa, deberá ser denunciado y sancionado con la Ley aplicable y ante la autoridad competente.  Los datos y la información que se proporcionan son de carácter informativo para fines de asesoría y orientación a los ciudadanos. El usuario consultante es responsable del uso, aplicación o difusión de la información contenida en este reporte.La información contenida proviene de fuentes oficiales y se actualiza periódicamente. Para consultar el año en que los datos fueron recabados se sugiere revisar el apartado de metadatos.</p></div></div>
+	.ms-header-hidden{
+		opacity: 1;
+	}
+	#sidenav-overlay{
+		z-index: 99;
+	}
+	
+	#tabArea{
+		height: 400px !important;
+	}
+	#geoArea_areaMap {
+		height: 400px !important;
+	}
+	#tabVocEco{
+		height: 400px !important;	
+	}
+	#tabVocEcoAct{
+		height: 400px !important; 
+	}
+	#vocationMapa{
+		height:400px !important;
+	}
+	
+	#vocation-container #sa_results_infoActEcoFind{
+		height: 202px !important;
+	}
+	#sa_results_searchArea{
+		height: 201px !important;
+	}
+	
+
+	#mobile-demo li[idref="5"]{
+		display: none;
+	}
+	#mobile-demo li[idref="6"]{
+		display: none;
+	}
+	.actEco-list-container{
+		height:400px !important;
+	}
+	.home-bubbleChat{
+		background: none !important;
+		height: auto !important;
+		width: 100% !important;
+	}
+	
+	.home-bubbleChat #ovie-definicion{
+		background: #e2007a;
+		width: 100% !important;
+		-webkit-border-radius: 7px 7px 7px 7px;
+		border-radius: 7px 7px 7px 7px;
+	}
+	.home-bubbleChat p{
+		padding: 10px;
+	}
+	
+	.home-infographic-element{
+		margin: auto !important;
+		width: 100% !important;
+		height: auto !important;
+	}
+	.ovieSprite-home{
+		position:  relative !important;
+	}
+	.home-text-right{
+		position: initial !important
+	}
+	.home-text-left{
+		position: initial !important
+	}
+	.home-icon-element{
+		top: auto !important;
+        left: auto !important;
+		right: auto !important;
+	}
+	.home-infographic-element{
+		background: none !important;
+		    padding-bottom: 15px;
+			font-size: 110%;
+	}
+	.home-text-left b{
+		margin-bottom: 5px !important;
+    margin-top: 0px !important;
+	}
+	.home-text-right b{
+		margin-bottom: 5px !important;
+    margin-top: 0px !important;
+	}
+	.ovie-title-definicion{
+		    font-size: 100% !important;
+	}
+	nav{
+		height: 50px !important ;	
+	}
+	.ovieSprite-escolaridad{
+		background-position:-10px -138px;
+		 width:300px;
+		 height:115px;
+	}
+}
+
+@media only screen and (max-width: 993px) and (min-width: 602px){
+    .ovieSprite-escolaridad{
+		background-position:-10px -138px;
+	}
+	
+	.width-content{
+		width:100%;
+	}
+	.customTab .header .option{
+		padding-left: 0px !important;
+		font-size: 100% !important;
+	}
+	.main-logo{
+		width:35% !important;
+		margin-top: 10px !important;
+	}
+	.cdmx-logo{
+		width:34% !important;
+		margin-top: 25px !important;
+	}
+	
+	.versionBeta{
+		top: 125px !important;
+		left: 15% !important;
+		font-size: 22px !important;
+		/*left: 116px !important;*/
+		
+	}
+	.sedeco-logo{
+		    width: 8% !important;
+			margin-right: 15px !important;
+	}
+	.inegi-logo{
+			width: 13% !important;
+			
+			margin-right: 8px !important;
+	}
+	.chip{
+		font-size: 12px !important;
+		padding: 0 9px !important;
+	}
+	.button-collapse{
+		display: none;
+	}
+	#vocEco_results .totales{
+		width:33.33% !important;
+	}
+	nav{
+		height: 105px !important;	
+	}
+}

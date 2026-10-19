@@ -1,0 +1,177 @@
+@import url('css/spriteInformation.css');
+
+.customLogin{
+    width: 300px !important;
+    z-index: 1003;
+    display: block;
+    opacity: 1;
+    transform: scaleX(1);
+    top: 0%;
+    height: 340px !important;
+}
+.customLogin.login{
+    width: 300px !important;
+    height: 340px !important;
+}
+.customLogin.registration{
+    width: 50% !important;
+    height: 80% !important;
+}
+.customLogin.registration .modal-content{
+    height: 100%;
+    top: 32px;
+    padding-top: 0px;
+}
+.customLogin .registrarse{
+    display: none;
+}
+.customLogin .title{
+    background: #e2007a;
+    color: white;
+    font-size: 16pt;
+    padding: 5px;
+}
+.customLogin .modal-content{
+    margin-top: -33px !important;
+}
+.customLogin ._signIn{
+    background: #e2007a;
+    width: 100%;
+}
+.customLogin .modal-footer{
+    bottom: 45px !important;
+}
+
+/*Clases de login anterior
+.customLogin{
+    position: absolute;
+    z-index: 50000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    background: #fff;
+}
+*/
+.customLogin .modal-title{
+   background: #E2007A;
+   padding: 10px;
+   font-size: 150%;
+   color: #fff;
+   margin: 10px;
+   padding: 10px;
+   margin-top: 0px;
+}
+
+.customLogin .content{
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    right: 0px;
+    bottom: 69px;
+    overflow: auto;
+}
+.customLogin .paragraph{
+    margin-top: 15px;
+    text-align: justify;
+}
+.customLogin .infoDescription{
+    margin-top: 17%;
+    margin-bottom: 0px;
+}
+.customLogin .description{
+   font-size: 150%;
+   color: #E2007A;
+   text-align: center;
+   margin-top: 0px;
+}
+
+.customLogin .paragraphs span{
+    font-size: 130%;
+    line-height: inherit;
+    color: #ACACAC;
+}
+.customLogin .paragraphs{
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+.customLogin .button{
+        background-color: #e2007a;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+}
+
+.customLogin .image{
+    content: url(img/ovie_logo.jpg);
+    width: 45% !important;
+    max-width: 170px;
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+}
+
+.customLogin .validate{
+    color:pink;
+}
+
+#login-ingresarTitle{   
+    margin-top: 25px;
+    color: #e2007a;
+    font-family: arial;
+    font-size: 125%;
+}
+
+.warningMsg{
+    display:none;    
+}
+
+#errorMsg{
+    color:#a21010;
+    font-size: 85%;
+    font-weight: 600;
+    /*display:none;*/
+}
+
+.warningIcon{
+    color:#a21010;
+}
+
+
+@media only screen and (max-width: 601px) and (min-width: 0px){
+    .customLogin .description{
+            font-size: 120%;
+    }
+    .customLogin .paragraphs{
+        margin-left: 0px;
+        margin-right: 0px;
+        
+    }
+    .customLogin .paragraphs span{
+        font-size: 110%;
+        line-height: 20px;
+    }
+    
+    .customLogin  .ti-soc{
+        width:74px; height:74px; background-position:-10px -409px;
+    }
+    
+    .customLogin .ti-prov{
+        width:74px; height:74px; background-position:-10px -325px;
+    }
+    
+    .customLogin .ti-eco{
+        width:74px; height:74px; background-position:-10px -493px;
+    }
+    .customLogin .ti-com{
+        width:74px; height:74px; background-position:-10px -824px;
+    }
+    .customLogin .ti-cal{
+        width:74px; height:74px; background-position:-9px -991px;
+    }
+    .customLogin .ti-agen{
+        width:74px; height:74px; background-position:-6px -662px;
+    }
+}

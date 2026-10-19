@@ -1,0 +1,114 @@
+.geoArea-areaMap{
+    height: 610px;
+    width: 100%;
+    margin-top: 5px;
+}
+.geoArea-areaMapAdditional{
+    height: 50px !important;
+    width: 50px !important;
+    top: -270px !important;
+    left: 0px !important;
+}
+.geoArea-areaMapAdditional2{
+    top: -300px;
+    left: 0px;
+    position: absolute;
+}
+
+.geoArea-results{
+	width:100%;
+    margin-top:40px;
+	background-color:#FFF;
+	height:auto;
+}
+#geoArea_list_container{
+	height:220px;	
+}
+#geoArea_list .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+#searchArea{
+    padding-top:10px;
+}
+#searchArea .collection-item{
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#geoArea_list .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+#sa_results_searchArea{
+    height: 374px !important;
+}
+
+
+#sa_detail_searchArea{
+    position: relative;
+    left: -10px;
+    width: 110%;
+    height:367px;
+}
+
+/*spinner resultados
+ 
+#geoadd-container .addGeo-message{
+    display: none;
+}
+
+#geoadd-container .addGeo-message-container{
+    text-align: center;
+    padding: 25px;
+    background: #F3F3F3;
+}
+
+#geoadd-container .blocker{
+	text-align: center;
+	display: none;
+}
+
+#geoadd-container .blocker .blocker-container{
+     padding: 35px;
+}
+
+#geoadd-container  .blocker .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;
+}
+
+#geoadd-container .blocker .spinner-layer{
+	border-color: #E2007A;
+}*/
+
+#proveed-container .proveedor-message-container{
+    text-align: center;
+    padding: 25px;
+    background: #F3F3F3;
+}
+#proveed-container .blocker{
+	text-align: center;
+	display: none;
+}
+#proveed-container .blocker .blocker-container{
+	    padding: 35px;
+}
+
+#proveed-container .blocker .spinner-layer{
+	border-color: #E2007A;
+}
+#proveed-container .blocker .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+#proveed-container .proveedor-mesage{
+	display: none;
+}
+#proveed-container .blocker .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;

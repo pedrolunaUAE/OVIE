@@ -1,0 +1,373 @@
+@import url('css/spriteOVIE.css');
+@import url('sprite-indicators.css');
+@import url('css/ovieSprite.css');
+
+.results-mainContainer{
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    border: 1px solid #E970A1;
+    overflow: auto;
+}
+
+.results-Row{
+	float: left;
+    width: 272px;
+    height: 90px;
+    /* border: 1px solid black; */
+}
+	
+.results-iconoContainer{
+	float: left;
+    width: 85px;
+    height: 100%;
+    /* border: 1px solid grey; */
+    /* background-color: aliceblue; */
+}	
+
+.results-datosContainer{
+	/* margin-top: 0px; */
+    /* margin-right: 0px; */
+    /* margin-bottom: 0px; */
+    height: 100%;
+    float: left;
+    width: 183px;
+    /* background-color: beige; */
+    /* border: 1px solid blue; */
+}
+
+.results-typeIcon{
+	float: left;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.results-dataTitle{
+	margin-top: 13px;
+    margin-left: 2px;
+    color: grey;
+}
+
+.results-data{
+    width: 100%;
+    margin-right: 9px;
+    margin-top: 5px;
+    color: #DC2C8C;
+    font-size: 14pt;
+    font-weight: bold;
+}	
+
+.geoArea-results div.col.nopadding{
+	padding:0px;
+}
+.nopadding-t{
+	padding-top:0px !important;
+}
+
+.nomargin-b{
+	margin-bottom:0px;
+}
+.geoArea-results .val-resum .label-title{
+	padding-top:4px;	
+}
+.geoArea-results .val-resum .label-val{
+	padding-top:4px;
+	color:#E2007A;
+	font-size:18px;
+	font-weight:bold;
+}
+.a-ids{
+	text-align:right;
+}
+.a-table td{
+	width:auto;
+	border-radius: 0;
+	padding: 0px;
+}
+.a-table .value{
+	color:#E42C86;
+	font-weight:bold;
+	font-size:20px;
+}
+.a-ids table{
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	padding: 5px 5px;
+}
+.a-tids td[bgColor]{
+	width:28px;	
+}
+.a-tids td{
+	height:14px;	
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	padding: 5px 5px;
+}
+.a-tids .a-flecha-bg{
+	background-image:url(flecha.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	height:19px;
+	width:34px;
+	color:#FFF;
+	padding: 4px 0px 0px 2px;
+	font-size: 11px;
+}
+
+/*Despliegue de resultados*/
+
+.totales{
+	width: 100%; 
+    padding-bottom: 17px;
+    /* float: left; */
+    position: relative;
+    display: inline-block;
+    /*width: 30%;*/
+}
+
+.vocacionBloque1 .title{
+     width: 70%;
+    /* float: left; */
+    cursor: auto;
+    width: 75%;
+    font-family: verdana;
+    font-size: 11pt;
+    line-height: normal;
+    color: #757575;
+    /* margin-left: 7px; */
+    position: absolute;
+    top: 0px;
+    left: 60px;
+}
+.vocacionBloque1 .data{
+    /* float: left; */
+    /* margin-left: 7px; */
+    /* margin-top: 0px; */
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #E2007A;
+    /*position: absolute;
+    top: 28px;
+    left: 60px;*/
+}
+.valoresTotales .title{
+    width: 70%;
+    /* float: left; */
+    cursor: auto;
+    width: 75%;
+    font-family: verdana;
+    font-size: 11pt;
+    line-height: normal;
+    color: #757575;
+    /* margin-left: 7px; */
+    position: absolute;
+    top: 10px;
+    left: 60px;
+}
+
+.valoresTotales .data{
+    /* float: left; */
+    /* margin-left: 7px; */
+    /* margin-top: 0px; */
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #E2007A;
+    /*position: absolute;
+    top: 28px;
+    left: 60px;*/
+}
+
+.ovie-results-icon{
+	/*float:left;*/
+}
+
+.ovie-results-title{
+	/* float: left; */
+    cursor: auto;
+    /* width: 75%; */
+    /* font-family: verdana; */
+    font-size: 11pt;
+    line-height: normal;
+    color: #757575;
+    /* margin-left: 7px; */
+}
+
+.toolipSquare:hover .ovie-results-information{
+    display:inline-block;
+}
+.ovie-results-information{
+    display:none;
+    position: absolute;
+    /*margin-left: 5px;*/
+    top: 0px !important;
+    right: 0px !important;
+}
+.ovie-results-data{
+	/*float: left;*/
+   /* margin-left: 7px;*/
+    margin-top: 0px;
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+    color: #E2007A;
+}
+
+.desarrolloSocial-container{
+	position: relative;
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.desarrolloSocial-indice-cont{
+    width: 1px;
+    height: 1px;
+    background: red;
+    position: relative;
+    top: -70px;
+    left: -45px;
+}
+.desarrolloSocial-indice{
+	position: absolute;
+    top: -13px;
+    left: -37px;
+    /* color: #DF132B; */
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.desarrolloSocial-title{
+	/*float: left; */
+    cursor: auto;
+    /* width: 75%; */
+    /* font-family: verdana; */
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: normal;
+    color: #757575;
+    /* margin-left: 7px; */
+}
+
+.gradosTermometro{
+    position: absolute;
+    left: 0px;
+    top: -35px;
+    width: 75px;
+}
+
+.gradosTermometro-cont{
+    width: 1px;
+    height: 1px;
+    /* background: red; */
+    position: relative;
+    top: -70px;
+    left: 40px;
+}
+/*grandes grupos de edades*/
+.ovie-results-edadTitle{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.edades-percentBar{
+	/* float: left; */
+    width: 300px;
+    height: 5px;
+    /* margin-left: 60px; */
+    background-color: #F3F3F3;
+}
+
+.gruposBar{
+	float: left;
+    /*width: 25%;*/
+    height: 5px;
+}
+
+.edadesData{
+	float: left;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    margin-top: 5px;
+    color: #E2007A;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.edades-results-title{
+    /* float: left; */
+    /* width: 60px; */
+    /* height: 20px; */
+    /* text-align: center; */
+    /* margin-top: 5px; */
+    color: grey !important;
+    font-family: arial;
+    font-size: 10pt !important;
+    line-height: normal; 
+}
+
+/*Distribución por sexos*/
+.sexos-icon-container{
+   width: 100%;
+}
+
+.sexos-percentData{
+	width: 100%;
+    
+}
+
+.sexos-dataContainer{
+	/*float: left; */
+    width: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.percentData{
+    font-family: arial;
+    font-weight: 600;
+	font-size: 14pt;
+}
+
+.ovie-results-sexosTitle{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/*nivel de escolaridad*/
+
+.school-levelsContainer{
+    width: 350px;
+	/*width: 100%;
+    float: left;
+    margin-top: 14px;
+    margin-left: 50px;*/
+}
+
+.grade-container{
+    width: 350px;
+    /*float: left;
+    margin-top:2px;*/
+}
+
+.school-level-Data{
+	float: left;
+    width: 54px;
+    height: 20px;
+    text-align: center;
+    margin-top: 5px;
+	margin-left: 3px;
+    color: #838382;
+    font-family: arial;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+

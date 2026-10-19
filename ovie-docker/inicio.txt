@@ -1,0 +1,16 @@
+:: 1. Descargar el código (igual que antes)
+D:
+mkdir ws\ovie
+cd \ws\ovie
+git clone https://git.inegi.org.mx/ovie/ovie-services.git
+git clone https://git.inegi.org.mx/ovie/ovie-client.git
+
+:: 2. Descomprimir ovie-docker.zip en D:\ws\ovie
+
+:: 3. Crear tu archivo de contraseñas
+cd ovie-docker
+copy .env.example .env
+notepad .env
+
+:: 4. Levantar todo
+docker compose up -d --build

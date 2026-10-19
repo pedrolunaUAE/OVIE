@@ -1,0 +1,114 @@
+@import url('css/spriteInformation.css');
+
+.customInformation{
+    position: absolute;
+    z-index: 50000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: auto;
+    background: #fff;
+    
+}
+
+.customInformation .title{
+   background: #E2007A;
+   padding: 10px;
+   font-size: 150%;
+   color: #fff;
+   margin: 10px;
+   padding: 10px;
+}
+
+.customInformation .content{
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    right: 0px;
+    bottom: 69px;
+    overflow: auto;
+}
+.customInformation .paragraph{
+    margin-top: 15px;
+    text-align: justify;
+}
+.customInformation .infoDescription{
+    margin-top: 17%;
+    margin-bottom: 0px;
+}
+.customInformation .description{
+   font-size: 150%;
+   color: #E2007A;
+   text-align: center;
+   margin-top: 0px;
+}
+
+.customInformation .paragraphs span{
+    font-size: 130%;
+    line-height: inherit;
+    color: #ACACAC;
+}
+.customInformation .paragraphs{
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+.customInformation .button{
+        background-color: #e2007a;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+}
+
+.customInformation .image{
+    content: url(img/ovie_logo.jpg);
+    width: 45% !important;
+    max-width: 170px;
+    position: absolute;
+    left: 5px;
+    bottom: 2px;
+}
+
+
+@media only screen and (max-width: 601px) and (min-width: 0px){
+    .customInformation .description{
+            font-size: 120%;
+    }
+    .customInformation .paragraphs{
+        margin-left: 0px;
+        margin-right: 0px;
+        
+    }
+    .customInformation .paragraphs span{
+        font-size: 110%;
+        line-height: 20px;
+    }
+    
+    .customInformation  .ti-soc{
+        width:74px; height:74px; background-position:-20px -406px;
+    }
+    
+    .customInformation .ti-prov{
+        width:74px; height:74px; background-position:-19px -319px;
+    }
+    
+    .customInformation .ti-eco{
+        width:74px; height:74px; background-position:-20px -489px;
+    }
+    .customInformation .ti-com{
+        width:74px; height:74px; background-position:-19px -815px;
+    }
+    .customInformation .ti-cal{
+        width:74px; height:74px; background-position:-18px -988px;
+    }
+    .customInformation .ti-agen{
+        width:74px; height:74px; background-position:-15px -654px;
+    }
+    .customInformation .ti-inmob{
+        width:74px; height:74px; background-position:-18px -1149px;
+    }
+    .customInformation .ti-lab{
+        width:74px; height:74px; background-position:-18px -1333px;
+    }
+}

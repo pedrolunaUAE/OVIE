@@ -1,0 +1,244 @@
+.questionnaire .labelInput{
+	color: #737276;
+    font-weight: bold;
+}
+.questionnaire .select-wrapper+label{
+	font-size:100%;
+}
+.questionnaire input{
+	color:#838383;
+}
+.questionnaire .btn{
+	background-color: #df4a91;
+}
+.questionnaire .tools{
+	position: absolute;
+	right: 10px;
+	top: 9px;
+	font-size: 160%;
+	color:#737276;
+}
+.questionnaire .tools .view{
+	position: relative;
+	float: right;
+	display: inline-block;
+	margin-left: 8px;
+	cursor: pointer;
+	display: none;
+}
+.questionnaire .tools .close{
+	position: relative;
+	float: right;
+	display: inline-block;
+	margin-left: 5px;
+	cursor: pointer;
+	display: none;
+}
+.questionnaire .btn input[type=file]{
+	float: left;
+    height: 3rem;
+    line-height: 3rem;
+}
+.customTab{
+    width: 100%;
+}
+
+.customTab .content{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.customTab .header{
+    background: #f3f3f3;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #eaeaea;    
+}
+.customTab .header .titleTab{
+    position: absolute;
+    padding: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #3e3f41;
+}
+
+.customTab .header .optionSpetial{
+    
+    padding: 5px !important; 
+    padding-top: 14px !important;
+    font-size: 95% !important;
+}
+.customTab .header .option{
+    float: left;
+    bottom: -21px;
+    position: relative;
+    color: black;
+    padding: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #737276;
+    font-weight: bold;
+    font-size: 107%;
+    cursor: pointer;
+}
+.customTab .header .option.active{
+    border-bottom: 5px solid #DE1074;
+}
+.customTab .content .optionContainer.notOverflow{
+    overflow: hidden;
+}
+.customTab .header .separator{
+    float: left;
+    bottom: -30px;
+    position: relative;
+    height: 50px;
+    height: 25px;
+    background: red;
+    border-left: 2px solid #D1D1D3;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.customTab .header .marginTab{
+    margin-left: 20px;
+}
+.customTab .content .optionContainer{
+    position: absolute;
+    width: 100%;
+    padding-left: 10px;
+    display: none;
+    padding-right: 10px;
+    bottom: 0px;
+    top: 0px;
+    overflow: auto;
+}
+.customTab .content .optionContainer.active{
+    display: block !important;
+}
+
+.customTab .Spinner{
+	text-align: center;
+	display: none;
+    background: #fff;
+    position: absolute;
+    height: 100%;
+}
+
+.customTab .Spinner-container{
+	    padding: 17%;
+}
+
+.customTab .Spinner .spinner-layer{
+	border-color: #E2007A;
+}
+.customTab .Spinner .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+
+.customTab .Spinner .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;
+}
+
+.questionnaire input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #737276;
+	font-size: 100%;
+}
+
+.questionnaire input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 0px 0 0 #9e9e9e;
+}
+
+.questionnaire input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #9e9e9e;
+    box-shadow: 0 0px 0 0 #9e9e9e;
+}
+	
+.questionnaire .input-field label.active{
+	font-size: 100%;
+	
+}
+.questionnaire .labelOption{
+	color: #838383;
+}
+
+.questionnaire .labelTitle{
+	font-style: italic;
+    font-weight: bold;
+    margin-top: 42px;
+    color: #df4a91;
+	font-size: 120%;
+}
+.questionnaire .titleSection{
+	margin-top: 20px;
+}
+.questionnaire .conditionsLab{
+	margin-top: 30px;
+}
+.questionnaire .sectionBtn{
+	margin-top: 30px;
+    text-align: center;
+}
+.questionnaire .sectionBtn .btn{
+	background-color:#e2007a;
+}
+.questionnaire .blocker{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #ffffff;
+    z-index: 1;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+	display: none;
+}
+.questionnaire .spinner{
+	position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+	text-align: center;
+	display: none;
+}
+.questionnaire .spinner .image{
+	top: 15px;
+    right: 34px;
+    position: absolute;
+}
+.questionnaire .spinner .spinner-layer{
+	    border-color: #e2007a;
+}
+.questionnaire .spinner .label{
+	margin-top: 10px;
+		font-weight: bold;
+		color: #3b3d3f;
+}
+
+.questionnaire .badInput input{
+	color:#C23b22;
+	border-bottom: 1px solid #C23b22;
+	box-shadow: 0 1px 0 0 #C23b22;
+}
+.questionnaire .badInput label{
+	color:#C23b22;
+}
+
+.questionnaire .badInput textarea{
+	color:#C23b22;
+	border-bottom: 1px solid #C23b22;
+	box-shadow: 0 1px 0 0 #C23b22;
+}
+
+.questionnaire .badInput .labelInput{
+	color: #C23b22;
+}

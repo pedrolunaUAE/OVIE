@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.OfertaLaboralMapper">
+
+	<insert id="insertLab" parameterType="mx.org.inegi.geo.ovie.domain.OfertaLaboral">
+		INSERT INTO
+		oferta_ovie.laboral(
+		nombre_contacto, telefono, correo_electronico,
+		calle_vacante,
+		no_ext, no_int, colonia, delegacion, cp, estatus)
+		VALUES
+		(#{oferta.nombre_contacto}, #{oferta.telefono},
+		#{oferta.correo_electronico}, #{oferta.calle_vacante},
+		#{oferta.no_ext}, #{oferta.no_int}, #{oferta.colonia},
+		#{oferta.delegacion}, #{oferta.cp}, #{oferta.estatus});
+	</insert>
+
+	<update id="updateLab" parameterType="mx.org.inegi.geo.ovie.domain.OfertaLaboral">
+		UPDATE oferta_ovie.laboral
+		SET nombre_contacto=#{oferta.nombre_contacto},
+		telefono=#{oferta.telefono},
+		correo_electronico=#{oferta.correo_electronico},
+		calle_vacante=#{oferta.calle_vacante}, no_ext=#{oferta.no_ext},
+		no_int=#{oferta.no_int}, colonia=#{oferta.colonia},
+		delegacion=#{oferta.delegacion},
+		cp=#{oferta.cp},
+		estatus=#{oferta.estatus}
+		WHERE
+		id_lab=#{oferta.id_lab};
+
+	</update>
+
+	<select id="selectLab" resultType="mx.org.inegi.geo.ovie.domain.OfertaLaboral">
+		SELECT id_lab, nombre_contacto, telefono, correo_electronico,
+		calle_vacante,
+		no_ext, no_int, colonia, delegacion, cp, estatus,
+		categoria, vacante,
+		total_vacantes, sueldo, descripcion_actividades,
+		perfil_postulante,
+		requisitos_entrevista, contacto, modalidad,
+		tiempo_contratacion, ubicacion,
+		titulo_oferta, no_ext, no_int
+		FROM
+		oferta_ovie.laboral
+		<if test="estatus!=null">
+			WHERE estatus =#{estatus}
+		</if>
+		;
+	</select>
+	<select id="selectByID" resultType="mx.org.inegi.geo.ovie.domain.OfertaLaboral">
+		SELECT id_lab,
+		nombre_contacto, telefono, correo_electronico, calle_vacante,
+		no_ext,
+		no_int, colonia, delegacion, cp, estatus, categoria, vacante,
+		total_vacantes, sueldo, descripcion_actividades, perfil_postulante,
+		requisitos_entrevista, contacto, modalidad, tiempo_contratacion,
+		ubicacion,
+		titulo_oferta, no_ext, no_int
+		FROM oferta_ovie.laboral
+		WHERE id_lab =#{id_lab};
+	</select>
+	<select id="selectByTitle" resultType="java.util.LinkedHashMap">
+		SELECT id_lab,
+		nombre_contacto, titulo_oferta
+		FROM oferta_ovie.laboral;
+	</select>
+</mapper>

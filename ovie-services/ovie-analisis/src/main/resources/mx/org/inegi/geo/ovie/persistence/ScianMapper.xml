@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.ScianMapper">
+
+    <select id="findIdleCount" resultType="int">
+		select count(*)
+		from ovie_web.scian_2013;
+	</select>
+	
+	<select id="findIdle" resultType="mx.org.inegi.geo.ovie.domain.OvieScian">
+		select scian, nombre_corto AS descripcion
+		from ovie_web.scian_2013 ORDER BY nombre_corto
+		limit #{limit} offset #{offset};
+	</select>
+
+</mapper>

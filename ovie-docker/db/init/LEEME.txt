@@ -1,0 +1,12 @@
+Coloque aquí los scripts de creación/carga de la base OVIE:
+  01_esquema.sql, 02_datos.sql, ... (se ejecutan en orden alfabético)
+  También se aceptan .sql.gz y .sh
+
+IMPORTANTE: solo se ejecutan cuando el volumen de PostgreSQL está vacío
+(primer arranque). Para volver a ejecutarlos:
+  docker compose down -v   (BORRA la base)
+  docker compose up -d
+
+Para restaurar un respaldo .backup / .dump (formato custom de pg_dump):
+  docker cp respaldo.backup ovie-postgres:/tmp/
+  docker exec -it ovie-postgres pg_restore -U ovie -d ovie --no-owner /tmp/respaldo.backup

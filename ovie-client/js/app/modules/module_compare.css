@@ -1,0 +1,218 @@
+
+#compare_container .map_compare{
+    position: relative;
+    height: 370px;
+    margin-bottom:10px;
+    margin-top: 7px !important;
+}
+#compare_container .segmentMap{
+    position:relative;
+    margin-bottom:12px;
+}
+
+
+#select_turn .act-item{
+	color:#555;
+}
+#select_turn .act-item.active{
+	color:#FFF;
+}
+#container_mnu_compare .blocker_compare{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #000000;
+    z-index: -1;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+
+#container_mnu_compare .blocker{
+	text-align: center;
+	display: none;
+}
+#container_mnu_compare .blocker .blocker-container{
+	    padding: 35px;
+}
+
+#container_mnu_compare .blocker .spinner-layer{
+	border-color: #E2007A;
+}
+#container_mnu_compare .blocker .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+#container_mnu_compare .proveedor-mesage{
+	display: none;
+}
+#container_mnu_compare .blocker .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;
+}
+
+#container_mnu_compare .selector_areaItem{
+
+}
+
+#container_mnu_compare .buttonSection{
+    text-align: center;
+    margin-top: 15px;
+}
+
+/**************/
+#compare_areas .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+
+#container_mnu_compare  #compare_areas .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+#compare_areas2 .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+
+#container_mnu_compare  #compare_areas2 .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+#container_mnu_compare #searchAreaCompare{
+    padding-top:10px;
+}
+#container_mnu_compare #searchAreaCompare .collection-item{
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#container_mnu_compare #sa_results_searchAreaCompare{
+    height: 136px !important;
+}
+#container_mnu_compare #sa_detail_searchAreaCompare{
+    width: 110% !important;
+    height: 90px;
+    left: -10px !important;
+    position: relative !important;
+    
+}
+#container_mnu_compare .FooterSection{
+    display: none;
+}
+#container_mnu_compare .tabSection {
+        border-bottom: 1px solid #9c9e9f;
+}
+
+#container_mnu_compare .tabSection .itemTab{
+    display: inline-block;
+    margin-right: 30px;
+    color: #f3f3f3;
+    font-size: 120%;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+#container_mnu_compare #searchInfoCompare{
+    margin-top: 10px;
+}
+#container_mnu_compare .textInformative{
+    color:#555;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+#container_mnu_compare .textInformative .sectionHelp{
+    color:#EC7DAB;
+    font-weight: bold;
+    cursor: pointer;
+}
+#container_mnu_compare .tabSection .itemTab.active{
+    border-bottom: 3px solid #f9dce8;
+    /*font-weight: bold;*/
+    color: #f9dce8;
+    
+}
+#compare_container #TabSelect_turn .Spinner-container{
+    padding: 10% !important;
+}
+#container_mnu_compare .tabSection .itemTab:hover{
+        border-bottom: 3px solid #f9dce8;
+    
+}
+#container_mnu_compare .labelSection{
+    font-size: 140%;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#container_mnu_compare .map2{
+   display: none;
+   margin-bottom: 15px;
+}
+#container_mnu_compare .buttonCompare a{
+    background-color: #e2007a;
+}
+#container_mnu_compare .buttonPrev{
+   display:none;
+}
+#container_mnu_compare .buttonApply{
+   display:none;
+}
+#container_mnu_compare .buttonNext{
+    text-align: right;
+}
+
+#container_mnu_compare #TabSelect_turn{
+    display:none;
+}
+#container_mnu_compare #resultsComparation{
+    margin-top: 10px;
+}
+#container_mnu_compare #resultsComparation .headItem{
+    color: #FFF;
+    background: #EC7DAB;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+#container_mnu_compare #resultsComparation .grayRow{
+    background: #F3F3F3;
+}
+#container_mnu_compare .itemCenter{
+    text-align: center;
+    font-weight: bold;
+}
+#container_mnu_compare #resultsComparation .pinkRow{
+    background: #F9DCE8;
+}
+#container_mnu_compare #resultsComparation .itemBorderTop{
+    border-top: 3px solid white;
+}
+#container_mnu_compare #resultsComparation tbody td{
+        border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+#container_mnu_compare #resultsComparation .itemBorderBottom{
+    border-bottom: 2px solid white;
+}
+#container_mnu_compare #resultsComparation tbody{
+    color: #555;
+}
+#container_mnu_compare .spinnerExport{
+    display:none;
+}
+#compare_container #resultsComparation .metadata{
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+
+}

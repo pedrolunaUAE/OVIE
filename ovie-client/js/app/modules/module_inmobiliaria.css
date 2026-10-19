@@ -1,0 +1,223 @@
+.customLogin{
+    width: 300px !important;
+    z-index: 1003;
+    display: block;
+    opacity: 1;
+    transform: scaleX(1);
+    top: 0%;
+    height: 340px !important;
+}
+.customLogin.login{
+    width: 300px !important;
+    height: 340px !important;
+}
+.customLogin.registration{
+    width: 50% !important;
+    height: 80% !important;
+}
+.customLogin.registration .modal-content{
+    height: 100%;
+    top: 32px;
+    padding-top: 0px;
+}
+.customLogin .registrarse{
+    display: none;
+}
+.customLogin .title{
+    background: #e2007a;
+    color: white;
+    font-size: 16pt;
+    padding: 5px;
+}
+.customLogin .modal-content{
+    margin-top: -33px !important;
+}
+.customLogin ._signIn{
+    background: #e2007a;
+    width: 100%;
+}
+.customLogin .modal-footer{
+    bottom: 45px !important;
+}
+.inmobiliaria-areaMap{
+    height: 610px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.inmobiliaria-results{
+	width:100%;
+    margin-top:0px;
+	background-color:#FFF;
+	height:auto;
+}
+
+#sa_results_inmobiliariaSearchArea{
+    height: 380px !important;
+    overflow-y: auto !important;
+}
+
+#sa_detail_inmobiliariaSearchArea{
+    width: 110%;
+    height: 92px;
+    position: relative;
+    left: -10px;
+}
+
+#inmobiliaria-geoArea_list_container{
+	height:220px;	
+}
+#inmobiliaria-geoArea_list .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+#searchArea{
+    padding-top:10px;
+}
+#searchArea .collection-item{
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#inmobiliaria-geoArea_list .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+#sa_results_searchArea{
+    height: 401px !important;
+}
+#sa_detail_searchArea{
+    position: relative;
+    left: -10px;
+    width: 110%;
+}
+
+#inmobiliariaSearchArea{
+    margin-top: 4px;
+}
+
+/*submenus tabs*/
+#container_mnu_inmobiliaria .tabSection .itemTab.active{
+    border-bottom: 3px solid #e2007a;
+    /* font-weight: bold; */
+    color: #e2007a;
+}
+
+#container_mnu_inmobiliaria .tabSection {
+    border-bottom: 1px solid #9c9e9f;
+}
+#container_mnu_inmobiliaria .tabSection .itemTab{
+    display: inline-block;
+    color: #7b7878;
+    font-size: 120%;
+    padding-bottom: 10px;
+    padding-left: 3px;
+    cursor: pointer;
+}
+
+#container_mnu_inmobiliaria .moduleSection .module{
+    display:none;    
+}
+
+#container_mnu_inmobiliaria .moduleSection .module.show{
+    display:block;
+}
+
+/*Login-logout icon*/
+#inmob_itemLogin{
+    color: #d22626;
+    /*color: #4CAF50;*/
+    float: right;
+    margin-left: 18px;
+    /*margin-top: -5px;*/
+    /*display:none;*/
+    cursor:pointer;
+}
+
+/*estilos de las tablas*/
+.tableHead{
+    color: #FFF;
+    background: #EC7DAB;
+    text-align: center;
+    border: 2px solid #fff;
+}
+
+.tableValue{
+    text-align: center;
+}
+
+.inm_registrar_wrap{
+    /*margin-top: 25px;*/
+    padding-top:20px;
+    background: #f3f3f3;
+    border: .5px solid grey;
+}
+
+#inm_registrar_Container{
+    padding-top: 20px;
+    background: #fbfbfb;
+    border: .5px solid grey;
+}
+
+#inm_questionnaire_modify{
+    padding-top:20px;
+    background: #fbfbfb;
+    border: .5px solid grey;
+}
+
+/*tablas de la ficha pop-up consulta*/
+
+#tr_primario{
+   padding: 5px 5px !important;
+}
+
+#inmPopup_container{
+    max-height: 176px;
+    max-width: 250px;
+    overflow-y: auto; 
+}
+
+.inmPopup_Row{
+    border-bottom: 1px solid #eaeaea;
+}
+
+#inmTxt_verMas{
+    margin-left: 4px;
+    float: left;
+    margin-top: -3px;
+}
+
+/*carrusel de imagenes*/
+
+#inmCarrusel_container{
+    width: 100%;
+    height: 120px;
+    /*background:#c2c1c1;*/
+}
+
+.inmPic-Arrow{
+    width: 10%;
+    height: 120px;
+    float: left;
+    padding-top: 43px;
+    /*background: green;*/
+}
+
+.inmPic-photo-area{
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    height: 120px;
+    float: left;
+    /*background: lightblue;
+    border-left: 3px solid #e2007a;
+    border-right: 3px solid #e2007a;*/
+}
+
+#verMenos{
+    float:right;
+    padding-right:25px;
+    padding-top:13px;
+    display:none;
+}
+

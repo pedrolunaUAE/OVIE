@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ovie
+
+spring:
+  application:
+    name: ovie-analisis
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+mybatis:
+  mapper-locations: classpath*:**/mx/org/inegi/geo/ovie/persistence/*.xml
+  type-aliases-package: mx.org.inegi.geo.ovie.domain

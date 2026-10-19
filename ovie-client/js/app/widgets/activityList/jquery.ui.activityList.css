@@ -1,0 +1,120 @@
+/*Lista de TODAS las actividades económicas*/
+.activity-row-container:hover {
+   background-color:#F9DCE8;
+}
+.activity-row-container.active{
+    background-color: #E2007A;
+}
+.activity-row-container.active .activity-cve{
+    color: #FFF;
+}
+
+.activity-row-container.active .activity-descripcion{
+    color: #FFF;
+}
+
+/***********/
+
+.activity-list-footer{
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    /* background: aqua; */
+    bottom: 0px;
+}
+
+.activity-list-footer .verMas-container{
+    float: right;
+    width: 20%;
+    height: 100%;
+    padding-top: 5px;
+    cursor: pointer;
+    /*background-color: aliceblue;*/
+}
+
+.activity-footer-icon{
+    float: left;
+    margin-left: 17px;
+}
+
+.activity-verMas-txt{
+    float: left;
+    margin-top: -18px;
+    margin-left: 6px;
+    font-family: arial;
+    font-weight: bold;
+    color: #e2007a;
+}
+
+/*prueba*/
+/*Listado de actividades economicas*/
+.calculator .activity-list-container{
+    height: 623px;
+    position: relative;
+    top: 8px;
+    /* right: 82px; */
+    background: white;
+    width: 100%;
+}
+
+.activity-list-header{
+    position: absolute;
+    border-bottom: 3px solid #e2007a;
+    width: 100%;
+    height: 40px;
+    background: #f3f3f3;
+}
+
+.activity-list-title{
+    padding-left: 7px;
+    margin-top: 4px;
+    color: #ababab;
+    /*font-weight: bold;*/
+    font-size: 107%;
+    
+}
+
+.activity-list{
+    /* position: absolute; */
+    /* width: 100%; */
+    /* background: beige; */
+    margin-top: 35px;
+    margin-left: 10px;
+    padding-top: 4px;
+    height: 565px;
+    overflow: auto;
+    
+}
+
+.activity-list-columnTitle{
+    float: left;
+    margin-left: 6px;
+   /*background-color: #e2007a;*/
+    margin-top: 12px;
+    color: #757575;;
+    font-weight: bold;
+}
+
+.activity-list-columnDivider{
+    float: left;
+    margin-top: 16px;
+    margin-left: 3px;
+    margin-right: -8px;
+    width: 1px;
+    height: 15px;
+    background: #757575; 
+}
+
+.activity-closeIcon{
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.activity-row{
+    padding: 5px 5px !important;
+}
+
+.activity-cve{
+    color: #e2007a;
+}

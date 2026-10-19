@@ -1,0 +1,39 @@
+.tooltipMetadata{
+        padding: 12px;
+        display:none;
+        position:absolute;
+        z-index:5000;
+        top:200px;
+        right:200px;
+        border: 1px solid pink;
+        background: #fff;
+        width:350px;
+        font-size:85%;
+    }
+    .tooltipMetadata .title{
+        
+        margin-bottom: 10px;
+        font-size: 110%;
+        font-weight: bolder;
+        
+    display: inline-block;
+    
+    color:#da007f;
+    }
+    .tooltipMetadata span{
+        color: gray;
+        text-align: justify;
+        padding-bottom: 10px;
+        display: block;
+    }
+    .tooltipMetadata span div{
+        font-weight: bolder;
+        color:#5b5a5d;
+        display: inline-block;
+    }
+    .tooltipMetadata ul{
+        color: gray;
+        font-style: italic;
+        margin-top: 0px;
+        padding-left: 10px;
+    }

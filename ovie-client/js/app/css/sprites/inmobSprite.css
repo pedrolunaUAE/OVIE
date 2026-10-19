@@ -1,0 +1,13 @@
+.inmobSprite{ background:url("inmobSprite.png") top left no-repeat; }
+.inmobSprite_telB{ width:45px; height:45px; background-position:-10px -10px; }
+.inmobSprite_usoB{ width:45px; height:45px; background-position:-10px -65px; }
+.inmobSprite_superficieB{ width:45px; height:45px; background-position:-10px -120px; }
+.inmobSprite_tipoB{ width:45px; height:45px; background-position:-10px -175px; }
+.inmobSprite_ofertaB{ width:45px; height:45px; background-position:-10px -230px; }
+.inmobSprite_tel{ width:35px; height:35px; background-position:-10px -285px; }
+.inmobSprite_uso{ width:35px; height:35px; background-position:-10px -330px; }
+.inmobSprite_superficie{ width:35px; height:35px; background-position:-10px -375px; }
+.inmobSprite_tipo{ width:35px; height:35px; background-position:-10px -420px; }
+.inmobSprite_oferta{ width:35px; height:35px; background-position:-10px -465px; }
+.inmobSprite_vermas{ width:15px; height:15px; background-position:-10px -510px; }
+

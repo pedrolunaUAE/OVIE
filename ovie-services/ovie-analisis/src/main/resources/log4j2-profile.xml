@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="defaultPattern">[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable</Property>
+        <Property name="appName" value="${spring:spring.application.name}"/>
+        <Property name="logPath" value="/logs"/>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${defaultPattern}"/>
+        </Console>
+        <RollingFile name="RollingFile" filePattern="${logPath}/${appName}-%d{MM-dd-yyyy}-%i.log.gz"
+                     fileName="${logPath}/${appName}.log"
+                     ignoreExceptions="false">
+            <JsonTemplateLayout eventTemplateUri="classpath:EcsLayout.json">
+                <EventTemplateAdditionalField key="appName" value="${appName}"/>
+            </JsonTemplateLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Application Loggers -->
+        <Logger name="mx.org.inegi" level="DEBUG"/>
+        <Logger name="org.springframework.web.cors.DefaultCorsProcessor" level="DEBUG" />
+
+        <!-- Root Logger -->
+        <Root level="DEBUG">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

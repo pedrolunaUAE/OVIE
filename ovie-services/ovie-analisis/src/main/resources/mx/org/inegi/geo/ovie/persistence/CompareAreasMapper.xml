@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.CompareAreasMapper">
+
+<select id="dynamicUrban" resultType="float">
+		WITH temp AS (
+		SELECT  sum(H001A) AS H001A
+		FROM  ovie_web.areas a ,ovie_web.economico_mza e
+		WHERE a.gid=#{id}
+		AND ST_Intersects(a.the_geom,e.the_geom)			
+		)
+		SELECT  trunc((H001A/sum(pobtot))*100,2)
+		FROM  ovie_web.areas a ,ovie_web.sociodemografico_mza p,temp
+		WHERE a.gid=#{id}		
+		AND ST_Intersects(a.the_geom,p.the_geom)	
+		GROUP by H001A
+</select>
+
+<select id="averageGrade" resultType="float">
+		SELECT  trunc (avg(graproes),2)
+		FROM  ovie_web.areas a ,ovie_web.sociodemografico_mza p
+		WHERE a.gid=#{id}		
+		AND ST_Intersects(a.the_geom,p.the_geom)	
+</select>
+
+<select id="goodsAccess" resultType="float">
+		SELECT trunc (((sum(VPH_AUTOM) / sum(VIVTOT::numeric))*0.33) + ( sum(VPH_INTER) / sum(VIVTOT::numeric)*0.33) + ((sum(VPH_PC) / sum(VIVTOT::numeric))*0.33),2) 
+		FROM  ovie_web.areas a ,ovie_web.sociodemografico_mza p
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,p.the_geom)	
+</select>
+
+
+
+<!-- ECONOMICOS -->
+<select id="employedPersonnel" resultType="float">
+	    SELECT  trunc((sum(H203A)/sum(H001A))*100,2)
+		FROM  ovie_web.areas a ,ovie_web.economico_mza e
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,e.the_geom)	
+</select>
+
+<select id="productivityLaboral" resultType="float">
+        SELECT  trunc((sum(A111A)/sum(H001A))*1000,0) 
+		FROM  ovie_web.areas a ,ovie_web.economico_mza e
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,e.the_geom)	
+</select>
+
+
+
+<!-- URBANO -->
+
+<select id="urbanEquipment" resultType="float">
+		SELECT  count(*)
+		FROM  ovie_web.areas a ,ovie_web.denue d
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,d.the_geom)
+		AND equipamiento=true
+</select>
+
+<select id="publicTransport" resultType="float">
+		SELECT  count(*)
+		FROM  ovie_web.areas a ,ovie_web.estacionescompletas e
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,e.the_geom	)
+</select>
+
+<select id="parkinglots" resultType="float">
+		SELECT  count(*)
+		FROM  ovie_web.areas a ,ovie_web.denue d
+		WHERE a.gid=#{id}	
+		AND ST_Intersects(a.the_geom,d.the_geom)
+		AND cve_scian='812410'
+</select>
+
+<!-- ECONOMICO POR GIRO -->
+
+
+
+<select id="getDelegation" resultType="java.util.LinkedHashMap">
+		SELECT cvegeo,st_area(ST_Intersection(a.the_geom,b.the_geom))  
+		FROM  ovie_web.areas a, ovie_web.municipios b
+		WHERE st_intersects (a.the_geom,b.the_geom) and a.gid=#{id} 
+		ORDER BY  2 DESC 
+		LIMIT 1 
+</select>
+
+<select id="administrativeSalary" resultType="float">
+	SELECT CASE 
+	    WHEN 
+	    SUM_H203A= 0 then 0 
+	    ELSE
+	    trunc(((SUM_J203A / SUM_H203A)*1000)/12,0)
+	    END
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian} AND
+	cvegeo=#{cvegeo}
+</select>	
+
+<select id="administrativeOperating" resultType="float">
+		SELECT CASE 
+	    WHEN 
+	    SUM_H101A = 0 then 0 
+	    ELSE
+	   trunc(((SUM_J010A / SUM_H101A)*1000)/12,0)
+	    END
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian}AND
+	cvegeo=#{cvegeo}
+</select>
+
+<select id="electricityConsumption" resultType="float">
+	SELECT trunc(((SUM_K041A  /total_de_unidades_economicas)*1000)/12,0)
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian} AND
+	cvegeo=#{cvegeo}
+</select>
+
+<select id="waterConsumption" resultType="float">
+	SELECT trunc(((SUM_k976A  /total_de_unidades_economicas)*1000)/12,0)
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian} AND
+	cvegeo=#{cvegeo}
+</select>
+
+<select id="avergaeSells" resultType="float">
+	SELECT trunc((((SUM_M010A+SUM_M020A+SUM_M030A +SUM_M050A)/total_de_unidades_economicas)*1000)/12,0)
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian} AND
+	cvegeo=#{cvegeo}
+</select>
+
+<select id="assetValue" resultType="float">
+	SELECT trunc(((SUM_Q000A  /total_de_unidades_economicas)*1000),0)
+	FROM ovie_web.base_delegaciones 
+	WHERE clase_scian=#{scian} AND
+	cvegeo=#{cvegeo}
+</select>
+
+
+	
+</mapper>

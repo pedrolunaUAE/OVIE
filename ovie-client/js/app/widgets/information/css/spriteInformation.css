@@ -1,0 +1,17 @@
+.templateInformation{ background:url("spriteInformation.png") top left no-repeat; }
+.ti-prov{ width:95px; height:95px; background-position:-10px -10px; }
+.ti-soc{ width:95px; height:95px; background-position:-10px -115px; }
+.ti-eco{ width:95px; height:95px; background-position:-10px -220px; }
+.ti-com{ width:95px; height:95px; background-position:-6px -730px; }
+.ti-cal{ width:95px; height:95px; background-position:-3px -895px; }
+.ti-agen{ width:95px; height:95px; background-position:-7px -567px;}
+.ti-inmob{ width:95px; height:95px; background-position:-8px -1060px;}
+.ti-lab{ width:95px; height:95px; background-position:-8px -1228px;}
+.ti-provS{ width:74px; height:74px; background-position:-10px -325px; }
+.ti-socS{ width:74px; height:74px; background-position:-20px -408px; }
+.ti-ecoS{ width:74px; height:74px; background-position:-10px -493px; }
+.ti-comS{ width:74px; height:74px; background-position:-10px -824px; }
+.ti-calS{ width:74px; height:74px; background-position:-9px -991px; }
+.ti-agenS{ width:74px; height:74px; background-position:-6px -662px;}
+.ti-inmobS{ width:74px; height:74px; background-position:-8px -1141px;}
+.ti-labS{ width:74px; height:74px; background-position:-6px -662px;}

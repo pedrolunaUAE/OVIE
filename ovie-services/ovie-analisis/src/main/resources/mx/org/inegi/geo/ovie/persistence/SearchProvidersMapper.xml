@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.SearchProvidersMapper">
+<select id="search" resultType="java.util.LinkedHashMap">
+	SELECT d.nom_est AS "Nombre",
+	round(st_distance (ST_GeomFromText(#{point},900913),d.the_geom )::numeric,0) AS "Distancia",
+	d.transporte AS "Transporte",
+	d.desc_cort AS "Establecimiento", 
+	nomvial AS "Calle",
+	d.numextnum||' '||numextalf AS "Núm",
+	d.nomasen AS "Colonia",
+	d.nom_mun AS "Delegacion",
+	d.tel_1 AS "Telefono",
+	d.dir_elec_1 AS "Correo",
+	d.cve_scian AS "cve_scian",
+	ST_AsText(d.the_geom) AS geom	
+	FROM  ovie_web.denue d
+	<if test=" id !=null">
+	, ovie_web.areas a
+	</if>	
+	<choose>
+    	<when test="parent==true">
+      		WHERE  d.cve_scian::numeric in 	
+      		  <foreach  collection="idProviders" item="cvescian" index="index" 
+      			open="(" separator="," close=")">
+        		#{cvescian}
+  			</foreach>
+    	</when>    
+    <otherwise>
+      WHERE  d.cve_scian::numeric=#{type}
+    </otherwise>
+  </choose>
+	
+	<if test=" id !=null">
+		AND a.gid=#{id}
+		AND ST_Intersects(a.the_geom,d.the_geom)
+	</if>
+	ORDER BY  st_distance(d.the_geom,ST_GeomFromText(#{point},900913)), d.d_llave
+	<if test=" limit != 0">
+		LIMIT 10
+	</if>
+	
+</select>
+
+<select id="selectCount" resultType="int">
+	SELECT COUNT(*)
+	FROM ovie_web.cadenas_productivas_pal p,ovie_web.cadenas_productivas c,ovie_web.denue d
+	<if test=" id !=null">
+	, ovie_web.areas a
+	</if>
+	WHERE p.clv_act=c.clv_act
+	AND c.clave=d.cve_scian::numeric
+	AND p.clv_neg=#{type}
+	<if test=" id !=null">
+		AND a.gid=#{id}
+		AND ST_Intersects(a.the_geom,d.the_geom)
+	</if>
+</select>
+
+
+<select id="catalogProviders" resultType="java.util.LinkedHashMap">
+	SELECT  clv_act AS id, desc_cort AS desc_corto, tipo as type
+	FROM ovie_web.cadenas_productivas_pal
+	ORDER BY desc_cort
+</select>
+
+<select id="catalogProvidersId" resultType="java.util.LinkedHashMap">
+	SELECT  scian AS id, desc_cort AS desc_corto
+	FROM ovie_web.cadenas_productivas
+	WHERE clv_act=#{id}
+	ORDER BY orden
+</select>
+
+<select id="catalogProvidersIdCveScian" resultType="int">
+	SELECT  scian AS id
+	FROM ovie_web.cadenas_productivas
+	WHERE clv_act=#{id}
+	ORDER BY orden
+</select>
+</mapper>

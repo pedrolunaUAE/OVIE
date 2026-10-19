@@ -1,0 +1,109 @@
+
+
+.customTab{
+    width: 100%;
+}
+
+.customTab .content{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.customTab .header{
+    background: #f3f3f3;
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid #eaeaea;    
+}
+.customTab .header .titleTab{
+    position: absolute;
+    padding: 10px;
+    padding-top: 6px;
+    font-weight: bold;
+    color: #3e3f41;
+}
+
+.customTab .header .optionSpetial{
+    
+    padding: 5px !important; 
+    padding-top: 14px !important;
+    font-size: 95% !important;
+}
+.customTab .header .option{
+    float: left;
+    bottom: -21px;
+    position: relative;
+    color: black;
+    padding: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    color: #737276;
+    font-weight: bold;
+    font-size: 107%;
+    cursor: pointer;
+}
+.customTab .header .option.active{
+    border-bottom: 5px solid #DE1074;
+}
+.customTab .content .optionContainer.notOverflow{
+    overflow: hidden;
+}
+.customTab .header .separator{
+    float: left;
+    bottom: -30px;
+    position: relative;
+    height: 50px;
+    height: 25px;
+    background: red;
+    border-left: 2px solid #D1D1D3;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.customTab .header .marginTab{
+    margin-left: 20px;
+}
+.customTab .content .optionContainer{
+    position: absolute;
+    width: 100%;
+    padding-left: 10px;
+    display: none;
+    padding-right: 10px;
+    bottom: 0px;
+    top: 0px;
+    overflow: auto;
+}
+.customTab .content .optionContainer.active{
+    display: block !important;
+}
+
+.customTab .Spinner{
+	text-align: center;
+	display: none;
+    background: #fff;
+    position: absolute;
+    height: 100%;
+}
+
+.customTab .Spinner-container{
+	    padding: 17%;
+}
+
+.customTab .Spinner .spinner-layer{
+	border-color: #E2007A;
+}
+.customTab .Spinner .label{
+	font-weight: bold;
+    color: #757575;
+    font-size: 110%;
+	margin-top: 15px;
+}
+
+.customTab .Spinner .image{
+	position: absolute;
+    margin-left: 18px;
+    margin-top: 13px;
+}

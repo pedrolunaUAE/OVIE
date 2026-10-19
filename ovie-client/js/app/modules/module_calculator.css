@@ -1,0 +1,293 @@
+.calculator-areaMap{
+    height: 610px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.calculator-results{
+	width:100%;
+    margin-top:0px;
+	background-color:#FFF;
+	height:auto;
+}
+
+#sa_results_calculatorSearchArea{
+    height: 383px !important;
+    overflow-y: auto !important;
+}
+
+#sa_detail_calculatorSearchArea{
+    width: 110%;
+    height:100px;
+    position: relative;
+    left: -10px;
+}
+
+#calculator-geoArea_list_container{
+	height:220px;	
+}
+#calculator-geoArea_list .areas-mainContainer{
+	box-shadow: none;
+    border: none;
+}
+#searchArea{
+    padding-top:10px;
+}
+#searchArea .collection-item{
+    border-bottom: 1px solid #e0e0e0 !important;
+}
+#calculator-geoArea_list .areas-mainContainer .collection-item{
+    min-height: 60px;
+    margin-bottom: 7px;
+    border: 1px solid #e0e0e0;
+}
+
+/*#sa_results_searchArea{
+    height: 401px !important;
+}*/
+#sa_detail_searchArea{
+    position: relative;
+    left: -10px;
+    width: 110%;
+}
+/*Calculadora*/
+
+#calculator-interfaceWrap{
+   /*width: 100%;
+    height: 550px;
+    background: aliceblue;*/
+}
+
+/*Colores de las variables del menú*/
+#treeMenu_1 span{
+    color:#18bfab !important;
+}
+
+#treeMenu_2 span{
+    color:#de1074 !important;
+}
+
+#treeMenu_3 span{
+    color:#80007f !important;
+}
+
+#treeMenu_4 span{
+    color:#6b6969 !important;
+}
+
+
+.showGiro{
+    padding-left:15px;
+    display:none;
+    border: 1px solid grey;
+   /* height: 30px;*/
+    margin-top: 5px;
+    padding-top: 3px;
+    background: white;
+}
+
+.backLabel{
+    margin-top: -6px;
+    font-size: 100%;
+    color: #c91c8f;;
+}
+
+.giroTitle-txt{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #de1074;
+}
+
+.giroValue{
+    font-weight: normal;
+    color: #585858;
+}
+ 
+.calculator-mainContainer{
+    /*width:70%;
+    height: 550px;
+    background: #f3f3f3;*/
+}
+
+.calculator-displayWrap{
+    width: 100%;
+    height: 150px;
+    background: grey;
+}
+
+.calculator-footerWrap{
+    width: 100%;
+    height: 55px;
+    background: grey;
+}
+.calculator-displayContainer{
+    width:95%;
+    height:87%;
+    margin-left: 12px;
+}
+
+.display-section{
+    width: 100%;
+    height: 50%;
+    /*overflow:hidden;*/
+    overflow-x: auto;
+    background: #f3f3f3;
+    font-size: 25pt;
+    color: #555;
+    padding: 5px;
+}
+
+.calculator-buttonsContainer{
+    width: 100%;
+    height: 345px;
+    background: #f3f3f3;
+}
+
+.buttons-fila{
+    height:20%;
+}
+
+.button-wrap{
+    position:relative;
+    height: 100%;
+   /*border: 1px solid grey;*/
+}
+
+.btn-border{
+    width: 90%;
+    height: 80%;
+    border: 1px solid grey; 
+    position: absolute;
+    cursor:pointer;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.btn-labelStyle{
+    font-family: arial;
+    font-size: 30pt;
+    color: #808080;
+}
+
+.buttons-sections{
+    position:relative;
+    /*border:1px solid grey;*/
+    height:100%;
+}
+
+.bar-btn-style{
+   font-size: 12pt;
+    line-height: normal;
+    color: #FFF;
+}
+
+.calculator-iconLabel{
+    font-size: 8pt;
+    color: #FFF;
+}
+
+.tree-menu li{
+    padding-left: 15px;
+}
+
+
+/*Lista de actividades NOTA:NO LAS ESTÁ AGARRANDO*/
+.calculator_ActEco .collection a.active{
+    color:#ffffff;
+}
+.calculator_ActEco .collection a.collection-item{
+    color:#555;
+}
+.calculator_ActEco .collection a.collection-item.active{
+    color:#fff;
+}
+
+/*BOTONES principales DE LAS TABLAS*/
+
+#headercalculatorTableDelete{
+    margin-right: 7px !important;
+    margin-top: -26px !important;
+    float: right !important;
+}
+#headercalculatorTablePrint{
+    margin-right: 7px !important;
+    margin-top: -26px !important;
+    float: right !important;
+}
+#headercalculatorTableDownload{
+    margin-right: 7px !important;
+    margin-top: -26px !important;
+    float: right !important;
+}
+ 
+/*Tablas de resumen*/
+#calculator-reports{
+    display:none;
+}
+
+.reportBarTitle{
+    margin-top: 12px;
+    background: #f3f3f3;
+    padding-top:7px;
+}
+
+.reporTitle{
+    font-family: "Roboto", sans-serif;
+    font-size: 14pt;
+    color: grey;
+    font-weight: bold;
+}
+
+.reportBtn{
+    font-family: "Roboto", sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: grey;
+    cursor:default;
+}
+
+.reportTable-header{
+    background:#F2B9CF;
+    color: #de1074;
+    padding:0px 0px!important;
+}
+
+.customTab .header .option {
+    font-size: 98% !important;
+}
+
+/*margenes en los buscadores*/
+#calculatorSearchArea{
+    margin-top: 4px;
+}
+
+#calculator_EcoSearch{
+    margin-top: 4px;
+}
+
+#tree-menu{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    overflow: auto;
+    top: 0px;
+}
+
+/*media query*/
+
+@media only screen and (max-width: 993px) and (min-width: 602px){
+    .customTab .header .option {
+        font-size: 73% !important;
+    }
+
+}
+
+@media only screen and (max-width: 601px) and (min-width: 0px){
+    
+    .customTab .header .option {
+        font-size: 80% !important;
+    }
+}

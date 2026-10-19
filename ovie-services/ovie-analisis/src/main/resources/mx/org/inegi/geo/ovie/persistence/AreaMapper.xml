@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.AreaMapper">
+
+	<select id="findById" parameterType="java.lang.Long" resultType="java.lang.String">
+        select ST_AsText(the_geom) from ovie_web.areas where gid = #{id}
+    </select>
+
+    <select id="findBuffer" parameterType="mx.org.inegi.geo.ovie.domain.Area" resultType="mx.org.inegi.geo.ovie.domain.Area">
+        select ST_AsText(ST_Buffer(the_geom, #{sizeBuffer})) as geometry
+        from ovie_web.${type}
+        where gid = #{id}
+    </select>
+	
+	<select id="simplify" parameterType="mx.org.inegi.geo.ovie.domain.Area" resultType="mx.org.inegi.geo.ovie.domain.Area">
+		select gid as id,
+		ST_AsText(ST_Simplify(the_geom, (ST_Area(the_geom)/100000000000))) as geometry
+		from ovie_web.areas
+		where gid = #{id}
+	</select>
+
+	<insert id="add" parameterType="mx.org.inegi.geo.ovie.domain.Area" >
+		insert into ovie_web.areas (fechahora, the_geom)
+		values (now(), ST_GeomFromText(#{geometry}, 900913))
+	 <selectKey keyProperty="id" resultType="Long" order="AFTER">
+             SELECT last_value as id FROM ovie_web.areas_gid_seq a
+        </selectKey>
+	</insert>
+	
+	<insert id="applyBuffer" parameterType="mx.org.inegi.geo.ovie.domain.Area" useGeneratedKeys="true" keyProperty="id">
+		insert into ovie_web.areas (fechahora, the_geom)
+		values (now(),
+		<choose>
+		    <when test="geometry != null">
+		        ST_GeomFromText(#{geometry}, 900913))
+		    </when>
+		    <otherwise>
+		        (select ST_Buffer(the_geom, #{sizeBuffer})		
+		        from ovie_web.areas
+		        where gid = #{id}))
+		    </otherwise>
+		</choose>
+		 <selectKey keyProperty="id" resultType="Long" order="AFTER">
+             SELECT last_value as id FROM ovie_web.areas_gid_seq a
+        </selectKey>
+	</insert>
+	
+	
+
+	<select id="indicadores" resultType="mx.org.inegi.geo.ovie.domain.Indicators">
+		SELECT sum(m.pobfem) as pobfem,
+		       sum(m.pobmas) as pobmas,
+		       <!-- trunc (avg(c.ide_1::numeric),2)as indsoc, -->
+		       sum(m.ed_pres) AS pres,sum(m.ed_prim) AS prim,sum(m.ed_sec) AS secu,
+		       sum(m.ed_bach+m.ed_normb+m.ed_tecn) AS bach ,
+		       sum(m.ed_normli+m.ed_lic) AS univ,
+		       sum(m.ed_mae+m.ed_doct) AS posg,
+		       sum (m.e_0_14) AS e_0_14,sum(m.e_15_24) AS e_15_24,sum(m.e_25_44) AS e_25_44,sum(m.e_45_64) AS e_45_64,sum(m.e_65_mas) AS e_65_mas,
+		       sum(m.vivtot::numeric) as vivtot,       		      
+		       sum(m.pobtot::numeric) AS pobtot	   
+		 FROM ovie_web.sociodemografico_mza  m, ovie_web.areas a
+	<!-- 	 , ovie_web.microdatos_ce2009 c -->
+		 WHERE  a.gid=#{id}
+		 AND ST_Intersects(a.the_geom,m.the_geom)
+		<!--  AND m.cvegeo=c.cvegeo -->
+	</select>
+	
+	<select id="indsoc" resultType="float">	
+		SELECT  trunc (avg(ids_v_m),2)as indsoc 
+		FROM ovie_web.sociodemografico_mza m , ovie_web.areas a 
+		WHERE a.gid=#{id}
+		AND ids_v_m > 0
+		AND ST_Intersects(a.the_geom,m.the_geom)
+	</select>
+	
+	<select id="ueTotal" resultType="float">
+		SELECT count(*) FROM ovie_web.denue  d, ovie_web.areas a
+			WHERE  a.gid=#{id}
+			AND ST_Intersects(a.the_geom,d.the_geom)	
+	</select>
+</mapper>

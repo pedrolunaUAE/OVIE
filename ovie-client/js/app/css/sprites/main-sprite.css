@@ -1,0 +1,12 @@
+.main-sprite{ background:url("main-sprite.png") top left no-repeat; }
+.main-sprite-lock{ width:45px; height:45px; background-position:-10px -10px; }
+.main-sprite-extra{ width:45px; height:45px; background-position:-10px -65px; }
+.main-sprite-supervisor{ width:45px; height:45px; background-position:-10px -120px; }
+.main-sprite-manager{ width:45px; height:45px; background-position:-10px -175px; }
+.main-sprite-graph-cake:hover{ width:45px; height:45px; background-position:-10px -230px; }
+.main-sprite-graph:hover{ width:45px; height:45px; background-position:-10px -285px; }
+.main-sprite-graph-cake{ width:45px; height:45px; background-position:-10px -340px; }
+.main-sprite-graph{ width:45px; height:45px; background-position:-10px -395px; }
+.main-sprite-logout:hover{ width:45px; height:45px; background-position:-10px -450px; }
+.main-sprite-logout{ width:45px; height:45px; background-position:-10px -505px; }
+

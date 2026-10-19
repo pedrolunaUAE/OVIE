@@ -1,0 +1,38 @@
+# Perfil "docker" de Spring Boot para OVIE.
+# Se monta en /app/config/ del contenedor; Spring Boot lo carga
+# automáticamente al usar SPRING_PROFILES_ACTIVE=docker.
+
+server:
+  port: 8080
+  servlet:
+    context-path: /ovie
+
+spring:
+  datasource:
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      pool-name: ovieAnalisisPool
+    # "postgres" es el nombre del servicio en docker-compose
+    url: jdbc:postgresql://postgres:5432/${POSTGRES_DB:ovie}
+    driver-class-name: org.postgresql.Driver
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+
+logging:
+  config: classpath:log4j2-profile.xml
+
+mail:
+  protocol: smtps
+  starttls: true
+  host: ${SMTP_HOST:}
+  port: ${SMTP_PORT:}
+  auth: true
+  from: ${SMTP_USER:}
+  pass: ${SMTP_PASSWORD:}
+
+planeacion:
+  allowed-origins:
+    - "${CORS_ORIGIN:http://localhost}"
+    - "http://localhost"
+    - "http://localhost:8080"
