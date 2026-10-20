@@ -4,10 +4,10 @@ Levanta los tres componentes de OVIE sin instalar Java ni Maven en Windows:
 
 | Servicio        | Contenedor      | URL                            |
 | --------------- | --------------- | ------------------------------ |
-| Cliente (nginx) | `ovie-client`   | http://localhost               |
-| Backend         | `ovie-services` | http://localhost:8080/ovie     |
-| API vía cliente | —               | http://localhost/ovie          |
-| PostgreSQL      | `ovie-postgres` | localhost:5432                 |
+| Cliente (nginx) | `ovie-client`   | http://localhost:8088 (ver `CLIENT_PORT`) |
+| Backend         | `ovie-services` | http://localhost:8081/ovie (ver `BACKEND_PORT`) |
+| API vía cliente | —               | http://localhost:8088/ovie     |
+| PostgreSQL      | `ovie-postgres` | localhost:15432 (ver `POSTGRES_PORT`) |
 
 ## 1. Estructura de carpetas
 
@@ -30,6 +30,7 @@ notepad .env
 ```
 
 - Cambie `POSTGRES_PASSWORD` (y SMTP si se usa).
+- Ajuste `CLIENT_PORT`, `BACKEND_PORT`, `POSTGRES_PORT` y `CORS_ORIGIN` si esos puertos ya están en uso en el host.
 - Copie los scripts SQL de la base OVIE a `db\init\` (ver `db\init\LEEME.txt`).
 - Si está en la red institucional con inspección HTTPS, copie el certificado
   raíz a `certs\` (ver `certs\LEEME.txt`).
@@ -47,7 +48,8 @@ minutos); las siguientes usan caché.
 
 ## 4. Configurar la URL del backend en el cliente
 
-nginx reenvía `http://localhost/ovie/...` al backend. Busque en `ovie-client`
+nginx reenvía `http://localhost:8088/ovie/...` al backend. En `js/app/config.js`
+debe usarse `server: '/ovie/'` (ruta relativa). Busque en `ovie-client`
 dónde está definida la URL de los servicios:
 
 ```cmd
@@ -77,7 +79,7 @@ docker compose down -v                    :: ¡BORRA también la base!
 | `PKIX path building failed` al compilar | Inspección TLS institucional: poner el certificado en `certs\` y `docker compose build --no-cache ovie-services`, o compilar desde otra red. |
 | Backend se reinicia en bucle | `docker compose logs ovie-services`. Suele ser la base vacía o credenciales distintas a `.env`. |
 | Los scripts de `db\init` no se ejecutaron | Solo corren con el volumen vacío: `docker compose down -v` y volver a levantar. |
-| Puerto 80 / 5432 / 8080 ocupado | Cambiar `CLIENT_PORT`, `POSTGRES_PORT` o `BACKEND_PORT` en `.env`. |
+| Puerto 8088 / 8081 / 15432 ocupado | Cambiar `CLIENT_PORT`, `BACKEND_PORT` o `POSTGRES_PORT` en `.env` y alinear `CORS_ORIGIN`. |
 | Error de CORS en el navegador | Usar la URL relativa `/ovie` en el cliente, o ajustar `CORS_ORIGIN` en `.env`. |
 | `extension "postgis" is not available` | Ya se usa la imagen `postgis/postgis`; si no se requiere PostGIS puede cambiarse a `postgres:17`. |
 

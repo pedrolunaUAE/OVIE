@@ -437,12 +437,13 @@ $.widget("custom.mapping", {
         return format;
     },
     addEvents : function(item){
-        
+        if (!item || !item.item || !item.item.events) {
+            return;
+        }
         var events = item.item.events;
         for(x in item.events){
             events.register(x,item.item,item.events[x]);
         }
-        
     },
     addEventControls : function(){
         var obj = this;
@@ -857,7 +858,6 @@ $.widget("custom.mapping", {
                                 toggleKey: "ctrl"+k, // remove selection
                                 multipleKey: "shift"+k, // add selection,
                                 onSelect: function(e){
-                                    console.log(e);
                                     setTimeout(function(){
                                         
                                             obj.options.regFeatures.setSelected(e.id,e.custom.type,e.custom.item);
@@ -1023,14 +1023,24 @@ $.widget("custom.mapping", {
           }
 	 
         }
-        this.addEvents({
-            item:obj.getLayer('Base'),
-            events:{
-                loadstart:loadStart,
-                loadend:loadEnd
-            }   
-        });
-        
+        var baseLayer = obj.getLayer('Base');
+        if (!baseLayer && obj.options.map) {
+            for (var i = 0; i < obj.options.map.layers.length; i++) {
+                if (obj.options.map.layers[i].isBaseLayer) {
+                    baseLayer = obj.options.map.layers[i];
+                    break;
+                }
+            }
+        }
+        if (baseLayer) {
+            this.addEvents({
+                item: baseLayer,
+                events:{
+                    loadstart: loadStart,
+                    loadend: loadEnd
+                }
+            });
+        }
     },
     addFeaturesFromOptions:function(){//modificada gordis
        var obj = this;
@@ -1393,8 +1403,21 @@ $.widget("custom.mapping", {
     },
     addLayer:function(params,isBase){
             if(params.type=='OSM'){
-                var newLayer = new OpenLayers.Layer[params.type](params.label);
+                var osmUrl = params.url || null;
+                var newLayer = new OpenLayers.Layer.OSM(params.label, osmUrl, {
+                    tileOptions: { crossOriginKeyword: null }
+                });
             }else{
+                var maxExtent = new OpenLayers.Bounds(
+                    -20037508.34, -20037508.34, 20037508.34, 20037508.34
+                );
+                var wmsOptions = {
+                    // Comportamiento original OVIE: tiled:false → rejilla 256px (singleTile:false)
+                    singleTile: params.singleTile !== undefined ? params.singleTile : params.tiled,
+                    maxExtent: maxExtent,
+                    displayOutsideMaxExtent: false,
+                    tileOrigin: new OpenLayers.LonLat(-20037508.34, -20037508.34)
+                };
                 var newLayer = new OpenLayers.Layer[params.type](
                                                                 params.label,
                                                                 params.url,
@@ -1402,9 +1425,7 @@ $.widget("custom.mapping", {
                                                                     layers: this.getLayers(params.layers),
                                                                     format:'image/'+params.format
                                                                 },
-                                                                {
-                                                                    singleTile: params.tiled
-                                                                }
+                                                                wmsOptions
                 );
             }
             newLayer.isBaseLayer = isBase;

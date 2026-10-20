@@ -413,7 +413,7 @@ define(function(){
 							}
 			},
 			searchAct:{
-							url:'http://gaiamapas.inegi.org.mx/mdmSearchEngine/busq-oviescian/select?',
+							url:'https://gaiamapas.inegi.org.mx/mdmSearchEngine/busq-oviescian/select?',
 							//url:'http://10.1.30.101:9090/solr/busq-oviescian/select?',
 							type: 'POST',
 							dataType: "jsonp",
@@ -689,14 +689,14 @@ define(function(){
 										{label:'Delegación', field:'delegacion'},
 										{label:'Categoría', field:'categoria', items:[
 											{label:'Profesional',value:1},{label:'Técnico',value:2},{label:'Administrativo',value:3},{label:'Ventas',value:4},{label:'Oficios',value:5},{label:'Servicios',value:6},{label:'Industria',value:7}]},
-									    {label:'Total de vacantes', field:'total_vacantes'},
+										{label:'Total de vacantes', field:'total_vacantes'},
 										{label:'Sueldo', field:'sueldo'},
 										/*{label:'Descripción de actividades', field:''},*/
 										{label:'Perfil esperado del postulante', field:'perfil_postulante'},
 										{label:'Tiempo de contratación', field:'tiempo_contratacion'},
 										/*{label:'Requisitos para la entrega', field:''},*/
 										{label:'Contacto', field:'contacto'},
-								     ]		
+									]		
 			}
 			
 		},
@@ -705,20 +705,20 @@ define(function(){
 			status:false,
 			
 			ingresar:{
-					  url:'http://<server_url>/ovie-oferta/api/login',
-					  contentType : "application/json; charset=utf-8",
-					  type: 'POST',
-					  dataType: "json",
-					  stringify:true
+					url:'http://<server_url>/ovie-oferta/api/login',
+					contentType : "application/json; charset=utf-8",
+					type: 'POST',
+					dataType: "json",
+					stringify:true
 			},
 			registrar:{
-					   save:{	
+					save:{	
 								url:'http://<server_url>/ovie-oferta/user',
 								contentType : "application/json; charset=utf-8",
 								type: 'POST',
 								dataType: "json",
 								stringify:true
-					   }	
+					}	
 			},
 			logOut:{
 					url:'http://<server_url>/ovie-oferta/api/logout',
@@ -735,7 +735,7 @@ define(function(){
                     {
                         type:'WMS',
                         label:'Base',
-                        url:['http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?','http://gaiamapas3.inegi.org.mx/mdmCache/service/wms?','http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?'],
+                        url:['https://gaiamapas1.inegi.org.mx/mdmCache/service/wms?','https://gaiamapas3.inegi.org.mx/mdmCache/service/wms?','https://gaiamapas2.inegi.org.mx/mdmCache/service/wms?'],
                         tiled:false,
                         format:'jpeg',
                         layers:{
@@ -754,7 +754,7 @@ define(function(){
                     {
                         type:'WMS',
                         label:'Vectorial',
-                        url:'http://gaia.inegi.org.mx/NLB/tunnel/wms/mdm6wms?map=/opt/map/mdm60/puntos_ovie.map&',
+                        url:'https://gaia.inegi.org.mx/NLB/tunnel/wms/mdm6wms?map=/opt/map/mdm60/puntos_ovie.map&',
                         tiled:true,
                         format:'png',
                         layers:{
@@ -765,7 +765,7 @@ define(function(){
             },
 		geometry:{
                     store:{ 
-                        url:'http://mdm5beta.inegi.org.mx:8181/ovie/geometry',
+                        url:'https://mdm5beta.inegi.org.mx:8181/ovie/geometry',
                         type: 'POST',
                         dataType: "json",
                         contentType : "application/json; charset=utf-8"
@@ -784,8 +784,7 @@ define(function(){
                         contentType : "application/json; charset=utf-8"
                     },
                     Export:{
-                            //url:'http://mdm5beta.inegi.org.mx:8181/ovie/kml/download',
-							url:'http://gaia.inegi.org.mx/mdmexport/kml/download',
+							url:'https://gaia.inegi.org.mx/mdmexport/kml/download',
                             type:'POST',
                             dataType:'json',
                             contentType:'application/json'
