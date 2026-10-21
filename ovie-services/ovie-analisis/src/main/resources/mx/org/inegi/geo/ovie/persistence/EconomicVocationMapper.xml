@@ -65,45 +65,49 @@
 
 <!--  -->
 	<select id="actpre" parameterType="map" resultType="java.util.LinkedHashMap">
-		SELECT  count(*) total,d.desc_cort  AS desc ,d.cve_scian as cve_scian
+		SELECT count(*) total,
+			COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100)) AS desc,
+			COALESCE(NULLIF(trim(d.cve_scian), ''), LPAD(d.codigo_act::text, 6, '0')) AS cve_scian
 		FROM ovie_web.denue d, ovie_web.areas a
 		WHERE a.gid=#{id}
 		AND ST_Intersects(a.the_geom,d.the_geom)
-		GROUP BY d.cve_scian ,d.desc_cort
-		order by count(*) DESC
+		GROUP BY COALESCE(NULLIF(trim(d.cve_scian), ''), LPAD(d.codigo_act::text, 6, '0')),
+		         COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100))
+		ORDER BY count(*) DESC
 		LIMIT 3
 	</select>
 	
 	<!-- Actividad Consultada -->
 	<select id="actcons" resultType="java.util.LinkedHashMap">
-		SELECT COUNT(*), d.desc_cort FROM ovie_web.denue d,ovie_web.areas a
+		SELECT COUNT(*), COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100)) AS desc_cort
+		FROM ovie_web.denue d, ovie_web.areas a
 		WHERE ST_Intersects(a.the_geom,d.the_geom)
-		AND cve_scian::numeric=#{cve}
+		AND COALESCE(NULLIF(trim(d.cve_scian), ''), LPAD(d.codigo_act::text, 6, '0'))::numeric=#{cve}
 		AND a.gid=#{id}
-		GROUP BY d.desc_cort
+		GROUP BY COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100))
 	</select>
 	
  <!--Composicion Economica  -->
 	<select id="economicCompositionComercio"  resultType="float">
 	    SELECT count(*)
-		FROM ovie_web.denue D, ovie_web.areas a
+		FROM ovie_web.denue d, ovie_web.areas a
 		WHERE a.gid=#{id}
-		AND ST_Intersects(a.the_geom,D.the_geom)	
-		AND d.sector IN ('43', '46')
+		AND ST_Intersects(a.the_geom,d.the_geom)
+		AND COALESCE(NULLIF(trim(d.sector), ''), substring(LPAD(d.codigo_act::text, 6, '0'), 1, 2)) IN ('43', '46')
 	</select>
 	<select id="economicCompositionServicio"  resultType="float">
 	    SELECT count(*)
-		FROM ovie_web.denue D, ovie_web.areas a
+		FROM ovie_web.denue d, ovie_web.areas a
 		WHERE a.gid=#{id}
-		AND ST_Intersects(a.the_geom,D.the_geom)	
-		AND d.sector IN ('48', '49', '51', '52', '53', '54', '55', '56', '61', '62', '71', '72', '81', '93')	
+		AND ST_Intersects(a.the_geom,d.the_geom)
+		AND COALESCE(NULLIF(trim(d.sector), ''), substring(LPAD(d.codigo_act::text, 6, '0'), 1, 2)) IN ('48', '49', '51', '52', '53', '54', '55', '56', '61', '62', '71', '72', '81', '93')
 	</select>
 	<select id="economicCompositionIndustria" resultType="float">
 	    SELECT count(*)
-		FROM ovie_web.denue D, ovie_web.areas a
+		FROM ovie_web.denue d, ovie_web.areas a
 		WHERE a.gid=#{id}
-		AND ST_Intersects(a.the_geom,D.the_geom)	
-		AND d.sector IN ('21', '22', '23', '31', '32','33')	
+		AND ST_Intersects(a.the_geom,d.the_geom)
+		AND COALESCE(NULLIF(trim(d.sector), ''), substring(LPAD(d.codigo_act::text, 6, '0'), 1, 2)) IN ('21', '22', '23', '31', '32', '33')
 	</select>
 
 	<!-- Especializacion definida  -->

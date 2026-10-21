@@ -81,7 +81,17 @@ docker compose down -v                    :: ¡BORRA también la base!
 | Error de CORS en el navegador | Usar la URL relativa `/ovie` en el cliente, o ajustar `CORS_ORIGIN` en `.env`. |
 | `extension "postgis" is not available` | Ya se usa la imagen `postgis/postgis`; si no se requiere PostGIS puede cambiarse a `postgres:17`. |
 
-## 7. Archivos
+## 7. Tepic, Nayarit (cliente)
+
+El cliente en `ovie-client/js/app/config.js` incluye `territory` y `mapping.initialExtent` /
+`restrictedExtent` centrados en Tepic. El mapa base sigue siendo WMS de INEGI; la capa de
+*Hitos* de CDMX se omitió.
+
+Para indicadores, manzanas y búsqueda geográfica con datos locales hace falta cargar en
+PostgreSQL el esquema `ovie_web` y DENUE (u homólogos) de Nayarit, y un índice Solr acorde
+si se sustituye `dataSource.searchAreas` (hoy apunta al shard CDMX de INEGI).
+
+## 8. Archivos
 
 ```text
 ovie-docker/

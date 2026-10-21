@@ -66,14 +66,18 @@ define(['code/config',
 				map.mapping('actionMarker',{action:'delete',items:'all',type:'soc'});
 				for(var x in features){
 					var f = features[x];
-					var c = f.position.mercator.split(',');
-					switch (f.geometry) {
-                        case 'point':
-							map.mapping('addMarker',{lon:c[1],lat:c[0],store:false,type:'soc',zoom:false,params:{nom:f.label,desc:f.typeLabel,image:'point'}});
-							break;
-						default:
-							map.mapping('addMarker',{lon:c[1],lat:c[0],store:false,type:'soc',zoom:false,params:{nom:f.label,desc:f.typeLabel,image:'point'}});
-                    }
+					var lon, lat;
+					if (f.position && f.position.mercator) {
+						var c = f.position.mercator.split(',');
+						lon = c[1];
+						lat = c[0];
+					} else if (f.position && f.position.lon != null && f.position.lat != null) {
+						lon = f.position.lon;
+						lat = f.position.lat;
+					} else {
+						continue;
+					}
+					map.mapping('addMarker',{lon:lon,lat:lat,store:false,type:'soc',zoom:false,params:{nom:f.label,desc:f.typeLabel,image:'point'}});
 				}
 			},
 			showSpinnerExport:function(){

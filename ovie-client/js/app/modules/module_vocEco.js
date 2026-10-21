@@ -111,6 +111,40 @@ define(['code/config',
 			},
 			actSelected:{clave:null,label:null,value:null},
 			item:null,
+			getActiveAreaDb:function(){
+				var obj=this;
+				if (obj.item && obj.item.db != null) {
+					return obj.item.db;
+				}
+				var list=obj.main.localData.geoList;
+				if (list && list.length>0) {
+					return list[list.length-1].db;
+				}
+				return null;
+			},
+			normalizeActpre:function(actpre){
+				var rows=(actpre && actpre.length)? actpre.slice(0):[];
+				var i;
+				for (i=0;i<rows.length;i++) {
+					if (!rows[i].cve_scian) {
+						rows[i].cve_scian='461110';
+					}
+					if (!rows[i].desc) {
+						rows[i].desc='—';
+					}
+					if (rows[i].total == null) {
+						rows[i].total=0;
+					}
+				}
+				while (rows.length<3) {
+					rows.push({desc:'—', total:0, cve_scian:'461110'});
+				}
+				return rows;
+			},
+			actpredIconClass:function(cveScian){
+				var cve=cveScian || '461110';
+				return (!validator.isGeneric(cve))? validator.getIcon(cve): cve;
+			},
 			
 			eventos:function(){
 				var obj=this;
@@ -533,6 +567,7 @@ define(['code/config',
 		
 		
 		if (data!=null) {
+			data.actpre=obj.normalizeActpre(data.actpre);
 			//actividad consultada
 			var act= obj.main.localData.actEco.cve;
 			var actLabel= obj.main.localData.actEco.label;
@@ -579,9 +614,9 @@ define(['code/config',
 			
 			kmlData.push({label:"El " +data.moda[0].porcentaje +" de las unidades econ&oacute;micas tienen de ", value: data.moda[0].estrato});
 			
-			var comer=Math.round(data.compeco.comerciop);
-			var indus=Math.round(data.compeco.industriap);
-			var serv=Math.round(data.compeco.serviciop);
+			var comer=obj.safePercent(data.compeco.comerciop);
+			var indus=obj.safePercent(data.compeco.industriap);
+			var serv=obj.safePercent(data.compeco.serviciop);
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:comer});
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:indus});
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:serv});
@@ -729,19 +764,19 @@ define(['code/config',
 														'<div class="ovie-results-information ovieSprite ovieSprite-igrey" ref="actPred" style="margin-left:3px"></div>'+
 													'</div>'+ 
 													'<div class="vocEco-actpred-container">'+
-														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+((!validator.isGeneric(data.actpre[0].cve_scian))?validator.getIcon(data.actpre[0].cve_scian):data.actpre[0].cve_scian) +'"></div>'+
+														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+obj.actpredIconClass(data.actpre[0].cve_scian) +'"></div>'+
 														'<div class="vocEco-actpred-data" style="position:relative; top:0px; left:35px">'+data.actpre[0].desc +
 															'<div class="vocEco-actpred-data vocEco-actpred-count">('+data.actpre[0].total+')</div>'+
 														'</div>'+
 													'</div>'+
 													'<div class="vocEco-actpred-container">'+
-														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+((!validator.isGeneric(data.actpre[1].cve_scian))?validator.getIcon(data.actpre[1].cve_scian):data.actpre[1].cve_scian) +'"></div>'+
+														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+obj.actpredIconClass(data.actpre[1].cve_scian) +'"></div>'+
 														'<div class="vocEco-actpred-data" style="position:relative; top:0px; left:35px">'+data.actpre[1].desc +
 															'<div class="vocEco-actpred-data vocEco-actpred-count">('+data.actpre[1].total+')</div>'+
 														'</div>'+
 													'</div>'+
 													'<div class="vocEco-actpred-container">'+
-														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+((!validator.isGeneric(data.actpre[2].cve_scian))?validator.getIcon(data.actpre[2].cve_scian):data.actpre[2].cve_scian) +'"></div>'+
+														'<div class="vocEco-actpred-icon ovieSprite ovieSprite-actpred-'+obj.actpredIconClass(data.actpre[2].cve_scian) +'"></div>'+
 														'<div class="vocEco-actpred-data" style="position:relative; top:0px; left:35px">'+data.actpre[2].desc +
 															'<div class="vocEco-actpred-data vocEco-actpred-count">('+data.actpre[2].total+')</div>'+
 													    '</div>'+
@@ -912,11 +947,15 @@ define(['code/config',
 		obj.graphData(data);
 		},
 		
+		safePercent:function(value){
+			var n=Math.round(Number(value));
+			return (isNaN(n) || !isFinite(n)) ? 0 : n;
+		},
 		graphData:function(dataResponse){
 		
 		var obj=this;	
 		var cont=0;
-		var i =dataResponse.compeco;
+		var i =dataResponse.compeco || {comerciop:0, industriap:0, serviciop:0};
 		var data={};
 			
 				 
@@ -954,7 +993,7 @@ define(['code/config',
 				switch (cont) {
 					case 0:
 						data=data.comercio;
-						data.y= Math.round(i.comerciop);
+						data.y= obj.safePercent(i.comerciop);
 						data.yComplemento=100-data.y;
 						//D:\xampp\htdocs\OVIE\js\app\css\img	
 						data.icon="js/app/css/img/comercio.png"
@@ -962,14 +1001,14 @@ define(['code/config',
 					break;
 					case 1:
 						data=data.industria;
-						data.y= Math.round(i.industriap);
+						data.y= obj.safePercent(i.industriap);
 						data.yComplemento=100-data.y;
 						data.icon="js/app/css/img/industria.png"
 						
 					break;
 					case 2:
 						data=data.servicio;
-						data.y= Math.round(i.serviciop);
+						data.y= obj.safePercent(i.serviciop);
 						data.yComplemento=100-data.y;
 						data.icon="js/app/css/img/servicio.png"	
 						
@@ -1093,19 +1132,23 @@ define(['code/config',
 		//íconos especialización
 		getSpecializationData:function(data){
 			var obj=this;
-			var specializationData={ue:{icon:null, value:null}, po:{icon:null, value:null}, pb:{icon:null, value:null}};
+			var specializationData={ue:{icon:'comercio', value:0}, po:{icon:'comercio', value:0}, pb:{icon:'comercio', value:0}};
+			var emptySector={tipo:'comercio', comerciop:0, industriap:0, serviciop:0};
+			var compeco = (data && data.compeco) ? data.compeco : emptySector;
+			var perocupado = (data && data.specialization && data.specialization.perocupado) ? data.specialization.perocupado : emptySector;
+			var probruta = (data && data.specialization && data.specialization.probruta) ? data.specialization.probruta : emptySector;
 				//ue
-				specializationData.ue.icon=data.compeco.tipo;
-				var ue_tipo=data.compeco.tipo;
-				specializationData.ue.value=data.compeco[ue_tipo+"p"];
+				specializationData.ue.icon=compeco.tipo || 'comercio';
+				var ue_tipo=specializationData.ue.icon;
+				specializationData.ue.value=compeco[ue_tipo+"p"] != null ? compeco[ue_tipo+"p"] : 0;
 				//po
-				specializationData.po.icon=data.specialization.perocupado.tipo;
-				var po_tipo=data.specialization.perocupado.tipo;
-				specializationData.po.value=data.specialization.perocupado[po_tipo+"p"];
+				specializationData.po.icon=perocupado.tipo || 'comercio';
+				var po_tipo=specializationData.po.icon;
+				specializationData.po.value=perocupado[po_tipo+"p"] != null ? perocupado[po_tipo+"p"] : 0;
 				//pb
-				specializationData.pb.icon=data.specialization.probruta.tipo;
-				var pb_tipo=data.specialization.probruta.tipo;
-				specializationData.pb.value=data.specialization.probruta[pb_tipo+"p"];
+				specializationData.pb.icon=probruta.tipo || 'comercio';
+				var pb_tipo=specializationData.pb.icon;
+				specializationData.pb.value=probruta[pb_tipo+"p"] != null ? probruta[pb_tipo+"p"] : 0;
 				
 			/*icons.ue=data.compeco.tipo;
 			icons.po=data.specialization.perocupado.tipo;
@@ -1187,9 +1230,11 @@ define(['code/config',
 						item.id=obj.actSelected.clave;
 						var list=obj.main.localData.geoList;
 						var type=$(this).attr('type');
-						if (list.length>0) {
-                            obj.requestResultados(obj.item.db, item, type);
-							//obj.showMarks();
+						var areaDb=obj.getActiveAreaDb();
+						if (list.length>0 && areaDb!=null) {
+                            obj.requestResultados(areaDb, item, type);
+                        } else if (list.length>0) {
+							Materialize.toast('Seleccione un área en el mapa antes de consultar', 4000);
                         }
 				});
 		},
@@ -1208,9 +1253,11 @@ define(['code/config',
 				item.desc_corto=actTxt;
 				item.id=cveScian;
 				var list=obj.main.localData.geoList;
-				if (list.length>0) {
-                    obj.requestResultados(obj.item.db, item);
-					//obj.showMarks();
+				var areaDb=obj.getActiveAreaDb();
+				if (list.length>0 && areaDb!=null) {
+                    obj.requestResultados(areaDb, item);
+                } else if (list.length>0) {
+					Materialize.toast('Seleccione un área en el mapa antes de consultar', 4000);
                 }
 			},
 		

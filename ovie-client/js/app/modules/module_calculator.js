@@ -936,7 +936,7 @@ define(['code/config',
 						  linea1:['atras','7','8','9','(',')'],	
 						  linea2:['.','4','5','6','+','-'],
 						  linea3:['0','1','2','3','/','*'],
-						  linea4:['=','% colonia','% delegación','% CDMX']
+						  linea4:['=','% colonia','% municipio','% Nayarit']
 				}
 				
 				var chain=" ";
@@ -1004,7 +1004,7 @@ define(['code/config',
 										'<div class="row btn-border" style="width:100%; background:#de1074; border:none; padding-top: 7px;">'+
 											'<div class="col s4"><center><span class="bar-btn-style">% <br>colonia</span></center></div>'+
 											'<div class="col s4"><center><span class="bar-btn-style">% <br>delegación</span></center></div>'+
-											'<div class="col s4"><center><span class="bar-btn-style">% <br>CDMX</span></center></div>'+
+											'<div class="col s4"><center><span class="bar-btn-style">% <br>Nayarit</span></center></div>'+
 										'</div>'+
 									'</div>'+*/
 								'</div>'		

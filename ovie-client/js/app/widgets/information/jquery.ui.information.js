@@ -2,7 +2,7 @@ $.widget("custom.information", {
 	
     options: {
 		data:{
-			paragraphs:['Esta herramienta te permitira conocer la dinamica economica de cualquier territorio de la Ciudad, a partir de la consulta y la descarga de indicadores relevantes economicos como: trabajadores, sueldos y salarios, nivel de desarrollo economico y especializacion','Tambien podras identificar y visualizar en el mapa los negocios dedicados a un giro de interes, para conocer el numero y la ubicacion de tus competidores potenciales.'],
+			paragraphs:['Esta herramienta te permitira conocer la dinamica economica de cualquier territorio de Tepic y Nayarit, a partir de la consulta y la descarga de indicadores relevantes economicos como: trabajadores, sueldos y salarios, nivel de desarrollo economico y especializacion','Tambien podras identificar y visualizar en el mapa los negocios dedicados a un giro de interes, para conocer el numero y la ubicacion de tus competidores potenciales.'],
 			title:'Analisis sociodemografico',
 			text:'La radiografia social',
 			icon:'provS'
