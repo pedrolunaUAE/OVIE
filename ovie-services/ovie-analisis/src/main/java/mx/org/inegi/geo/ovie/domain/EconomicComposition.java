@@ -58,6 +58,10 @@ public class EconomicComposition {
 	}
 
 	public float getComerciop() {
+		if (this.total <= 0) {
+			this.comerciop = 0;
+			return 0;
+		}
 		this.comerciop = (this.comercio * 100) / this.total;
 		return (float) (Math.rint(comerciop*100.0)/100.0);
 	}
@@ -67,8 +71,11 @@ public class EconomicComposition {
 	}
 
 	public float getIndustriap() {
+		if (this.total <= 0) {
+			this.industriap = 0;
+			return 0;
+		}
 		this.industriap = (this.industria * 100) / this.total;
-		//return Math.round(industriap);
 		return (float) (Math.rint(industriap*100.0)/100.0);
 	}
 
@@ -77,8 +84,11 @@ public class EconomicComposition {
 	}
 
 	public float getServiciop() {
+		if (this.total <= 0) {
+			this.serviciop = 0;
+			return 0;
+		}
 		this.serviciop = (this.servicio * 100) / this.total;
-		//return  Math.round(serviciop);
 		return (float) (Math.rint(serviciop*100.0)/100.0);
 	}
 

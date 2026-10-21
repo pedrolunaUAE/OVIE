@@ -614,9 +614,9 @@ define(['code/config',
 			
 			kmlData.push({label:"El " +data.moda[0].porcentaje +" de las unidades econ&oacute;micas tienen de ", value: data.moda[0].estrato});
 			
-			var comer=Math.round(data.compeco.comerciop);
-			var indus=Math.round(data.compeco.industriap);
-			var serv=Math.round(data.compeco.serviciop);
+			var comer=obj.safePercent(data.compeco.comerciop);
+			var indus=obj.safePercent(data.compeco.industriap);
+			var serv=obj.safePercent(data.compeco.serviciop);
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:comer});
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:indus});
 			kmlData.push({label:"Composici&oacute;n de unidades econ&oacute;micas por sector comercio",value:serv});
@@ -947,11 +947,15 @@ define(['code/config',
 		obj.graphData(data);
 		},
 		
+		safePercent:function(value){
+			var n=Math.round(Number(value));
+			return (isNaN(n) || !isFinite(n)) ? 0 : n;
+		},
 		graphData:function(dataResponse){
 		
 		var obj=this;	
 		var cont=0;
-		var i =dataResponse.compeco;
+		var i =dataResponse.compeco || {comerciop:0, industriap:0, serviciop:0};
 		var data={};
 			
 				 
@@ -989,7 +993,7 @@ define(['code/config',
 				switch (cont) {
 					case 0:
 						data=data.comercio;
-						data.y= Math.round(i.comerciop);
+						data.y= obj.safePercent(i.comerciop);
 						data.yComplemento=100-data.y;
 						//D:\xampp\htdocs\OVIE\js\app\css\img	
 						data.icon="js/app/css/img/comercio.png"
@@ -997,14 +1001,14 @@ define(['code/config',
 					break;
 					case 1:
 						data=data.industria;
-						data.y= Math.round(i.industriap);
+						data.y= obj.safePercent(i.industriap);
 						data.yComplemento=100-data.y;
 						data.icon="js/app/css/img/industria.png"
 						
 					break;
 					case 2:
 						data=data.servicio;
-						data.y= Math.round(i.serviciop);
+						data.y= obj.safePercent(i.serviciop);
 						data.yComplemento=100-data.y;
 						data.icon="js/app/css/img/servicio.png"	
 						
