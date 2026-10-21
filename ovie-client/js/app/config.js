@@ -1,5 +1,11 @@
 define(function(){
 	return{
+		// Territorio de despliegue (extensión del mapa en grados: oeste, sur, este, norte)
+		territory:{
+			name:'Tepic, Nayarit',
+			initialExtent:{lon:[-104.98, 21.42], lat:[-104.82, 21.58]},
+			restrictedExtent:{lon:[-105.55, 20.95], lat:[-104.15, 22.15]}
+		},
 		menu:[
 			  {
 				id: 'mnu_home',
@@ -17,7 +23,7 @@ define(function(){
 				inactiveSprite: 'ovie-sprite-tools ovie-sprite-tools-analysis-off',
 				enabled: true,
 				modal:{
-					paragraphs:['Esta herramienta te permitirá conocer mejor el mercado potencial de cualquier territorio de la Ciudad, a partir de la consulta y descarga de los indicadores más importantes de población, nivel de escolaridad, edad y nivel de desarrollo social.'],
+					paragraphs:['Esta herramienta te permitirá conocer mejor el mercado potencial de cualquier territorio de Tepic y Nayarit, a partir de la consulta y descarga de los indicadores más importantes de población, nivel de escolaridad, edad y nivel de desarrollo social.'],
 					title:'Análisis sociodemográfico',
 					text:'La radiografía social',
 					icon:'soc'
@@ -40,7 +46,7 @@ define(function(){
 				inactiveSprite: 'ovie-sprite-tools ovie-sprite-tools-market-off',
 				enabled: true,
 				modal:{
-					paragraphs:['Esta herramienta te permitirá conocer la dinámica económica de cualquier territorio de la Ciudad, a partir de la consulta y la descarga de indicadores relevantes económicos como: trabajadores, sueldos y salarios, nivel de desarrollo económico y especialización.','También podrás identificar y visualizar en el mapa los negocios dedicados a un giro de interés, para conocer el número y la ubicación de tus competidores potenciales.'],
+					paragraphs:['Esta herramienta te permitirá conocer la dinámica económica de cualquier territorio de Tepic y Nayarit, a partir de la consulta y la descarga de indicadores relevantes económicos como: trabajadores, sueldos y salarios, nivel de desarrollo económico y especialización.','También podrás identificar y visualizar en el mapa los negocios dedicados a un giro de interés, para conocer el número y la ubicación de tus competidores potenciales.'],
 					title:'Análisis económico',
 					text:'La radiografía económica',
 					icon:'eco'
@@ -137,7 +143,7 @@ define(function(){
 				inactiveSprite: 'ovie-sprite-tools ovie-sprite-tools-laboral-off',
 				enabled: true,
 				modal:{
-					paragraphs:['En esta sección podrás subir y consultar ofertas de trabajo en un área de interés específica dentro de la Ciudad de México'],
+					paragraphs:['En esta sección podrás subir y consultar ofertas de trabajo en un área de interés específica en Tepic, Nayarit'],
 					title:'Oferta laboral',
 					text:'Encuentra ofertas de trabajo',
 					icon:'lab'
@@ -395,7 +401,8 @@ define(function(){
 			
 		},
 		dataSource:{
-			server:'http://<server_url>/ovie/',
+			server:'/ovie/',
+			// Índice Solr de INEGI orientado a CDMX; hasta tener shard Nayarit, la búsqueda por nombre puede no cubrir Tepic.
 			searchAreas:{
 							url:'https://gaia.inegi.org.mx/mdmSearchEngine/busq-oviemun/shardovie',
 							type: 'POST',
@@ -489,14 +496,14 @@ define(function(){
 			questionnaire:{
 				labor:{
 					save:{
-						url:'http://<server_url>/ovie-oferta/laboral',
+						url:'/ovie/laboral',
 						contentType : "application/json; charset=utf-8",
 						type: 'POST',
 						dataType: "json",
 						stringify:true
 					},
 					get:{
-						url:'http://<server_url>/ovie-oferta/laboral',
+						url:'/ovie/laboral',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
@@ -505,28 +512,28 @@ define(function(){
 				},
 				realState:{
 					save:{
-						url:'http://<server_url>/ovie-oferta/inmobiliaria',
+						url:'/ovie/inmobiliaria',
 						contentType : "application/json; charset=utf-8",
 						type: 'POST',
 						dataType: "json",
 						stringify:true
 					},
 					get:{
-						url:'http://<server_url>/ovie-oferta/inmobiliaria',
+						url:'/ovie/inmobiliaria',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:false
 					},
 					upload:{
-						url:'http://<server_url>/ovie-oferta/fotosinmobiliaria',
+						url:'/ovie/fotosinmobiliaria',
 						contentType : "application/json; charset=utf-8",
 						type: 'POST',
 						dataType: "json",
 						stringify:true
 					},
 					remove:{
-								url:'http://<server_url>/ovie-oferta/delfotosinmobiliaria',
+								url:'/ovie/delfotosinmobiliaria',
 								contentType : "application/json; charset=utf-8",
 								type: 'GET',
 								dataType: "json",
@@ -539,28 +546,28 @@ define(function(){
 		},
 		inmobiliaria:{
 			 modifyList:{
-						url:'http://<server_url>/ovie-oferta/inmobiliariaTitle',
+						url:'/ovie/inmobiliariaTitle',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:true
 			 },
 			 modifyItem:{
-						url:'http://<server_url>/ovie-oferta/inmobiliariaID?',
+						url:'/ovie/inmobiliariaID?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:true
 			 },
 			downloadFotos:{
-					    url:'http://<server_url>/ovie-oferta/fotosinmobiliaria?',
+					    url:'/ovie/fotosinmobiliaria?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:true
 			},
 			downloadFotosConsulta:{
-						url:'http://<server_url>/ovie-oferta/fotosinmobiliariafree?',
+						url:'/ovie/fotosinmobiliariafree?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
@@ -575,7 +582,7 @@ define(function(){
 						{label:'Casa con uso de suelo que permita actividad econ&oacute;mica', value:'ccasa'}
 					],
 			identify:{
-					    url:'http://<server_url>/ovie-oferta/getOfertainmobiliaria?',
+					    url:'/ovie/getOfertainmobiliaria?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
@@ -612,21 +619,21 @@ define(function(){
 		
 		laboral:{
 			 modifyList:{
-						url:'http://<server_url>/ovie-oferta/laboralTitle',
+						url:'/ovie/laboralTitle',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:true
 			 },
 			 modifyItem:{
-						url:'http://<server_url>/ovie-oferta/laboralID?',
+						url:'/ovie/laboralID?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
 						stringify:true
 			 },
 			 upload:{
-					    url:'http://<server_url>/ovie-oferta/fotoslaboral',
+					    url:'/ovie/fotoslaboral',
 						contentType : "application/json; charset=utf-8",
 						type: 'POST',
 						dataType: "json",
@@ -634,7 +641,7 @@ define(function(){
 			},
 			downloadFotos:{
 						//ovie/fotosinmobiliaria?id_inm=188 
-					    url:'http://<server_url>/ovie-oferta/fotoslaboral?',
+					    url:'/ovie/fotoslaboral?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
@@ -661,7 +668,7 @@ define(function(){
 							]	
 			},
 			identify:{
-					    url:'http://<server_url>/ovie-oferta/getOfertalaboral?',
+					    url:'/ovie/getOfertalaboral?',
 						contentType : "application/json; charset=utf-8",
 						type: 'GET',
 						dataType: "json",
@@ -705,7 +712,7 @@ define(function(){
 			status:false,
 			
 			ingresar:{
-					  url:'http://<server_url>/ovie-oferta/api/login',
+					  url:'/ovie/api/login',
 					  contentType : "application/json; charset=utf-8",
 					  type: 'POST',
 					  dataType: "json",
@@ -713,7 +720,7 @@ define(function(){
 			},
 			registrar:{
 					   save:{	
-								url:'http://<server_url>/ovie-oferta/user',
+								url:'/ovie/user',
 								contentType : "application/json; charset=utf-8",
 								type: 'POST',
 								dataType: "json",
@@ -721,7 +728,7 @@ define(function(){
 					   }	
 			},
 			logOut:{
-					url:'http://<server_url>/ovie-oferta/api/logout',
+					url:'/ovie/api/logout',
 					contentType : "application/json; charset=utf-8",
 					type: 'POST',
 					dataType: "json",
@@ -730,55 +737,39 @@ define(function(){
 			
 		},
 		
-		mapping:{ 
+		mapping:{
+                initialExtent:{lon:[-104.98, 21.42], lat:[-104.82, 21.58]},
+                restrictedExtent:{lon:[-105.55, 20.95], lat:[-104.15, 22.15]},
                 bases:[
                     {
                         type:'WMS',
                         label:'Base',
-                        url:['http://gaiamapas1.inegi.org.mx/mdmCache/service/wms?','http://gaiamapas3.inegi.org.mx/mdmCache/service/wms?','http://gaiamapas2.inegi.org.mx/mdmCache/service/wms?'],
+                        url:['https://gaiamapas1.inegi.org.mx/mdmCache/service/wms?','https://gaiamapas3.inegi.org.mx/mdmCache/service/wms?','https://gaiamapas2.inegi.org.mx/mdmCache/service/wms?'],
                         tiled:false,
                         format:'jpeg',
                         layers:{
                             MapaBaseTopograficov61_sinsombreado:{label:'Base'}
                         }
                     }
-					/*
-					{
-						type:'OSM',
-                        label:'Base'
-					}
-					*/
                 ],
-                overlays:[
-                    
-                    {
-                        type:'WMS',
-                        label:'Vectorial',
-                        url:'http://gaia.inegi.org.mx/NLB/tunnel/wms/mdm6wms?map=/opt/map/mdm60/puntos_ovie.map&',
-                        tiled:true,
-                        format:'png',
-                        layers:{
-                            chitosv3:{label:'Hitos',active:true}
-                        }
-                    }
-                ]
+                overlays:[]
             },
 		geometry:{
                     store:{ 
-                        url:'http://mdm5beta.inegi.org.mx:8181/ovie/geometry',
+                        url:'/ovie/geometry',
                         type: 'POST',
                         dataType: "json",
                         contentType : "application/json; charset=utf-8"
                         
                     },
                     addBuffer:{
-						url:'http://<server_url>/ovie/area',
+						url:'/ovie/area',
                         type:'POST',
                         dataType:'json',
                         contentType:'application/json; charset=utf-8'
                     },
                     bufferLine:{
-						url:'http://<server_url>/ovie/buffer',
+						url:'/ovie/buffer',
                         type: 'POST',
                         dataType: "json",
                         contentType : "application/json; charset=utf-8"

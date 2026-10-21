@@ -45,7 +45,7 @@ define(['code/config',
 												'información geográfica dirigida a emprendedores,<br class="spaces">'+
 												'empresarios e inversionistas, que presenta de </br class="spaces"> manera clara, unificada y comprensible, los </br class="spaces"> principales datos económicos, sociodemográficos <br class="spaces">'+
 												'y urbanos del territorio.</p>'+
-												'<p class="ovie-title-definicion2" style="padding-top: 18px; padding-bottom: 10px;">Podrás obtener información de</br class="spaces"> cualquier lugar de la Ciudad, ya sea:</p>'+
+												'<p class="ovie-title-definicion2" style="padding-top: 18px; padding-bottom: 10px;">Podrás obtener información de</br class="spaces"> cualquier lugar de Tepic y Nayarit, ya sea:</p>'+
 											'</div>'+
 											
 											'<div class="row">'+

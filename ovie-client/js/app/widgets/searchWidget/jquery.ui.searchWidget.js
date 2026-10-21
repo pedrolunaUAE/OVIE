@@ -115,7 +115,7 @@ $.widget( "custom.searchWidget", {
 				obj.currentData.cat = '';
 			}
 			
-			obj.getData(obj.options.dataSource,{},function(data){
+			obj.getData(source,{},function(data){
 				obj.proccessSearch(data);
 				delete source.params.fq;
 			})

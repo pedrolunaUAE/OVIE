@@ -145,8 +145,14 @@ define([], function(){
     }
     var getIcon = function(clv,additional){
         additional = (additional)?additional:'';
-        var icon = clv+'';
-        var segment = clv.substr(0,2);
+        if (clv === null || clv === undefined || clv === '') {
+            return additional + 'comercio';
+        }
+        var icon = String(clv);
+        if (icon.length < 2) {
+            return additional + 'comercio';
+        }
+        var segment = icon.substr(0,2);
         var resultado=getNewIcon(icon);
         if (!resultado.exist) {
           

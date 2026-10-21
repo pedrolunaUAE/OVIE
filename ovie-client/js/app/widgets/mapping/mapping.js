@@ -16,8 +16,8 @@ $.widget("custom.mapping", {
                        {type:'point',status:false,border:'middle'},
                        {type:'line',status:false,border:'bottom'}
             ],
-            initialExtent:{lon:[-99.3928324914, 18.9996612877 ],lat:[-98.8575833408, 19.6129390869]},
-            restrictedExtent:{lon:[-100.091065006, 18.7591801477 ],lat:[-97.8875668742, 19.9448620493]},
+            initialExtent:{lon:[-104.98, 21.42], lat:[-104.82, 21.58]},
+            restrictedExtent:{lon:[-105.55, 20.95], lat:[-104.15, 22.15]},
             projection: 'EPSG:900913',
             displayProjection: "EPSG:4326",
             resolutions: [/*305.7481130859375,*/152.87405654296876,76.43702827148438,38.21851413574219,19.109257067871095,9.554628533935547,4.777314266967774,2.388657133483887,1.1943285667419434,0.5971642833709717,0.29858214168548586,0.14929107084274293,0.07464553542137146],
@@ -437,12 +437,13 @@ $.widget("custom.mapping", {
         return format;
     },
     addEvents : function(item){
-        
+        if (!item || !item.item || !item.item.events) {
+            return;
+        }
         var events = item.item.events;
         for(x in item.events){
             events.register(x,item.item,item.events[x]);
         }
-        
     },
     addEventControls : function(){
         var obj = this;
@@ -711,6 +712,10 @@ $.widget("custom.mapping", {
     },
     buildMap:function(){
         var obj = this;
+        if (this.options.layers && this.options.layers.initialExtent) {
+            this.options.initialExtent = this.options.layers.initialExtent;
+            this.options.restrictedExtent = this.options.layers.restrictedExtent;
+        }
         var e = this.options.initialExtent;
         var re = this.options.restrictedExtent;
         this.options.extent = new OpenLayers.Bounds(e.lon[0],e.lon[1], e.lat[0],e.lat[1]);
@@ -857,7 +862,6 @@ $.widget("custom.mapping", {
                                 toggleKey: "ctrl"+k, // remove selection
                                 multipleKey: "shift"+k, // add selection,
                                 onSelect: function(e){
-                                    console.log(e);
                                     setTimeout(function(){
                                         
                                             obj.options.regFeatures.setSelected(e.id,e.custom.type,e.custom.item);
@@ -1023,14 +1027,24 @@ $.widget("custom.mapping", {
           }
 	 
         }
-        this.addEvents({
-            item:obj.getLayer('Base'),
-            events:{
-                loadstart:loadStart,
-                loadend:loadEnd
-            }   
-        });
-        
+        var baseLayer = obj.getLayer('Base');
+        if (!baseLayer && obj.options.map) {
+            for (var i = 0; i < obj.options.map.layers.length; i++) {
+                if (obj.options.map.layers[i].isBaseLayer) {
+                    baseLayer = obj.options.map.layers[i];
+                    break;
+                }
+            }
+        }
+        if (baseLayer) {
+            this.addEvents({
+                item: baseLayer,
+                events:{
+                    loadstart: loadStart,
+                    loadend: loadEnd
+                }
+            });
+        }
     },
     addFeaturesFromOptions:function(){//modificada gordis
        var obj = this;
@@ -1393,8 +1407,20 @@ $.widget("custom.mapping", {
     },
     addLayer:function(params,isBase){
             if(params.type=='OSM'){
-                var newLayer = new OpenLayers.Layer[params.type](params.label);
+                var osmUrl = params.url || null;
+                var newLayer = new OpenLayers.Layer.OSM(params.label, osmUrl, {
+                    tileOptions: { crossOriginKeyword: null }
+                });
             }else{
+                var maxExtent = new OpenLayers.Bounds(
+                    -20037508.34, -20037508.34, 20037508.34, 20037508.34
+                );
+                var wmsOptions = {
+                    singleTile: params.singleTile !== undefined ? params.singleTile : params.tiled,
+                    maxExtent: maxExtent,
+                    displayOutsideMaxExtent: false,
+                    tileOrigin: new OpenLayers.LonLat(-20037508.34, -20037508.34)
+                };
                 var newLayer = new OpenLayers.Layer[params.type](
                                                                 params.label,
                                                                 params.url,
@@ -1402,9 +1428,7 @@ $.widget("custom.mapping", {
                                                                     layers: this.getLayers(params.layers),
                                                                     format:'image/'+params.format
                                                                 },
-                                                                {
-                                                                    singleTile: params.tiled
-                                                                }
+                                                                wmsOptions
                 );
             }
             newLayer.isBaseLayer = isBase;

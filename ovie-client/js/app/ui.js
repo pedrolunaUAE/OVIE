@@ -231,9 +231,9 @@ define([
 						'<div class="modal-content">'+
 						  '<h4 class="modal-title">Bienvenido</h4>'+
 						  '<center><div><img src="img/reports/logo-copia.png"></div></center>'+
-						  '<p class="modal-txt">La Oficina Virtual de Información Económica (OVIE) es una plataforma GRATUITA de análisis territorial que busca servirte de guía para fundamentar tus decisiones económicas. A través de este portal, podrás acceder al mapa económico de la CDMX y conocer, cuadra por cuadra, el contexto social, económico y urbano de cualquier área de tu interés, así como información relevante para los más de 900 tipos de negocios que existen en la Ciudad.<br><br>'+
-'Las estadísticas aquí presentadas son resultado del procesamiento de información de distintas fuentes de la administración pública federal y local, con base en la disponibilidad de información en tiempo y espacio y, están sujetas a una actualización continua.'+ 
-'La OVIE es un esfuerzo por poner a tu alcance una caja de herramientas con información útil para iniciar, expandir o consolidar tu negocio. Quien arriesga su patrimonio para el desarrollo económico de la Ciudad debe contar con la mayor información que le ayude a tomar decisiones. '+
+						  '<p class="modal-txt">La Oficina Virtual de Información Económica (OVIE) es una plataforma GRATUITA de análisis territorial que busca servirte de guía para fundamentar tus decisiones económicas. A través de este portal, podrás acceder al mapa económico de Tepic y Nayarit y conocer el contexto social, económico y urbano de cualquier área de tu interés, así como información relevante para los más de 900 tipos de negocios catalogados.<br><br>'+
+'Las estadísticas aquí presentadas son resultado del procesamiento de información de distintas fuentes de la administración pública federal y estatal, con base en la disponibilidad de información en tiempo y espacio y, están sujetas a una actualización continua.'+ 
+'La OVIE es un esfuerzo por poner a tu alcance una caja de herramientas con información útil para iniciar, expandir o consolidar tu negocio. Quien arriesga su patrimonio para el desarrollo económico de la región debe contar con la mayor información que le ayude a tomar decisiones. '+
 '<br><br><center>¡Te invitamos a utilizar esta herramienta!</center>'+
 
 '</p>'+
