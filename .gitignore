@@ -9,3 +9,8 @@ node_modules/
 
 logs/
 *.log
+
+bdback/
+*.backup
+*.dump
+tmp-*.json
