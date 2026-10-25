@@ -48,7 +48,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_calculator.css'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_calculator.css?v=2'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})
@@ -198,14 +198,14 @@ define(['code/config',
 							'</div>'+
 							//Botón de exportación
 							'<div class="fixed-action-btn" style="bottom: 24px; right: 24px;">'+
-								'<a class="btn-floating btn-large " style="background:#E2007A">'+
+								'<a class="btn-floating btn-large " style="background:#6E1A1A">'+
 									'<i class="material-icons">'+
 										'<img src="js/app/widgets/results/export.png" style="margin-top: 5px;">'+
 									'</i>'+
 								'</a>'+
 								'<ul>'+
-									//'<li><a class="btn-floating exportKml" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
-									'<li><a class="btn-floating exportBtn" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+									//'<li><a class="btn-floating exportKml" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+									'<li><a class="btn-floating exportBtn" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
 								'</ul>'+
 							'</div>'+
 							Footer.get()+
@@ -286,7 +286,7 @@ define(['code/config',
 				});
 				 
 				//Contenedor del nombre del giro seleccionado
-				var giroContainer='<div class="showGiro"><span style="font-weight:bold; color:#771388;">Giro seleccionado:</span><span class="giroValue"></span></div>';
+				var giroContainer='<div class="showGiro"><span style="font-weight:bold; color:#4A1212;">Giro seleccionado:</span><span class="giroValue"></span></div>';
 				$("#varSelection").html(giroContainer);
 				
 				//buscador de actividades
@@ -955,7 +955,7 @@ define(['code/config',
 					   if (cont==0) {
 							clase="ovieSprite ovieSprite-calculator-arrow";
 							firstBtn="";
-							color="#de1074";
+							color="#6E1A1A";
 							stylePos="float:left";
 							styleBorder="none";
 							
@@ -982,10 +982,10 @@ define(['code/config',
 									'<div class="btn-border" btnValue='+btns[btnLabel][3]+'><center><span class="btn-labelStyle">'+btns[btnLabel][3]+'</span></center></div>'+
 								'</div>'+
 								'<div class="col s2 button-wrap">'+
-									'<div class="btn-border" btnValue='+btns[btnLabel][4]+' style="background:#de1074; border:none"><center><span class="btn-labelStyle" style="color:#FFF">'+btns[btnLabel][4]+'</span></center></div>'+
+									'<div class="btn-border" btnValue='+btns[btnLabel][4]+' style="background:#6E1A1A; border:none"><center><span class="btn-labelStyle" style="color:#FFF">'+btns[btnLabel][4]+'</span></center></div>'+
 								'</div>'+
 								'<div class="col s2 button-wrap">'+
-									'<div class="btn-border" btnValue='+btns[btnLabel][5]+' style="background:#de1074; border:none"><center><span class="btn-labelStyle" style="color:#FFF">'+btns[btnLabel][5]+'</span></center></div>'+
+									'<div class="btn-border" btnValue='+btns[btnLabel][5]+' style="background:#6E1A1A; border:none"><center><span class="btn-labelStyle" style="color:#FFF">'+btns[btnLabel][5]+'</span></center></div>'+
 								'</div>'+
 						      '</div>'
                     cont=cont+1;
@@ -1001,7 +1001,7 @@ define(['code/config',
 									'<div class="col s4" style="height:100%"><div></div></div>'+
 									
 									/*'<div class="col s10 buttons-sections">'+
-										'<div class="row btn-border" style="width:100%; background:#de1074; border:none; padding-top: 7px;">'+
+										'<div class="row btn-border" style="width:100%; background:#6E1A1A; border:none; padding-top: 7px;">'+
 											'<div class="col s4"><center><span class="bar-btn-style">% <br>colonia</span></center></div>'+
 											'<div class="col s4"><center><span class="bar-btn-style">% <br>delegación</span></center></div>'+
 											'<div class="col s4"><center><span class="bar-btn-style">% <br>Nayarit</span></center></div>'+

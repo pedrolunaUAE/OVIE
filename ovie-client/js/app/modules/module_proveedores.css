@@ -65,7 +65,7 @@
 }
 .infoProviders .headProvider{
 	    color: #FFF;
-    background: #EC7DAB;
+    background: #C4AF99;
 	text-align: center;
     border: 2px solid #fff;
 }
@@ -98,7 +98,7 @@
 }
 
 #proveed-container .blocker .spinner-layer{
-	border-color: #E2007A;
+	border-color: #6E1A1A;
 }
 #proveed-container .blocker .label{
 	font-weight: bold;
@@ -118,7 +118,7 @@
 	display: none;
 }
 #proveed-container .exportPdf{
-	background-color: #E2007A;
+	background-color: #6E1A1A;
     /*margin-top: 20px;*/
 }
 #proveed-container .exportPdf .image{

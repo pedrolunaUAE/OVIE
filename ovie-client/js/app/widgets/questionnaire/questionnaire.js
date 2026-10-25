@@ -356,7 +356,7 @@ $.widget("custom.questionnaire", {
 						  '<center><div><img src=""></div></center>'+
 						'</div>'+
 						'<div class="modal-footer">'+
-						  '<a href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>'+
+						  '<a href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat ">Cerrar</a>'+
 						'</div>'+
 					  '</div>';
 			return chain;

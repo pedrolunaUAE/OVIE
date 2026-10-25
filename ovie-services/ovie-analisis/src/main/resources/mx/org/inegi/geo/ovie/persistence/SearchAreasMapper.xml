@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mx.org.inegi.geo.ovie.persistence.SearchAreasMapper">
+
+	<!-- tabla debe ser el nombre real en ovie_web: AreaMapper.findBuffer la usa como ovie_web.${type} junto con el gid.
+	     ovie_web.localidades_busqueda se genera con ovie-docker/sql/catalogo_busqueda_nayarit.sql.
+	     ovie_web.cp y ovie_web.limite_mun no se incluyen porque contienen datos de Michoacán. -->
+	<sql id="matches">
+		WITH src AS (
+			SELECT gid AS id, 'colonias' AS tabla, 'Colonia' AS tipo, 3 AS prio,
+			       COALESCE(localidad || ', ', '') || nom_asen AS busqueda, COALESCE(cp, '') AS extra, the_geom
+			FROM ovie_web.colonias
+			UNION ALL
+			SELECT gid, 'localidades_busqueda', tipo, CASE tipo WHEN 'Municipio' THEN 1 ELSE 2 END,
+			       CASE tipo WHEN 'Municipio' THEN 'Nayarit, ' || nombre ELSE nom_mun || ', ' || nombre END,
+			       '', the_geom
+			FROM ovie_web.localidades_busqueda
+		), m AS (
+			SELECT *
+			FROM src
+			WHERE 1 = 1
+			<foreach item="token" collection="tokens">
+				AND translate(lower(busqueda || ' ' || tipo || ' ' || extra), 'áéíóúüñàèìòù', 'aeiouunaeiou') LIKE '%' || #{token} || '%'
+			</foreach>
+			<if test="tipo != null">
+				AND tipo = #{tipo}
+			</if>
+		)
+	</sql>
+
+	<select id="search" resultType="mx.org.inegi.geo.ovie.domain.SearchArea">
+		<include refid="matches"/>
+		SELECT id, tabla, tipo, busqueda, 'polygon' AS geomtype,
+		       ST_AsText(the_geom) AS wkt,
+		       ST_Y(p) || ',' || ST_X(p) AS coord_merc,
+		       ST_Y(ST_Transform(ST_SetSRID(p, 900913), 4326)) || ',' || ST_X(ST_Transform(ST_SetSRID(p, 900913), 4326)) AS locacion
+		FROM (SELECT *, ST_PointOnSurface(the_geom) AS p FROM m) q
+		ORDER BY prio, length(busqueda), busqueda
+		LIMIT #{rows}
+	</select>
+
+	<select id="countByTipo" resultType="java.util.LinkedHashMap">
+		<include refid="matches"/>
+		SELECT tipo, count(*) AS total
+		FROM m
+		GROUP BY tipo, prio
+		ORDER BY prio
+	</select>
+
+</mapper>

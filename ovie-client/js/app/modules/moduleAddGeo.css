@@ -3,6 +3,17 @@
     width: 100%;
     margin-top: 5px;
 }
+@media only screen and (min-width: 1300px){
+    #geoadd-container{
+        width: 1250px;
+    }
+    #geoadd-container > .row > .col.m5{
+        width: 417px;
+    }
+    #geoadd-container > .row > .col.m7{
+        width: calc(100% - 417px);
+    }
+}
 .geoArea-areaMapAdditional{
     height: 50px !important;
     width: 50px !important;
@@ -80,7 +91,7 @@
 }
 
 #geoadd-container .blocker .spinner-layer{
-	border-color: #E2007A;
+	border-color: #6E1A1A;
 }*/
 
 #proveed-container .proveedor-message-container{
@@ -97,7 +108,7 @@
 }
 
 #proveed-container .blocker .spinner-layer{
-	border-color: #E2007A;
+	border-color: #6E1A1A;
 }
 #proveed-container .blocker .label{
 	font-weight: bold;

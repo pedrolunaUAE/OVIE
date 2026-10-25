@@ -15,7 +15,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_share.css'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_share.css?v=2'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})

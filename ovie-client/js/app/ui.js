@@ -131,12 +131,12 @@ define([
 				
 				cadena+= '	<div id="ms_header_logos" class="row width-content">';
 				cadena+= '			<div class="pivot"></div>';
-				cadena+= '			<img src="js/app/css/img/ovie_logo.jpg" class="main-logo">';
-				cadena+= '			<img src="js/app/css/img/logo_cdmx.png" class="cdmx-logo">';
+				cadena+= '			<img src="js/app/css/img/ovie_logo_nayarit.png?v=2" class="main-logo" alt="OVIE Nayarit">';
+				cadena+= '			<img src="js/app/css/img/LogoNayarit.png" class="nayarit-logo" alt="Gobierno de Nayarit">';
 				//cadena+= '          <div class="versionBeta">Versión Beta</div>';
 				
 				cadena+= '			<img src="js/app/css/img/inegi_logo.png" class="inegi-logo">';
-				cadena+= '			<img src="js/app/css/img/sedeco_logo.png" class="sedeco-logo">';
+				cadena+= '			<img src="js/app/css/img/sedesNay_logo.png" class="sedes-logo" alt="Secretaría de Desarrollo Económico y Social de Nayarit">';
 				
 				
 				cadena+= '			<div id="header_title" class="header-title"></div>';
@@ -230,7 +230,7 @@ define([
 			var chain='<div id="modal1" class="modal modal-fixed-footer modal-container">'+
 						'<div class="modal-content">'+
 						  '<h4 class="modal-title">Bienvenido</h4>'+
-						  '<center><div><img src="img/reports/logo-copia.png"></div></center>'+
+						  '<center><div><img src="js/app/css/img/ovie_logo_nayarit.png?v=2" alt="OVIE Nayarit" style="width:164px;height:auto"></div></center>'+
 						  '<p class="modal-txt">La Oficina Virtual de Información Económica (OVIE) es una plataforma GRATUITA de análisis territorial que busca servirte de guía para fundamentar tus decisiones económicas. A través de este portal, podrás acceder al mapa económico de Tepic y Nayarit y conocer el contexto social, económico y urbano de cualquier área de tu interés, así como información relevante para los más de 900 tipos de negocios catalogados.<br><br>'+
 'Las estadísticas aquí presentadas son resultado del procesamiento de información de distintas fuentes de la administración pública federal y estatal, con base en la disponibilidad de información en tiempo y espacio y, están sujetas a una actualización continua.'+ 
 'La OVIE es un esfuerzo por poner a tu alcance una caja de herramientas con información útil para iniciar, expandir o consolidar tu negocio. Quien arriesga su patrimonio para el desarrollo económico de la región debe contar con la mayor información que le ayude a tomar decisiones. '+
@@ -239,7 +239,7 @@ define([
 '</p>'+
 						'</div>'+
 						'<div class="modal-footer">'+
-						  '<a href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>'+
+						  '<a href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat ">Aceptar</a>'+
 						'</div>'+
 					  '</div>';
 			return chain;

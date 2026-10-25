@@ -1,4 +1,4 @@
-.inmobSprite{ background:url("inmobSprite.png") top left no-repeat; }
+.inmobSprite{ background:url("inmobSprite.png?v=2") top left no-repeat; }
 .inmobSprite_telB{ width:45px; height:45px; background-position:-10px -10px; }
 .inmobSprite_usoB{ width:45px; height:45px; background-position:-10px -65px; }
 .inmobSprite_superficieB{ width:45px; height:45px; background-position:-10px -120px; }

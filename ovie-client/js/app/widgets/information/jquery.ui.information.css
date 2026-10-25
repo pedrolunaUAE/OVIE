@@ -1,4 +1,4 @@
-@import url('css/spriteInformation.css');
+@import url('css/spriteInformation.css?v=2');
 
 .customInformation{
     position: absolute;
@@ -13,7 +13,7 @@
 }
 
 .customInformation .title{
-   background: #E2007A;
+   background: #6E1A1A;
    padding: 10px;
    font-size: 150%;
    color: #fff;
@@ -39,7 +39,7 @@
 }
 .customInformation .description{
    font-size: 150%;
-   color: #E2007A;
+   color: #6E1A1A;
    text-align: center;
    margin-top: 0px;
 }
@@ -55,14 +55,14 @@
         
     }
 .customInformation .button{
-        background-color: #e2007a;
+        background-color: #6E1A1A;
         position: absolute;
         bottom: 10px;
         right: 10px;
 }
 
 .customInformation .image{
-    content: url(img/ovie_logo.jpg);
+    content: url(img/ovie_logo_nayarit.png?v=2);
     width: 45% !important;
     max-width: 170px;
     position: absolute;

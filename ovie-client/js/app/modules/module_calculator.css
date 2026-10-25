@@ -64,11 +64,11 @@
 }
 
 #treeMenu_2 span{
-    color:#de1074 !important;
+    color:#6E1A1A !important;
 }
 
 #treeMenu_3 span{
-    color:#80007f !important;
+    color:#4A1212 !important;
 }
 
 #treeMenu_4 span{
@@ -89,13 +89,13 @@
 .backLabel{
     margin-top: -6px;
     font-size: 100%;
-    color: #c91c8f;;
+    color: #6E1A1A;;
 }
 
 .giroTitle-txt{
     font-family: sans-serif;
     font-weight: bold;
-    color: #de1074;
+    color: #6E1A1A;
 }
 
 .giroValue{
@@ -249,8 +249,8 @@
 }
 
 .reportTable-header{
-    background:#F2B9CF;
-    color: #de1074;
+    background:#EDE3D8;
+    color: #6E1A1A;
     padding:0px 0px!important;
 }
 

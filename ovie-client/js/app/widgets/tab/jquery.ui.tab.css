@@ -47,7 +47,7 @@
     cursor: pointer;
 }
 .customTab .header .option.active{
-    border-bottom: 5px solid #DE1074;
+    border-bottom: 5px solid #6E1A1A;
 }
 .customTab .content .optionContainer.notOverflow{
     overflow: hidden;
@@ -93,7 +93,7 @@
 }
 
 .customTab .Spinner .spinner-layer{
-	border-color: #E2007A;
+	border-color: #6E1A1A;
 }
 .customTab .Spinner .label{
 	font-weight: bold;

@@ -62,7 +62,7 @@
 	
 }
 .contentSearch .collection-item:hover{
-	background-color:#F9DCE8;
+	background-color:#EDE3D8;
 }
 .contentSearch .collection{
 	margin:0px;
@@ -84,7 +84,7 @@
 }
 .sa-search-detail .chip{
 	color:#FFF;
-	background-color:#E2007A;
+	background-color:#6E1A1A;
 	margin: 2px 2px 2px 2px;
 	cursor:pointer;
 }
@@ -99,7 +99,7 @@
 }
 
 .collection-item.avatar .activity-clave{
-	color: #e2007a;
+	color: #6E1A1A;
     font-weight: bold;
     font-size: 13pt;
 }
@@ -110,7 +110,7 @@
 
 /*buscador de actividades seleccionar elemento*/
 .collection .collection-item.active {
-    background-color: #E2007A;
+    background-color: #6E1A1A;
     color: #eafaf9;
 }
 

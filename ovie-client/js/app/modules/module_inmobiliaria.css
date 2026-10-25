@@ -24,7 +24,7 @@
     display: none;
 }
 .customLogin .title{
-    background: #e2007a;
+    background: #6E1A1A;
     color: white;
     font-size: 16pt;
     padding: 5px;
@@ -33,7 +33,7 @@
     margin-top: -33px !important;
 }
 .customLogin ._signIn{
-    background: #e2007a;
+    background: #6E1A1A;
     width: 100%;
 }
 .customLogin .modal-footer{
@@ -98,9 +98,9 @@
 
 /*submenus tabs*/
 #container_mnu_inmobiliaria .tabSection .itemTab.active{
-    border-bottom: 3px solid #e2007a;
+    border-bottom: 3px solid #6E1A1A;
     /* font-weight: bold; */
-    color: #e2007a;
+    color: #6E1A1A;
 }
 
 #container_mnu_inmobiliaria .tabSection {
@@ -137,7 +137,7 @@
 /*estilos de las tablas*/
 .tableHead{
     color: #FFF;
-    background: #EC7DAB;
+    background: #C4AF99;
     text-align: center;
     border: 2px solid #fff;
 }
@@ -210,8 +210,8 @@
     height: 120px;
     float: left;
     /*background: lightblue;
-    border-left: 3px solid #e2007a;
-    border-right: 3px solid #e2007a;*/
+    border-left: 3px solid #6E1A1A;
+    border-right: 3px solid #6E1A1A;*/
 }
 
 #verMenos{
