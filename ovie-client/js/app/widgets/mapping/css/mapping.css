@@ -1,5 +1,5 @@
 .template_ovie_mappingPan{
-    background:url("../img/pan.png") top left no-repeat;
+    background:url("../img/pan.png?v=2") top left no-repeat;
 }
 .tom_zoomin{
 	width: 23px;
@@ -36,7 +36,7 @@
 
 
 .template_ovie_mapping{
-    background:url("../img/mapping.png") top left no-repeat;
+    background:url("../img/mapping.png?v=2") top left no-repeat;
 }
 
 .tom_polygon{
@@ -201,7 +201,7 @@
     border-radius: 0px 0px 10px 10px;
 }
 .ovie_mapping .Title{
-    background:#EC7DAB;
+    background:#C4AF99;
     color:#fff;
     padding-bottom:5px;
     padding-top:5px;
@@ -620,7 +620,7 @@ border-radius: 5px 5px 5px 5px;
     top: 40px !important;
 }    
 .ovie_mapping .Change {
-    background: #EC7DAB;
+    background: #C4AF99;
     color: #fff;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -634,6 +634,6 @@ border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
     cursor: pointer;
 }
-.dinamicPanel-sprite{ background:url("dinamicPanel-sprite.png") top left no-repeat; }
+.dinamicPanel-sprite{ background:url("dinamicPanel-sprite.png?v=2") top left no-repeat; }
 .dinamicPanel-close-short:hover{ width:20px; height:20px; background-position:-10px -4040px; }
 .dinamicPanel-close-short{ width:20px; height:20px; background-position:-10px -4550px; }

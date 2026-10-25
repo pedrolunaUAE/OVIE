@@ -19,7 +19,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_proveedores.css'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_proveedores.css?v=2'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})
@@ -569,14 +569,14 @@ define(['code/config',
 										'</a>'+
 										*/
 										  '<div class="fixed-action-btn" style="bottom: 24px; right: 24px;">'+
-											'<a class="btn-floating btn-large " style="background:#E2007A">'+
+											'<a class="btn-floating btn-large " style="background:#6E1A1A">'+
 											  '<i class="material-icons">'+
 													'<img src="js/app/widgets/results/export.png" style="margin-top: 5px;">'+
 											  '</i>'+
 											'</a>'+
 											'<ul>'+
-											  '<li><a class="btn-floating exportKml" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
-											  '<li><a class="btn-floating exportPdf" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+											  '<li><a class="btn-floating exportKml" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+											  '<li><a class="btn-floating exportPdf" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
 											'</ul>'+
 										  '</div>'+
 									'</div>'+

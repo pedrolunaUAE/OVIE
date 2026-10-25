@@ -220,7 +220,7 @@ $.widget("custom.results", {
                                 '</center>'+
 								'<div class="sexos-percentData">'+
 									'<div class="sexos-dataContainer"><div class="percentData" style="color: #07B2AE; position:absolute; right:21px">'+menPercent+'%</div></div>'+
-									'<div class="sexos-dataContainer"><div class="percentData" style="color: #E2007A; position:absolute; left:28px">'+womenPercent+'%</div></div>'+
+									'<div class="sexos-dataContainer"><div class="percentData" style="color: #6E1A1A; position:absolute; left:28px">'+womenPercent+'%</div></div>'+
 								'</div>'+
 							'</div>'+
                         '</div>'+
@@ -244,7 +244,7 @@ $.widget("custom.results", {
                                         '<div class="edades-teenagerBar gruposBar" style="background-color: #F6A017; width:'+Math.floor(teen)+'%"></div>'+
                                         '<div class="edades-adultBar gruposBar" style="background-color: #897C7A; width:'+Math.floor(youngAdult)+'%"></div>'+
                                         '<div class="edades-oldpeopleBar gruposBar" style="background-color: #009f9e; width:'+Math.floor(adult)+'%"></div>'+
-                                        '<div class="edades-oldpeopleBar gruposBar" style="background-color: #F190A9; width:'+Math.floor(old)+'%"></div>'+
+                                        '<div class="edades-oldpeopleBar gruposBar" style="background-color: #A0524D; width:'+Math.floor(old)+'%"></div>'+
                                     '</div>'+
                                     '<div class="edades-percentData row" style="width:300px">'+
                                         '<div class="col s2 m2 l2 childrenBar-data edadesData" style="width:20%">'+child+'%</div>'+
@@ -280,25 +280,25 @@ $.widget("custom.results", {
 						'</div>'+
 				'</div>'+
 				/*'<div class="row exportarPDF">'+
-					'<a class="waves-effect waves-light btn exportBtn" style="background-color:#E2007A"><i>'+
+					'<a class="waves-effect waves-light btn exportBtn" style="background-color:#6E1A1A"><i>'+
 						'<img src="js/app/widgets/results/pdf.png" style="margin-top:-5px">'+
 					'</i><p style="float:right; margin-top:1px">Exportar</p></a>'+
 				'</div>'*/
                 
                 '<div class="fixed-action-btn" style="bottom: 24px; right: 24px;">'+
-					'<a class="btn-floating btn-large " style="background:#E2007A">'+
+					'<a class="btn-floating btn-large " style="background:#6E1A1A">'+
 						'<i class="material-icons">'+
 							'<img src="js/app/widgets/results/export.png" style="margin-top: 5px;">'+
 						'</i>'+
 					'</a>'+
 					'<ul>'+
-						'<li><a class="btn-floating exportKml" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
-						'<li><a class="btn-floating exportBtn" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+						'<li><a class="btn-floating exportKml" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+						'<li><a class="btn-floating exportBtn" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
 					'</ul>'+
 				'</div>';
                 /*
                 '<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">'+
-					'<a class="class="btn-floating btn-large" style="background-color:#E2007A; float:left; ">'+
+					'<a class="class="btn-floating btn-large" style="background-color:#6E1A1A; float:left; ">'+
 						'<i><img src="js/app/widgets/results/export.png" style="margin-top:3px"></i>'+
 					'</a>'+
 					'<ul>'+

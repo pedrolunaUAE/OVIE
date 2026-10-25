@@ -35,12 +35,12 @@ $.widget("custom.login", {
 										'<div class="row _loginContent">'+
 											'<form class="col s12 ingresar">'+
 												'<div class="input-field col s12">'+
-												  '<i class="material-icons prefix" style="color:#e2007a">account_circle</i>'+
+												  '<i class="material-icons prefix" style="color:#6E1A1A">account_circle</i>'+
 												  '<input id="login_user" type="text" value="">'+
 												  '<label for="login_user">Nombre de usuario</label>'+
 												'</div>'+
 												'<div class="input-field col s12">'+
-												  '<i class="material-icons prefix" style="color:#e2007a">lock</i>'+
+												  '<i class="material-icons prefix" style="color:#6E1A1A">lock</i>'+
 												  '<input id="login_password" type="password" value="">'+
 												  '<label for="login_password">Contraseña</label>'+
 												'</div>'+

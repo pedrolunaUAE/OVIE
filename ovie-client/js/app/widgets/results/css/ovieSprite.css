@@ -1,4 +1,4 @@
-.ovieSprite{ background:url("ovieSprite.png") top left no-repeat; }
+.ovieSprite{ background:url("ovieSprite.png?v=2") top left no-repeat; }
 .ovieSprite-termometro{ width:55px; height:118px; background-position:-10px -10px; }
 .ovieSprite-empleado{ width:80px; height:118px; background-position:-75px -10px; }
 .ovieSprite-sexos{ width:155px; height:118px; background-position:-165px -10px; }

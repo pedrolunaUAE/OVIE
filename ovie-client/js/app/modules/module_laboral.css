@@ -57,9 +57,9 @@
 
 /*submenus tabs*/
 #container_mnu_laboral .tabSection .itemTab.active{
-    border-bottom: 3px solid #e2007a;
+    border-bottom: 3px solid #6E1A1A;
     /* font-weight: bold; */
-    color: #e2007a;
+    color: #6E1A1A;
 }
 
 #container_mnu_laboral .tabSection {
@@ -112,7 +112,7 @@
 }
 
 .labFilterTitle{
-    color: #e2007a;
+    color: #6E1A1A;
     font-weight: bold;
     margin-left: 20px;
     padding-top: 2px;

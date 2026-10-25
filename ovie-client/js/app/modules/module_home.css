@@ -1,4 +1,4 @@
-@import url('../css/sprites/ovieSprite-home.css');
+@import url('../css/sprites/ovieSprite-home.css?v=2');
 @import url('../../../img/home/sprite-home/spriteHome.css');
 
 /*Nuevo home*/
@@ -7,9 +7,10 @@
     transform: translateY(0%);
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
-    background-image: url(../../../img/home/homeBG.jpg);
+    background-color: #FFF;
+    background-image: url(../../../img/home/homeBG_tepic.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     position: absolute;
     top: 0px;
     left: 0;
@@ -159,7 +160,7 @@
     text-align: center;
 }
 .info_contact .col{
-    background: #e2007a;
+    background: #6E1A1A;
 }
 .home-dirigido-txt{
     width: 300px;
@@ -221,7 +222,7 @@
     width: 100%;
     height: 3px;
     text-align: justify;
-    background-color: #e2007a;
+    background-color: #6E1A1A;
     margin-top:20px;
 }
 

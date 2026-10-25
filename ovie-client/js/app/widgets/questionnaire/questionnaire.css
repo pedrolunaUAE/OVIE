@@ -9,7 +9,7 @@
 	color:#838383;
 }
 .questionnaire .btn{
-	background-color: #df4a91;
+	background-color: #6E1A1A;
 }
 .questionnaire .tools{
 	position: absolute;
@@ -86,7 +86,7 @@
     cursor: pointer;
 }
 .customTab .header .option.active{
-    border-bottom: 5px solid #DE1074;
+    border-bottom: 5px solid #6E1A1A;
 }
 .customTab .content .optionContainer.notOverflow{
     overflow: hidden;
@@ -132,7 +132,7 @@
 }
 
 .customTab .Spinner .spinner-layer{
-	border-color: #E2007A;
+	border-color: #6E1A1A;
 }
 .customTab .Spinner .label{
 	font-weight: bold;
@@ -174,7 +174,7 @@
 	font-style: italic;
     font-weight: bold;
     margin-top: 42px;
-    color: #df4a91;
+    color: #6E1A1A;
 	font-size: 120%;
 }
 .questionnaire .titleSection{
@@ -188,7 +188,7 @@
     text-align: center;
 }
 .questionnaire .sectionBtn .btn{
-	background-color:#e2007a;
+	background-color:#6E1A1A;
 }
 .questionnaire .blocker{
 	position: absolute;
@@ -216,7 +216,7 @@
     position: absolute;
 }
 .questionnaire .spinner .spinner-layer{
-	    border-color: #e2007a;
+	    border-color: #6E1A1A;
 }
 .questionnaire .spinner .label{
 	margin-top: 10px;

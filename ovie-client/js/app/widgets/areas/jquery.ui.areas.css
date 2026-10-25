@@ -1,4 +1,4 @@
-@import url('css/spriteOVIE.css');
+@import url('css/spriteOVIE.css?v=2');
 
 .areas-mainContainer{
     width: 100%;
@@ -10,11 +10,11 @@
 
 .areas-mainContainer .secondary-content {
     float: right;
-    color: #E2007A;
+    color: #6E1A1A;
 }	
 
 .areas-Row:hover{
-	background:#F9DCE8;
+	background:#EDE3D8;
 	cursor: pointer;
 }
 

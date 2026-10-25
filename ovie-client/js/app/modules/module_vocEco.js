@@ -75,7 +75,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_vocEco.css'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_vocEco.css?v=2'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})
@@ -854,19 +854,19 @@ define(['code/config',
 						'</div>'+
 						//'<div class="row exportarPDF">'+
 						'<div class="fixed-action-btn" style="bottom: 24px; right: 24px;">'+
-						'<a class="btn-floating btn-large " style="background:#E2007A">'+
+						'<a class="btn-floating btn-large " style="background:#6E1A1A">'+
 							'<i class="material-icons">'+
 								'<img src="js/app/widgets/results/export.png" style="margin-top: 5px;">'+
 							'</i>'+
 						'</a>'+
 						'<ul>'+
-							'<li><a class="btn-floating exportKml" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
-							'<li><a class="btn-floating exportBtn" style="background:#E2007A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+							'<li><a class="btn-floating exportKml" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/kml.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
+							'<li><a class="btn-floating exportBtn" style="background:#6E1A1A"><i class="material-icons"><img src="js/app/widgets/results/pdf.png" style="margin-top:-4px;margin-left:0px;"></i></a></li>'+
 						'</ul>'+
 					'</div>';
 						
 						/*'<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">'+
-								'<a class="class="btn-floating btn-large" style="background-color:#E2007A; float:left; ">'+
+								'<a class="class="btn-floating btn-large" style="background-color:#6E1A1A; float:left; ">'+
 									'<i><img src="js/app/widgets/results/export.png" style="margin-top:3px"></i>'+
 								'</a>'+
 								'<ul>'+
@@ -1487,7 +1487,7 @@ define(['code/config',
 								'<div class="blocker-container">'+
 									'<img class="image" src="img/icons/mark.png" style="position:absolute; margin-top:13px; margin-left:18px">'+
 									'<div class="preloader-wrapper big active">'+
-										'<div class="spinner-layer spinner-blue-only" style="border-color: #E2007A;">'+
+										'<div class="spinner-layer spinner-blue-only" style="border-color: #6E1A1A;">'+
 											'<div class="circle-clipper left">'+
 												'<div class="circle"></div>'+
 											'</div><div class="gap-patch">'+

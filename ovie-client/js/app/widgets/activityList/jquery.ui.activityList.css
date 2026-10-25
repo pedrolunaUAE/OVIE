@@ -1,9 +1,9 @@
 /*Lista de TODAS las actividades económicas*/
 .activity-row-container:hover {
-   background-color:#F9DCE8;
+   background-color:#EDE3D8;
 }
 .activity-row-container.active{
-    background-color: #E2007A;
+    background-color: #6E1A1A;
 }
 .activity-row-container.active .activity-cve{
     color: #FFF;
@@ -43,7 +43,7 @@
     margin-left: 6px;
     font-family: arial;
     font-weight: bold;
-    color: #e2007a;
+    color: #6E1A1A;
 }
 
 /*prueba*/
@@ -59,7 +59,7 @@
 
 .activity-list-header{
     position: absolute;
-    border-bottom: 3px solid #e2007a;
+    border-bottom: 3px solid #6E1A1A;
     width: 100%;
     height: 40px;
     background: #f3f3f3;
@@ -89,7 +89,7 @@
 .activity-list-columnTitle{
     float: left;
     margin-left: 6px;
-   /*background-color: #e2007a;*/
+   /*background-color: #6E1A1A;*/
     margin-top: 12px;
     color: #757575;;
     font-weight: bold;
@@ -116,5 +116,5 @@
 }
 
 .activity-cve{
-    color: #e2007a;
+    color: #6E1A1A;
 }

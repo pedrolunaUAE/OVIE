@@ -30,7 +30,7 @@ define(function(){
 											'<div class="blocker-container">'+
 												'<img class="image" src="img/icons/mark.png" style="position:absolute; margin-top:13px; margin-left:18px">'+
 												'<div class="preloader-wrapper big active">'+
-													'<div class="spinner-layer spinner-blue-only" style="border-color: #E2007A;">'+
+													'<div class="spinner-layer spinner-blue-only" style="border-color: #6E1A1A;">'+
 													  '<div class="circle-clipper left">'+
 															'<div class="circle"></div>'+
 													  '</div><div class="gap-patch">'+

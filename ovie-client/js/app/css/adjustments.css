@@ -16,9 +16,9 @@ textarea:focus, input:focus{
 /* Ajustes Materialize  */
 
 /*.collection .collection-item.active {
-    background-color: #E2007A;
+    background-color: #6E1A1A;
     color: #eafaf9;
 }*/
 .card .card-action a {
-    color: #E2007A;
+    color: #6E1A1A;
 }

@@ -30,7 +30,7 @@ define(['code/config',
 						localUrl = localUrl.split('?')[0];
 			
 					$.when(
-						$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_agendar.css'}).appendTo('head'),
+						$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_agendar.css?v=2'}).appendTo('head'),
 						$.Deferred(function( deferred ){
 							$( deferred.resolve );
 						})
@@ -108,7 +108,7 @@ define(['code/config',
 									/*Hasta aqui*/
 									if((valid)&&(validLigado)){//No tiene nada
 											mensajes.push(etiqueta);
-											$(this).css("background","#F9DCE8");
+											$(this).css("background","#EDE3D8");
 									}
 								}
 						});
@@ -163,7 +163,7 @@ define(['code/config',
 									/*Hasta aqui*/
 									if((!valid)&&(validLigado)){
 											mensajes.push(etiqueta);
-											$(this).css("background","#F9DCE8");
+											$(this).css("background","#EDE3D8");
 											
 									}
 								}
@@ -287,7 +287,7 @@ define(['code/config',
 											'<div id="datePicker-agenda" format="date" type="text" class="datePicker_agenda">'+	
 											'</div>'+
 										'<div class="leyend">'+	
-											'<div><span class="leyenda" style="background:#F9DCE8"></span><label>Amplia disponibilidad</label></div>'+
+											'<div><span class="leyenda" style="background:#EDE3D8"></span><label>Amplia disponibilidad</label></div>'+
 											'<div><span class="leyenda" style="background:#FCF3CF"></span><label>Poca disponibilidad</label></div>'+
 											'<div ><span class="leyenda" style="background:#F4ABAB"></span><label>Sin disponibilidad</label></div>'+
 											'<div><span class="leyenda" style="background:#BDBDBD"></span><label>Este día no hay citas</label></div>'+
@@ -311,7 +311,7 @@ define(['code/config',
 									'</div>'+
 									'<div class="row">'+
 										'<div class="input-field col s12">'+
-												'<a type="submit" id="enviar_solicitud" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat">Enviar Solicitud</a>'+
+												'<a type="submit" id="enviar_solicitud" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat">Enviar Solicitud</a>'+
 														obj.getAceptarCheck()+										
 										'</div>'+
 									'</div>'+
@@ -541,7 +541,7 @@ define(['code/config',
 										'</p>'+
 								'</div>'+
 								'<div class="modal-footer" >'+
-									'<a id="nose" href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
+									'<a id="nose" href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
 								'</div>'+
 						'</div>';
 			
@@ -563,7 +563,7 @@ define(['code/config',
 										'</center>'+
 								'</div>'+
 								'<div class="modal-footer" >'+
-									'<a  href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
+									'<a  href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
 								'</div>'+
 						'</div>';
 			
@@ -578,7 +578,7 @@ define(['code/config',
 										
 								'</div>'+
 								'<div class="modal-footer" >'+
-									'<a id="nose" href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
+									'<a id="nose" href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
 								'</div>'+
 						'</div>';
 			
@@ -593,7 +593,7 @@ define(['code/config',
 										'<p class="modal-txt" style="text-align: center;"> En un momento recibirá un mensaje a la cuenta de correo electrónico que proporcionaste, le pedimos de favor revises si este llego a su “Bandeja de Entrada”, de no ser así, revise su bandeja de “Correos no deseados”. ¡Gracias! </p>'+
 								'</div>'+
 								'<div class="modal-footer" >'+
-									'<a id="nose" href="#!" style="color:#FFF; background:#E2007A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
+									'<a id="nose" href="#!" style="color:#FFF; background:#6E1A1A" class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>'+
 								'</div>'+
 						'</div>';
 			

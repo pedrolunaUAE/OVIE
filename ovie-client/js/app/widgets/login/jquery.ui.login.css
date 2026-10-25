@@ -1,4 +1,4 @@
-@import url('css/spriteInformation.css');
+@import url('css/spriteInformation.css?v=2');
 
 .customLogin{
     width: 300px !important;
@@ -26,7 +26,7 @@
     display: none;
 }
 .customLogin .title{
-    background: #e2007a;
+    background: #6E1A1A;
     color: white;
     font-size: 16pt;
     padding: 5px;
@@ -35,7 +35,7 @@
     margin-top: -33px !important;
 }
 .customLogin ._signIn{
-    background: #e2007a;
+    background: #6E1A1A;
     width: 100%;
 }
 .customLogin .modal-footer{
@@ -55,7 +55,7 @@
 }
 */
 .customLogin .modal-title{
-   background: #E2007A;
+   background: #6E1A1A;
    padding: 10px;
    font-size: 150%;
    color: #fff;
@@ -82,7 +82,7 @@
 }
 .customLogin .description{
    font-size: 150%;
-   color: #E2007A;
+   color: #6E1A1A;
    text-align: center;
    margin-top: 0px;
 }
@@ -98,14 +98,14 @@
         
     }
 .customLogin .button{
-        background-color: #e2007a;
+        background-color: #6E1A1A;
         position: absolute;
         bottom: 10px;
         right: 10px;
 }
 
 .customLogin .image{
-    content: url(img/ovie_logo.jpg);
+    content: url(img/ovie_logo_nayarit.png?v=2);
     width: 45% !important;
     max-width: 170px;
     position: absolute;
@@ -114,12 +114,12 @@
 }
 
 .customLogin .validate{
-    color:pink;
+    color:#C4AF99;
 }
 
 #login-ingresarTitle{   
     margin-top: 25px;
-    color: #e2007a;
+    color: #6E1A1A;
     font-family: arial;
     font-size: 125%;
 }

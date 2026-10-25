@@ -17,7 +17,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_home.css'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_home.css?v=7'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})
@@ -63,7 +63,7 @@ define(['code/config',
 											'</div>'+
 											
 											'<p class="ovie-title-definicion2" style="padding-top: 20px;">¡Te invitamos a utilizarla!<br>'+
-												'<span><a style="color: #e2007a;" href="docs/manualOvie.pdf" target="_blank" >Descarga la guía de uso rápido aquí</a></span>'+
+												'<span><a style="color: #6E1A1A;" href="docs/manualOvie.pdf" target="_blank" >Descarga la guía de uso rápido aquí</a></span>'+
 											'</p>'+
 										
 										'</div>'+
@@ -71,8 +71,9 @@ define(['code/config',
 								 '</center>'+
 								 
 								'<div class="row info_contact">'+
-										'<div class="col s12"><a href="https://www.facebook.com/OVIECDMX/" target="_blank" style="color:white"><img src="img/home/fbIcon-white.png" style="position:relative; top:7px; margin-right:5px"/></a><a href="https://twitter.com/@OvieCdmx" target="_blank" style="color:white"><img src="img/home/twitterIcon-white.png" style="position:relative; top:7px;margin-right: 5px;"/></a><img src="img/home/ovie-home-mail.png" style="position:relative; top:7px; margin-right:5px"/>ovie@sedecodf.gob.mx <img src="img/home/ovie-home-tel.png" style="position:relative; top:7px;"/> 5536 9040 &oacute; 5682 2096 ext. 330</div>'+
-										'<div class="col s12">Cuauht&eacute;moc 898, Narvarte, Benito Ju&aacute;rez, 03020, Ciudad de M&eacute;xico</div>'+
+										'<div class="col s12"><img src="img/home/ovie-home-mail.png" style="position:relative; top:7px; margin-right:5px"/><a href="mailto:sec.economia@nayarit.gob.mx" style="color:white">sec.economia@nayarit.gob.mx</a> <img src="img/home/ovie-home-tel.png" style="position:relative; top:7px;"/> <a href="tel:+523112580929" style="color:white">311 258 09 29</a></div>'+
+										'<div class="col s12">Secretar&iacute;a de Desarrollo Econ&oacute;mico y Social del Gobierno del Estado de Nayarit</div>'+
+										'<div class="col s12">Av. de los Insurgentes Pte. #854, Col. El Rodeo, Tepic, Nayarit</div>'+
 										//'<div class="col s12" style="padding-bottom: 7px;"></div>'+
 										/*'<img src="img/datosContacto.png">'+*/
 									'</div>'+	

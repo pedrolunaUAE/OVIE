@@ -33,15 +33,15 @@
  }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
-	background:#F9DCE8;
-	color:#df0077;
+	background:#EDE3D8;
+	color:#6E1A1A;
 }
 
  /*Segun su typo:: Para Amplia disponibilidad color  rosa*/
 .highlighted1 a{
-	background-color:#F9DCE8 !important;
+	background-color:#EDE3D8 !important;
 	background-image:none !important;
-	color:#E2007A !important;
+	color:#6E1A1A !important;
 	font-weight: bold !important;
 	font-size:12pt;
 	

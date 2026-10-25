@@ -1,4 +1,4 @@
-.sprite-indicators{ background:url("sprite-indicators.png") top left no-repeat; }
+.sprite-indicators{ background:url("sprite-indicators.png?v=2") top left no-repeat; }
 .sprite-indicators-employer{ width:53px; height:65px; background-position:-10px -10px; }
 .sprite-indicators-handmoney-big{ width:55px; height:55px; background-position:-10px -85px; }
 .sprite-indicators-people-big{ width:55px; height:55px; background-position:-10px -150px; }

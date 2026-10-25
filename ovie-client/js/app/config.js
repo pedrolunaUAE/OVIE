@@ -4,7 +4,7 @@ define(function(){
 		territory:{
 			name:'Tepic, Nayarit',
 			initialExtent:{lon:[-104.98, 21.42], lat:[-104.82, 21.58]},
-			restrictedExtent:{lon:[-105.55, 20.95], lat:[-104.15, 22.15]}
+			restrictedExtent:{lon:[-106.75, 20.45], lat:[-103.55, 23.25]}
 		},
 		menu:[
 			  {
@@ -402,12 +402,11 @@ define(function(){
 		},
 		dataSource:{
 			server:'/ovie/',
-			// Índice Solr de INEGI orientado a CDMX; hasta tener shard Nayarit, la búsqueda por nombre puede no cubrir Tepic.
+			// Búsqueda local sobre ovie_web (colonias, localidades y municipios de Nayarit); responde con formato Solr.
 			searchAreas:{
-							url:'https://gaia.inegi.org.mx/mdmSearchEngine/busq-oviemun/shardovie',
-							type: 'POST',
-							dataType: "jsonp",
-							jsonp:'json.wrf',
+							url:'/ovie/search/areas',
+							type: 'GET',
+							dataType: "json",
 							stringify:false,
 							params:{ //Params----------------------
 								q:'',
@@ -739,7 +738,7 @@ define(function(){
 		
 		mapping:{
                 initialExtent:{lon:[-104.98, 21.42], lat:[-104.82, 21.58]},
-                restrictedExtent:{lon:[-105.55, 20.95], lat:[-104.15, 22.15]},
+                restrictedExtent:{lon:[-106.75, 20.45], lat:[-103.55, 23.25]},
                 bases:[
                     {
                         type:'WMS',
