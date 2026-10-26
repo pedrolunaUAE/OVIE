@@ -108,7 +108,7 @@
 	   trunc(((SUM_J010A / SUM_H101A)*1000)/12,0)
 	    END
 	FROM ovie_web.base_delegaciones 
-	WHERE clase_scian=#{scian}AND
+	WHERE clase_scian=#{scian} AND
 	cvegeo=#{cvegeo}
 </select>
 
