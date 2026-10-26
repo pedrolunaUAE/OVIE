@@ -35,14 +35,14 @@ public class EconomicVocationServiceImpl implements EconomicVocationService {
 			indicator.setSpecialization(specialization);
 			indicator.setCompeco(economicComposition);
 			actcons = mapper.actcons(id, cve);
-			if (actcons != null)
-				indicator.setActcons(mapper.actcons(id, cve));
-			else {
+			if (actcons == null) {
 				actcons = new LinkedHashMap<>();
 				actcons.put("count", 0);
 				actcons.put("desc_cort", mapper.getCatalogScian(cve));
-				indicator.setActcons(actcons);
+			} else if (actcons.get("desc_cort") == null) {
+				actcons.put("desc_cort", mapper.getCatalogScian(cve));
 			}
+			indicator.setActcons(actcons);
 			return indicator;
 		} else
 			return null;

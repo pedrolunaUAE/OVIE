@@ -47,19 +47,15 @@
 
 
 	<select id="moda" parameterType="map" resultType="java.util.LinkedHashMap">
-		WITH total AS (
-		SELECT count(*) AS total
-		FROM ovie_web.denue d, ovie_web.areas a
-		WHERE a.gid=#{id}
-		AND ST_Intersects(a.the_geom,d.the_geom)
-		)
-		SELECT estr_poc AS estrato ,round(((count(*)* 100.00)/ total),0) as
-		porcentaje
-		FROM ovie_web.denue d, ovie_web.areas a,total t
-		WHERE a.gid=#{id}
-		AND ST_Intersects(a.the_geom,d.the_geom)
-		GROUP BY estr_poc, total
-		ORDER BY count(*) DESC
+		SELECT estr_poc AS estrato, round((cnt * 100.00) / sum(cnt) OVER (), 0) AS porcentaje
+		FROM (
+			SELECT d.estr_poc, count(*) AS cnt
+			FROM ovie_web.denue d
+			JOIN ovie_web.areas a ON a.gid = #{id}
+			WHERE ST_Intersects(a.the_geom, d.the_geom)
+			GROUP BY d.estr_poc
+		) s
+		ORDER BY cnt DESC
 		LIMIT 1
 	</select>
 
@@ -79,12 +75,28 @@
 	
 	<!-- Actividad Consultada -->
 	<select id="actcons" resultType="java.util.LinkedHashMap">
-		SELECT COUNT(*), COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100)) AS desc_cort
-		FROM ovie_web.denue d, ovie_web.areas a
-		WHERE ST_Intersects(a.the_geom,d.the_geom)
-		AND COALESCE(NULLIF(trim(d.cve_scian), ''), LPAD(d.codigo_act::text, 6, '0'))::numeric=#{cve}
-		AND a.gid=#{id}
-		GROUP BY COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100))
+		WITH clave AS MATERIALIZED (
+			SELECT COALESCE(NULLIF(trim(d.cve_scian), ''), LPAD(d.codigo_act::text, 6, '0'))::numeric AS scian,
+			       COALESCE(NULLIF(trim(d.desc_cort), ''), left(d.desc_scian, 100)) AS desc_cort
+			FROM ovie_web.denue d
+			JOIN ovie_web.areas a ON a.gid = #{id}
+			WHERE ST_Intersects(a.the_geom, d.the_geom)
+		),
+		directo AS (
+			SELECT count(*) AS n, max(desc_cort) AS desc_cort
+			FROM clave
+			WHERE scian = #{cve}
+		)
+		SELECT
+			CASE WHEN (SELECT n FROM directo) &gt; 0 THEN (SELECT n FROM directo)
+			     ELSE (SELECT count(*) FROM clave
+			           WHERE scian IN (SELECT scian FROM ovie_web.cadenas_productivas WHERE clv_act = #{cve}))
+			END AS count,
+			COALESCE(
+				(SELECT desc_cort FROM ovie_web.cadenas_productivas_pal WHERE clv_act = #{cve} LIMIT 1),
+				(SELECT desc_cort FROM directo),
+				(SELECT nombre_corto FROM ovie_web.scian_2013_vw WHERE scian::numeric = #{cve} LIMIT 1)
+			) AS desc_cort
 	</select>
 	
  <!--Composicion Economica  -->

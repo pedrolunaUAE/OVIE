@@ -1142,7 +1142,7 @@ define(['code/config',
                 var addHeader = function(top,doc){
 					doc.addImage(images['logo'], 'PNG',25,15);
 					doc.addImage(images['header'],'PNG',400,30);
-					doc.setDrawColor(226, 0 ,122);
+					doc.setDrawColor(110, 26, 26);
 					doc.line(20, top, 590, 80);
 				}
 				var addFooter = function(top,left,doc){

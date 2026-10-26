@@ -3,6 +3,11 @@
  */
 package mx.org.inegi.geo.ovie.service.impl;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,6 +24,15 @@ import mx.org.inegi.geo.ovie.service.AreaService;
 @Service
 public class AreaServiceImpl implements AreaService {
 
+	/**
+	 * Nombres que el cliente envía como "type" al crear un área de influencia.
+	 * Van directo al SQL (ovie_web.${type}), así que solo se aceptan estos.
+	 */
+	private static final Set<String> BUFFER_TABLES = Collections.unmodifiableSet(new HashSet<String>(
+			Arrays.asList("colonias", "localidades_busqueda")));
+
+	private static final int MAX_BUFFER_METERS = 50000;
+
 	@Autowired
 	private AreaMapper mapper;
 
@@ -30,8 +44,14 @@ public class AreaServiceImpl implements AreaService {
 
 	@Override
 	public Area findBuffer(Area area) {
-		Area a = mapper.findBuffer(area);
-		return a;
+		if (area == null || area.getType() == null || !BUFFER_TABLES.contains(area.getType())) {
+			return null;
+		}
+		Integer size = area.getSizeBuffer();
+		if (size == null || size < 0 || size > MAX_BUFFER_METERS) {
+			return null;
+		}
+		return mapper.findBuffer(area);
 	}
 
 	@Override

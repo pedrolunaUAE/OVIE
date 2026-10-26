@@ -38,10 +38,10 @@ $.widget("custom.results", {
 		vivtot: 506949
 		*/
 		
-		//Indice de desarrollo social
-		var valor=(data.indsoc).toFixed(2);
-		var indice=parseFloat(valor);
-		var color=obj.indSoc(indice);
+		//El índice solo se muestra cuando el servicio trae un valor real. En Nayarit llega nulo.
+		var tieneIndice = data.indsoc !== null && data.indsoc !== undefined && data.indsoc !== '';
+		var indice = tieneIndice ? parseFloat(Number(data.indsoc).toFixed(2)) : null;
+		var color = tieneIndice ? obj.indSoc(indice) : '';
         
         
         //Distribución por sexo
@@ -90,7 +90,9 @@ $.widget("custom.results", {
          var uetotal=obj.formatNumber(data.uetotal);
         
 		//objeto para kml {
-                        kmlData.push({label:"Indice de desarrollo social",value:indice});
+                        if (tieneIndice) {
+                            kmlData.push({label:"Indice de desarrollo social",value:indice});
+                        }
                         kmlData.push({label:"Poblaci&oacute;n masculina",value:menPercent});
                         kmlData.push({label:"Poblaci&oacute;n femenina",value:womenPercent});
                         kmlData.push({label:"Grupo de edad ni&ntilde;os",value:child});
@@ -141,9 +143,7 @@ $.widget("custom.results", {
             this.reportData.radio=obj.options.validator.getFormatNumber(obj.options.radio)+' mts';
         }else{showRatio='none'}
 
-        var cdmx=false;
-		var showIndice='';
-		showIndice=(cdmx)?showIndice='block':showIndice='none';
+		var showIndice = tieneIndice ? 'block' : 'none';
 
         //console.log(reportData);
          var cadena= '<div class="row bloques-area">'+

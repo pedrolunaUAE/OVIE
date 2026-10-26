@@ -38,8 +38,11 @@ public class AreaController {
 	@RequestMapping(value = "area", method = RequestMethod.POST)
 	public Object applyBuffer(@RequestBody Area area) throws Exception {
 		Area a = null;
-		if (area.getType() != null && area.getType() != "") {
+		if (area.getType() != null && area.getType().length() > 0) {
 			Area tmp = service.findBuffer(area);
+			if (tmp == null || tmp.getGeometry() == null) {
+				return ResponseFactory.unsuccessful("No se puede generar el área con los datos enviados");
+			}
 			a = service.applyBuffer(tmp);
 
 		} else {

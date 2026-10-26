@@ -8,7 +8,7 @@ public class Indicators {
 	
 	private float uetotal; //Total Unidades Economicas
 	
-	private float indsoc;	//Indice de Desarrollo social
+	private Float indsoc;	//Indice de Desarrollo social. Nulo cuando las manzanas no traen un índice real.
 	
 	
 	//Grandes grupos de edad
@@ -66,11 +66,11 @@ public class Indicators {
 		this.uetotal = uetotal;
 	}
 
-	public float getIndsoc() {
+	public Float getIndsoc() {
 		return indsoc;
 	}
 
-	public void setIndsoc(float indsoc) {
+	public void setIndsoc(Float indsoc) {
 		this.indsoc = indsoc;
 	}
 

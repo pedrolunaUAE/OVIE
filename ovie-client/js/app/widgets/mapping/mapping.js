@@ -1609,7 +1609,7 @@ $.widget("custom.mapping", {
                         zoom:false,
                         store:true,
                         params:this.formatFeatures.get('georeference','polygon'),
-                        typeFeature:'point',
+                        typeFeature:'polygon',
                         ratio:meters
         });
         //eventFinishedCeationGeo.execute(temporalGeoParams);

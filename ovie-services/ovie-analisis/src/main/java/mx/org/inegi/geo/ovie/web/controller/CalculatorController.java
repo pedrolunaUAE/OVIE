@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import mx.org.inegi.geo.ovie.service.CalculatorService;
+import mx.org.inegi.geo.ovie.service.impl.CalculatorServiceImpl;
 import mx.org.inegi.geo.ovie.service.CompareAreasService;
 import mx.org.inegi.geo.ovie.web.response.ResponseFactory;
 
@@ -40,15 +41,22 @@ public class CalculatorController {
 	@RequestMapping(value = "{id_area}/{id}", method = RequestMethod.POST)
 	public Object getValor(@PathVariable() int id_area, @PathVariable int id) {
 		String sql = service.getsql(id);
+		if (!CalculatorServiceImpl.isCatalogSelect(sql)) {
+			return ResponseFactory.unsuccessful("Consulta no permitida");
+		}
 		Float valor = service.getValor(id_area, sql);
 		return ResponseFactory.successful("valor", valor);
 
 	}
 
 	@RequestMapping(value = "{id_area}/{scian}/{id}", method = RequestMethod.POST)
-	public Object getValorGiro(@PathVariable() int id_area, @PathVariable String scian, @PathVariable int id) {		
+	public Object getValorGiro(@PathVariable() int id_area, @PathVariable String scian, @PathVariable int id) {
 		String sql = service.getsql(id);
-		Float valor = service.getValorGiro(id_area,scian, sql);
+		if (!CalculatorServiceImpl.isScian(scian) || !CalculatorServiceImpl.isCatalogSelect(sql)
+				|| sql.indexOf("#{scian}") < 0) {
+			return ResponseFactory.unsuccessful("Consulta no permitida");
+		}
+		Float valor = service.getValorGiro(id_area, scian, sql);
 		return ResponseFactory.successful("valor", valor);
 
 	}

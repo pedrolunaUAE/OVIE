@@ -67,12 +67,18 @@
 		<!--  AND m.cvegeo=c.cvegeo -->
 	</select>
 	
-	<select id="indsoc" resultType="float">	
-		SELECT  trunc (avg(ids_v_m),2)as indsoc 
-		FROM ovie_web.sociodemografico_mza m , ovie_web.areas a 
-		WHERE a.gid=#{id}
-		AND ids_v_m > 0
-		AND ST_Intersects(a.the_geom,m.the_geom)
+	<!-- ids_v_m vale 1 en todas las manzanas de Nayarit: es un relleno, no el índice.
+	     Si no hay variación, se devuelve nulo para no publicar 1.00. -->
+	<select id="indsoc" resultType="java.lang.Float">
+		SELECT CASE
+		         WHEN count(DISTINCT ids_v_m) &lt;= 1 AND min(ids_v_m) = 1 THEN NULL
+		         ELSE trunc(avg(ids_v_m), 2)
+		       END
+		FROM ovie_web.sociodemografico_mza m, ovie_web.areas a
+		WHERE a.gid = #{id}
+		AND ids_v_m &gt; 0
+		AND m.cvegeo::text LIKE '18%'
+		AND ST_Intersects(a.the_geom, m.the_geom)
 	</select>
 	
 	<select id="ueTotal" resultType="float">

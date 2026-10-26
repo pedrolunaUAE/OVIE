@@ -30,6 +30,6 @@ public interface AreaMapper {
 	 * @param id
 	 * @return
 	 */
-	public float indsoc(Long id);
+	public Float indsoc(Long id);
 
 }

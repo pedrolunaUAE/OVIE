@@ -413,7 +413,7 @@ define(['code/config',
 						var top = 80;
 						doc.addImage(images['logo'], 'PNG',25,15);
 						doc.addImage(images['header'],'PNG',400,30);
-						doc.setDrawColor(226, 0 ,122);
+						doc.setDrawColor(110, 26, 26);
 						doc.line(20, top, 590, 80);
 						doc.setFontSize(12);doc.setTextColor(87, 84, 85);
 						doc.text('Perfil Sociodemográfico',20,top+20);
@@ -431,7 +431,7 @@ define(['code/config',
 								doc.addImage(images[i.field], 'PNG',left,top);
 								doc.setFontSize(10);doc.setTextColor(87, 84, 85);
 								doc.text(i.label,left+50,top+15);
-								doc.setFontSize(11);doc.setTextColor(225, 0, 122);
+								doc.setFontSize(11);doc.setTextColor(110, 26, 26);
 								var num = data[i.field];
 								var isNumber = (typeof(num)=='number')?true:false;
 								num = (isNumber)? num:num.replace('<sup>2</sup>','²');
@@ -515,7 +515,7 @@ define(['code/config',
 							leftLine=widthLine;
 							widthLine+=increment;
 							
-							doc.setFontSize(9);doc.setTextColor(225, 0, 122);
+							doc.setFontSize(9);doc.setTextColor(110, 26, 26);
 							var etiqueta = (percent)+aditional;
 							doc.text(etiqueta,leftText,top+81);
 							leftText+=incrementText;
@@ -592,12 +592,12 @@ define(['code/config',
 						var l = f.legend;
 						/*
 						doc.setLineWidth(1);
-						doc.setDrawColor(225, 0, 122);
+						doc.setDrawColor(110, 26, 26);
 						doc.setFillColor(255,255,255);
 						doc.circle(left+5, top, 5, 'FD');
-						doc.setDrawColor(226, 0 ,122);
+						doc.setDrawColor(110, 26, 26);
 						doc.line(left+10, top, 480, top);
-						doc.setFontSize(11);doc.setTextColor(225, 0, 122);
+						doc.setFontSize(11);doc.setTextColor(110, 26, 26);
 						doc.text('Observaciones',left+20,top+20);
 						doc.setFontSize(11);doc.setTextColor(87, 84, 85);
 						var a = 37;
@@ -605,10 +605,10 @@ define(['code/config',
 							doc.text(o[x],left+20,top+a);
 							a+=15;
 						}
-						doc.setDrawColor(225, 0, 122);
+						doc.setDrawColor(110, 26, 26);
 						doc.setFillColor(255,255,255);
 						doc.circle(555, top+70, 5, 'FD');
-						doc.setDrawColor(226, 0 ,122);
+						doc.setDrawColor(110, 26, 26);
 						doc.line(70, top+70, 550, top+70);
 						*/
 						doc.setFontSize(7);doc.setTextColor(150, 151, 152);

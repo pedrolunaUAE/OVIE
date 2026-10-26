@@ -27,7 +27,7 @@ define(function(){
 					'<li>vi) adecuación energética</li>'+
                 '</ul>'+
 				'<span>El indicador toma valores entre cero y uno:  de 0  a .69 se considera muy bajo,  de .7 a .79 es bajo, de .8 a .89  es medio y de .9  a 1 es alto. A medida que el índice se acerca a 1, la zona de análisis presenta mayor nivel de bienestar social. El valor expresado es el promedio de las manzanas dentro de un área delimitada.</span>'+
-				'<span><div>Fuente:</div> GCDMX. Consejo de Evaluación del Desarrollo Social de la Ciudad de México. Índice de Desarrollo Social por manzana y colonia, 2010. </span>',
+				'<span><div>Fuente:</div> Este índice corresponde al Consejo de Evaluación del Desarrollo Social de la Ciudad de México (2010) y no está calculado para Nayarit. Por eso no se muestra en los resultados. </span>',
                 
         grupos: '<div class="title">Grandes grupos de edad</div>'+
                 '<span><div>Definición:</div> es el porcentaje de la población total que reside dentro de un área delimitada, según los siguientes rangos de edades:</span>'+

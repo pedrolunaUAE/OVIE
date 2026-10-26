@@ -77,15 +77,15 @@ $.widget("custom.areas", {
 				var areaName=i[x].name;
 				var areaNumber=i[x].area;
 				
-				if(areaType=="polygon"){
+				if(areaType=="polygon" || areaType=="buffer"){
 				   icnArea="img/icons/polygon.jpg";
+				}else if(areaType=="line"){
+					icnArea="img/icons/line.jpg";
+				}else if(areaType=="point"){
+					icnArea="img/icons/point.jpg";
 				}else{
-					  if(areaType=="line"){
-							 icnArea=="img/icons/line.jpg";
-						}else{
-								icnArea=="img/icons/point.jpg";	
-							 }
-					  }
+					icnArea="img/icons/polygon.jpg";
+				}
 			
 				chain+='<li id="areas-Row'+ areaId+'" class="collection-item avatar areas-Row">'+
 							'<img src="'+icnArea+'" alt="" class="circle">'+
