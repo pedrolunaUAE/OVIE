@@ -1,5 +1,5 @@
 @import url('../css/sprites/ovieSprite-home.css?v=2');
-@import url('../../../img/home/sprite-home/spriteHome.css');
+@import url('../../../img/home/sprite-home/spriteHome.css?v=8');
 
 /*Nuevo home*/
 .home-container .section .BG{
@@ -92,7 +92,7 @@
         background-repeat: no-repeat;
         width: 80px;
         height: 80px;
-        background-image : url(../../../img/home/sprite-home/delegacionS.png);
+        background-image : url(../../../img/home/sprite-home/delegacionS.png?v=8);
 	}
     
     .coloniaB{

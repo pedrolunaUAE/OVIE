@@ -751,7 +751,7 @@ define(['code/config',
 											Rows+
 									'</tbody>'+
 								'</table>'+
-								'<div class="row textInformative">Para consultar detalle de los cálculos ver la sección de <a class="sectionHelp" href="docs/ayuda.pdf" target="_blank">ayuda</div>';
+								'<div class="row textInformative">Para consultar detalle de los cálculos ver la sección de <a class="sectionHelp" href="docs/ayuda.pdf?v=20261026" target="_blank">ayuda</div>';
 					$("#"+obj._id+" #resultsComparation").html(chain).show();
 					
 					$('#compare_container #resultsComparation .metadata').mouseenter(function(){

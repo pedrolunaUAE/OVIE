@@ -30,7 +30,7 @@
 }
 .delegacionS
 {
-	background-image : url(delegacionS.png);
+	background-image : url(delegacionS.png?v=8);
 	background-repeat : no-repeat;
 }
 .servicioB
@@ -47,7 +47,7 @@
 }
 .delegacionB
 {
-	background-image : url(delegacionB.png);
+	background-image : url(delegacionB.png?v=8);
 	background-repeat : no-repeat;
 	width:116px;
     height:116px;

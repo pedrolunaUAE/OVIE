@@ -17,7 +17,7 @@ define(['code/config',
 					localUrl = localUrl.split('?')[0];
 		
 				$.when(
-					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_home.css?v=7'}).appendTo('head'),
+					$('<link>', {rel: 'stylesheet',type: 'text/css',href: localUrl+'/modules/module_home.css?v=9'}).appendTo('head'),
 					$.Deferred(function( deferred ){
 						$( deferred.resolve );
 					})
@@ -45,7 +45,7 @@ define(['code/config',
 												'información geográfica dirigida a emprendedores,<br class="spaces">'+
 												'empresarios e inversionistas, que presenta de </br class="spaces"> manera clara, unificada y comprensible, los </br class="spaces"> principales datos económicos, sociodemográficos <br class="spaces">'+
 												'y urbanos del territorio.</p>'+
-												'<p class="ovie-title-definicion2" style="padding-top: 18px; padding-bottom: 10px;">Podrás obtener información de</br class="spaces"> cualquier lugar de Tepic y Nayarit, ya sea:</p>'+
+												'<p class="ovie-title-definicion2" style="padding-top: 18px; padding-bottom: 10px;">Podrás obtener información de</br class="spaces"> lugares de Nayarit, ya sea:</p>'+
 											'</div>'+
 											
 											'<div class="row">'+
@@ -63,7 +63,7 @@ define(['code/config',
 											'</div>'+
 											
 											'<p class="ovie-title-definicion2" style="padding-top: 20px;">¡Te invitamos a utilizarla!<br>'+
-												'<span><a style="color: #6E1A1A;" href="docs/manualOvie.pdf" target="_blank" >Descarga la guía de uso rápido aquí</a></span>'+
+												'<span><a style="color: #6E1A1A;" href="docs/manualOvie.pdf?v=20261026" target="_blank" >Descarga la guía de uso rápido aquí</a></span>'+
 											'</p>'+
 										
 										'</div>'+

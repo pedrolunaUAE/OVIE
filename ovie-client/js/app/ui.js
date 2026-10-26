@@ -366,8 +366,8 @@ define([
 				var op = menu[x];
 				
 				cadena+= '<div id="'+op.id+'" idref="'+x+'" class="ovie-nav-btn" status="'+((x == obj.menuActive && x > 3)?'active':'inactive')+'">';
-				cadena+= 	(x==11)?'<a href="docs/ayuda.pdf" target="_blank">':'';
-				cadena+= 	(x==12)?'<a href="docs/manualOvie.pdf" target="_blank"><img src="'+op.sprite+'">':'';
+				cadena+= 	(x==11)?'<a href="docs/ayuda.pdf?v=20261026" target="_blank">':'';
+				cadena+= 	(x==12)?'<a href="docs/manualOvie.pdf?v=20261026" target="_blank"><img src="'+op.sprite+'">':'';
 				//cadena+=    (x==12)?'<img src="'+op.sprite+'">':'';
 				cadena+= '	<div class="ovie-nav-btn-img '+op.sprite+'"></div>';
 				cadena+= '	<div class="ovie-nav-btn-img btn-img-inactive '+op.inactiveSprite+'"></div>'; 
